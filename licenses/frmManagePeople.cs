@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LicensesBusinessLayer;
 namespace licensesApp
 {
     public partial class frmManagePeople : Form
@@ -15,6 +15,16 @@ namespace licensesApp
         public frmManagePeople()
         {
             InitializeComponent();
+        }
+
+        public  void _RefreshPeopleList()
+        {
+            dgvPeoplelist.DataSource = clsPeople.GetAllPeople();
+        }
+
+        private void frmManagePeople_Load(object sender, EventArgs e)
+        {
+            _RefreshPeopleList();
         }
     }
 }

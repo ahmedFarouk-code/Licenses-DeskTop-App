@@ -88,5 +88,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LicensesBusinessLayer\LicensesBusinessLayer.csproj">
+      <Project>{9bf4e826-7fcc-4a50-ae5b-64438188b091}</Project>
+      <Name>LicensesBusinessLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

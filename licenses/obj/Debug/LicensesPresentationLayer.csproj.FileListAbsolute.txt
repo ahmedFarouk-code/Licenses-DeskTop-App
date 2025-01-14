@@ -1,0 +1,16 @@
+D:\Licenses-DeskTop-App\licenses\bin\Debug\licensesApp.exe.config
+D:\Licenses-DeskTop-App\licenses\bin\Debug\licensesApp.exe
+D:\Licenses-DeskTop-App\licenses\bin\Debug\licensesApp.pdb
+D:\Licenses-DeskTop-App\licenses\obj\Debug\LicensesPresentationLayer.csproj.AssemblyReference.cache
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmMainMenu.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmManagePeople.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.Properties.Resources.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\LicensesPresentationLayer.csproj.GenerateResource.cache
+D:\Licenses-DeskTop-App\licenses\obj\Debug\LicensesPresentationLayer.csproj.CoreCompileInputs.cache
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.exe
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.pdb
+D:\Licenses-DeskTop-App\licenses\bin\Debug\LicensesBusinessLayer.dll
+D:\Licenses-DeskTop-App\licenses\bin\Debug\clsPeopleData.dll
+D:\Licenses-DeskTop-App\licenses\bin\Debug\LicensesBusinessLayer.pdb
+D:\Licenses-DeskTop-App\licenses\bin\Debug\clsPeopleData.pdb
+D:\Licenses-DeskTop-App\licenses\obj\Debug\Licenses.7A6C36B4.Up2Date

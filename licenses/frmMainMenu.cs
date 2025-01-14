@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using LicensesBusinessLayer;
 namespace licensesApp
 {
     public partial class frmMainMenu : Form
@@ -15,6 +15,12 @@ namespace licensesApp
         public frmMainMenu()
         {
             InitializeComponent();
+        }
+
+        private void peopleToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManagePeople();
+            frm.ShowDialog();
         }
     }
 }

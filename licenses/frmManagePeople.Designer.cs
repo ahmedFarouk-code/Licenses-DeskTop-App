@@ -28,27 +28,27 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvPeoplelist = new System.Windows.Forms.DataGridView();
             this.btnClose = new System.Windows.Forms.Button();
             this.btnAddNew = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.lblRecords = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cbSortingBy = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeoplelist)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // dgvPeoplelist
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToOrderColumns = true;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(3, 118);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(797, 270);
-            this.dataGridView1.TabIndex = 0;
+            this.dgvPeoplelist.AllowUserToAddRows = false;
+            this.dgvPeoplelist.AllowUserToDeleteRows = false;
+            this.dgvPeoplelist.AllowUserToOrderColumns = true;
+            this.dgvPeoplelist.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvPeoplelist.Location = new System.Drawing.Point(3, 118);
+            this.dgvPeoplelist.Name = "dgvPeoplelist";
+            this.dgvPeoplelist.ReadOnly = true;
+            this.dgvPeoplelist.Size = new System.Drawing.Size(797, 270);
+            this.dgvPeoplelist.TabIndex = 0;
             // 
             // btnClose
             // 
@@ -118,10 +118,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddNew);
             this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvPeoplelist);
             this.Name = "frmManagePeople";
             this.Text = "Manage People";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.frmManagePeople_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPeoplelist)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -129,7 +130,7 @@
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvPeoplelist;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnAddNew;
         private System.Windows.Forms.Label label1;

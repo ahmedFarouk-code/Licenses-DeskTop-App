@@ -1,0 +1,6 @@
+D:\Licenses-DeskTop-App\clsPeopleData\bin\Debug\clsPeopleData.dll
+D:\Licenses-DeskTop-App\clsPeopleData\bin\Debug\clsPeopleData.pdb
+D:\Licenses-DeskTop-App\clsPeopleData\obj\Debug\LicensesDataAccess.csproj.AssemblyReference.cache
+D:\Licenses-DeskTop-App\clsPeopleData\obj\Debug\LicensesDataAccess.csproj.CoreCompileInputs.cache
+D:\Licenses-DeskTop-App\clsPeopleData\obj\Debug\clsPeopleData.dll
+D:\Licenses-DeskTop-App\clsPeopleData\obj\Debug\clsPeopleData.pdb
