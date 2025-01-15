@@ -15,6 +15,7 @@ namespace LicensesBusinessLayer
         public enMode Mode = enMode.AddNew;
 
         public int ID { get; set; }
+        public string NationalNo { get; set; }
         public string FirstName { get; set; }
         public string SecondName { get; set; }
         public string ThirdName { get; set; }
@@ -28,9 +29,10 @@ namespace LicensesBusinessLayer
         public string ImagePath { get; set; }
 
 
-        private clsPeople(int ID, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, int Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
+        private clsPeople(int ID,string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, int Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
             this.ID = ID;
+            this.NationalNo = NationalNo;
             this.FirstName = FirstName;
             this.SecondName = SecondName;
             this.ThirdName = ThirdName;
@@ -50,6 +52,7 @@ namespace LicensesBusinessLayer
         public clsPeople()
         {
             this.ID = -1;
+            this.NationalNo = "";
             this.FirstName = "";
             this.SecondName = "";
             this.ThirdName = "";
@@ -68,7 +71,7 @@ namespace LicensesBusinessLayer
 
         private bool _AddNewPerson()
         {
-            this.ID = clsPeopleData.AddNewPerson(this.FirstName, this.SecondName,
+            this.ID = clsPeopleData.AddNewPerson(this.NationalNo, this.FirstName, this.SecondName,
                 this.ThirdName,this.LastName, this.DateOfBirth,this.Gendor,this.Address,
                 this.Phone,this.Email,this.NationalityCountryID,this.ImagePath);
 
@@ -78,7 +81,7 @@ namespace LicensesBusinessLayer
 
         private bool _UpdateContact()
         {
-            return clsPeopleData.UpdatePerson(this.ID,this.FirstName, this.SecondName,
+            return clsPeopleData.UpdatePerson(this.ID,this.NationalNo, this.FirstName, this.SecondName,
                 this.ThirdName, this.LastName, this.DateOfBirth, this.Gendor, this.Address,
                 this.Phone, this.Email, this.NationalityCountryID, this.ImagePath);
         }

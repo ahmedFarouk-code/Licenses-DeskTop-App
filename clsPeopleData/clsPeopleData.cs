@@ -10,7 +10,7 @@ namespace LicensesDataAccess
 {
     public class clsPeopleData
     {
-        public static int AddNewPerson( string FirstName,  string SecondName,
+        public static int AddNewPerson(string NationalNo ,string FirstName,  string SecondName,
              string ThirdName ,  string LastName,  DateTime DateOfBirth,
              int Gendor,  string Address,  string Phone,  string Email,
              int NationalityCountryID,  string ImagePath)
@@ -18,15 +18,16 @@ namespace LicensesDataAccess
             int PersonID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"INSERT INTO People (FirstName, SecondName, ThirdName,
+            string query = @"INSERT INTO People (NationalNo,FirstName, SecondName, ThirdName,
                               LastName, DateOfBirth, Gendor, Address, Phone, Email,
                               NationalityCountryID, ImagePath) 
-                              VALUES(@FirstName, @SecondName, @ThirdName,
+                              VALUES(@NationalNo,@FirstName, @SecondName, @ThirdName,
                               @LastName, @DateOfBirth, @Gendor, @Address, @Phone, @Email,
                               @NationalityCountryID, @ImagePath);
                               SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName",FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
             command.Parameters.AddWithValue("@ThirdName", ThirdName);
@@ -65,7 +66,7 @@ namespace LicensesDataAccess
         }
 
 
-        public static bool UpdatePerson(int ID,string FirstName, string SecondName,
+        public static bool UpdatePerson(int ID,string NationalNo, string FirstName, string SecondName,
              string ThirdName, string LastName, DateTime DateOfBirth,
              int Gendor, string Address, string Phone, string Email,
              int NationalityCountryID, string ImagePath)
@@ -73,7 +74,9 @@ namespace LicensesDataAccess
             int RowsEffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
             string query = @"UPDATE People
-                               SET FirstName = @FirstName,
+                               SET
+                                   NationalNo = @NationalNo,
+                                   FirstName = @FirstName,
                                    SecondName = @SecondName,
                                    ThirdName = @ThirdName,
                                    LastName = @LastName,
@@ -84,11 +87,12 @@ namespace LicensesDataAccess
                                    Email = @Email,
                                    NationalityCountryID = @NationalityCountryID,
                                    ImagePath = @ImagePath
-                                   where ContactID = @ContactID";
+                                   where PersonID = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@ContactID", ID);
+            command.Parameters.AddWithValue("@PersonID", ID);
+            command.Parameters.AddWithValue("@NationalNo", NationalNo);
             command.Parameters.AddWithValue("@FirstName", FirstName);
             command.Parameters.AddWithValue("@SecondName", SecondName);
             command.Parameters.AddWithValue("@ThirdName", ThirdName);
@@ -159,5 +163,7 @@ namespace LicensesDataAccess
             return dt;
 
         }
+
+       
     }
 }
