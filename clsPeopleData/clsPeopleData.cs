@@ -164,6 +164,125 @@ namespace LicensesDataAccess
 
         }
 
-       
+
+        public static bool GetPersonByID(int ID ,ref string NationalNo, ref string FirstName, ref string SecondName,
+            ref string ThirdName, ref string LastName, ref DateTime DateOfBirth,
+           ref int Gendor, ref string Address, ref string Phone, ref string Email,
+           ref int NationalityCountryID, ref string ImagePath)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "SELECT * FROM People WHERE PersonID = @PersonID";
+           SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("PersonID", ID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if(reader.Read())
+                {
+                    isFound = false;
+                    NationalNo = (string)reader["NationalNo"];
+                    FirstName = (string)reader["FirstName"];
+                    SecondName = (string)reader["SecondName"];
+                    ThirdName = (string)reader["ThirdName"];
+                    LastName = (string)reader["LastName"];
+                    DateOfBirth = (DateTime)reader["DateOfBirth"];
+                    Gendor = (int)reader["Gendor"];
+                    Address = (string)reader["Address"];
+                    Phone = (string)reader["Phone"];
+                    Email = (string)reader["Email"];
+                    NationalityCountryID = (int)reader["NationalityCountryID"];
+                    
+                    if(reader["ImagePath"] != System.DBNull.Value)
+                    {
+                        ImagePath = (string)reader["ImagePath"];
+                    }
+                    else
+                    {
+                        ImagePath = "";
+                    }
+                    reader.Close();
+                }
+                else
+                {
+                    isFound = false;
+                }
+            }
+            catch (Exception ex)
+            {
+               // Console.WriteLine("Error" + ex.ToString());
+               isFound=false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+        
+        return isFound;
+        }
+
+        public static bool DeletePerson(int ID)
+        {
+            int RowsEffected = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = @"DELETE  People
+                            WHERE PersonID = @PersonID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("PersonID", ID);
+
+            try
+            {
+                connection.Open();
+                RowsEffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error" + ex.ToString());
+              
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowsEffected > 0);
+        }
+
+        public static bool IsPersonExist(int ID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+
+            string query = "SELECT Found=1 FROM People WHERE PersonID = @PersonID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@PersonID", ID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
     }
 }

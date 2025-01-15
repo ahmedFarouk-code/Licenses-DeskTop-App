@@ -17,14 +17,15 @@ namespace licensesApp
             InitializeComponent();
         }
 
-        public  void _RefreshPeopleList()
-        {
-            dgvPeoplelist.DataSource = clsPeople.GetAllPeople();
-        }
-
+       
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
-            _RefreshPeopleList();
+            
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

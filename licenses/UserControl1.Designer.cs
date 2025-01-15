@@ -334,7 +334,6 @@
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
-          
             // 
             // UserControl1
             // 
@@ -369,6 +368,7 @@
             this.Controls.Add(this.txtFirstName);
             this.Name = "UserControl1";
             this.Size = new System.Drawing.Size(739, 385);
+            this.Load += new System.EventHandler(this.UserControl1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();

@@ -79,7 +79,7 @@ namespace LicensesBusinessLayer
         }
 
 
-        private bool _UpdateContact()
+        private bool _UpdatePerson()
         {
             return clsPeopleData.UpdatePerson(this.ID,this.NationalNo, this.FirstName, this.SecondName,
                 this.ThirdName, this.LastName, this.DateOfBirth, this.Gendor, this.Address,
@@ -110,14 +110,43 @@ namespace LicensesBusinessLayer
                     }
                 case enMode.Update:
 
-                    return _UpdateContact();
+                    return _UpdatePerson();
 
             }
-
-
 
             return false;
         }
 
+        public static clsPeople Find(int ID)
+        {
+            int Gendor = -1, NationalityCountryID = -1;
+            DateTime DateOfBirth = DateTime.Now;
+            string NationalNo = "",  FirstName ="",  SecondName ="",ThirdName = "",
+            LastName = "", Address = "", Phone = "", Email = "", ImagePath = "";
+
+            if (clsPeopleData.GetPersonByID(ID, ref NationalNo, ref FirstName, ref SecondName,
+           ref ThirdName, ref LastName, ref DateOfBirth,
+          ref Gendor, ref Address, ref Phone, ref Email,
+          ref NationalityCountryID, ref ImagePath))
+
+                return new clsPeople(ID, NationalNo, FirstName, SecondName,
+             ThirdName, LastName, DateOfBirth,
+            Gendor, Address, Phone, Email,
+            NationalityCountryID, ImagePath);
+
+            else
+                return null;
+
+        }
+
+        public static bool isExistPerson(int ID)
+        {
+            return clsPeopleData.IsPersonExist(ID);
+        }
+
+        public static bool DeletePerson(int ID)
+        {
+            return clsPeopleData.DeletePerson(ID);
+        }
     }
 }
