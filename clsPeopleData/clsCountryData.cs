@@ -15,7 +15,7 @@ namespace LicensesDataAccess
             int CountryID = -1;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"INSERT INTO Country (CountryName) 
+            string query = @"INSERT INTO Countries (CountryName) 
                               VALUES(@CountryName);
                               SELECT SCOPE_IDENTITY();";
 
@@ -48,7 +48,7 @@ namespace LicensesDataAccess
         {
             int RowsEffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"UPDATE Country
+            string query = @"UPDATE Countries
                                SET
                                    CountryID = @CountryID     
                                    where CountryID = @CountryID";
@@ -83,7 +83,7 @@ namespace LicensesDataAccess
             DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM Country";
+            string query = "SELECT * FROM Countries order by CountryName";
 
             SqlCommand command = new SqlCommand(query, connection);
 
@@ -116,7 +116,7 @@ namespace LicensesDataAccess
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM Country WHERE CountryID = @CountryID";
+            string query = "SELECT * FROM Countries WHERE CountryID = @CountryID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("CountryID", ID);
 
@@ -153,7 +153,7 @@ namespace LicensesDataAccess
         {
             int RowsEffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"DELETE  Country
+            string query = @"DELETE  Countries
                             WHERE CountryID = @CountryID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("CountryID", ID);
@@ -182,7 +182,7 @@ namespace LicensesDataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
 
-            string query = "SELECT Found=1 FROM Country WHERE CountryID = @CountryID";
+            string query = "SELECT Found=1 FROM Countries WHERE CountryID = @CountryID";
 
             SqlCommand command = new SqlCommand(query, connection);
 

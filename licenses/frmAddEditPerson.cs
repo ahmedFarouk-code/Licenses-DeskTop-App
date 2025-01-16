@@ -12,11 +12,18 @@ namespace licensesApp
 {
     public partial class frmAddEditPerson : Form
     {
-        public frmAddEditPerson()
+        private int _PersonID;
+        public frmAddEditPerson(int PersonID)
         {
             InitializeComponent();
+
+            _PersonID = PersonID;
+            userControl11.PersonID = _PersonID;
         }
 
-       
+        private void frmAddEditPerson_Load(object sender, EventArgs e)
+        {
+            lblPersonID.Text = _PersonID.ToString();
+        }
     }
 }
