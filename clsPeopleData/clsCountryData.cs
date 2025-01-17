@@ -116,9 +116,9 @@ namespace LicensesDataAccess
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM Countries WHERE CountryID = @CountryID";
+            string query = "SELECT * FROM Countries WHERE CountryID = @CountryID;";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("CountryID", ID);
+            command.Parameters.AddWithValue("@CountryID", ID);
 
             try
             {
@@ -126,19 +126,58 @@ namespace LicensesDataAccess
                 SqlDataReader reader = command.ExecuteReader();
                 if (reader.Read())
                 {
-                    isFound = false;
-                    CountryName = (string)reader[" CountryName"];
+                    isFound = true;
+                    CountryName = (string)reader["CountryName"];
                     
-                    reader.Close();
+                   
                 }
                 else
                 {
                     isFound = false;
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
-                // Console.WriteLine("Error" + ex.ToString());
+                 //Console.WriteLine("Error" + ex.ToString());
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        public static bool GetCountryByName(ref int ID,  string CountryName)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "SELECT * FROM Countries WHERE CountryName = @CountryName;";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@CountryName", CountryName);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    ID = (int)reader["CountryID"];
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error" + ex.ToString());
                 isFound = false;
             }
             finally

@@ -96,6 +96,20 @@ namespace LicensesBusinessLayer
 
         }
 
+        public static clsCountry Find(string CountryName)
+        {
+
+            int ID = -1;
+
+            if (clsCountryData.GetCountryByName(ref ID,  CountryName))
+
+                return new clsCountry(ID, CountryName);
+
+            else
+                return null;
+
+        }
+
         public static bool isExistCountry(int ID)
         {
             return clsCountryData.IsCountryExist(ID);

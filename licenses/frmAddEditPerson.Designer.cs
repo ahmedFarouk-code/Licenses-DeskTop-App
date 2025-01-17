@@ -57,23 +57,25 @@
             // lblFormTitle
             // 
             this.lblFormTitle.AutoSize = true;
-            this.lblFormTitle.Font = new System.Drawing.Font("Tahoma", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFormTitle.ForeColor = System.Drawing.Color.Red;
-            this.lblFormTitle.Location = new System.Drawing.Point(353, 23);
+            this.lblFormTitle.Font = new System.Drawing.Font("Stencil", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblFormTitle.ForeColor = System.Drawing.SystemColors.MenuHighlight;
+            this.lblFormTitle.Location = new System.Drawing.Point(300, 19);
             this.lblFormTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblFormTitle.Name = "lblFormTitle";
-            this.lblFormTitle.Size = new System.Drawing.Size(255, 35);
+            this.lblFormTitle.Size = new System.Drawing.Size(267, 34);
             this.lblFormTitle.TabIndex = 3;
             this.lblFormTitle.Text = "Add New Person";
             // 
             // userControl11
             // 
-            this.userControl11.Location = new System.Drawing.Point(54, 61);
+            this.userControl11.BackColor = System.Drawing.SystemColors.Control;
+            this.userControl11.Location = new System.Drawing.Point(25, 56);
             this.userControl11.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.userControl11.Name = "userControl11";
             this.userControl11.PersonID = 0;
             this.userControl11.Size = new System.Drawing.Size(835, 399);
             this.userControl11.TabIndex = 4;
+            this.userControl11.RequestCloseForm += new System.EventHandler(this.MyUserControl_RequestCloseForm);
             // 
             // frmAddEditPerson
             // 

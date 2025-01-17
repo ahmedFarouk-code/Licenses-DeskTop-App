@@ -21,7 +21,7 @@ namespace LicensesBusinessLayer
         public string ThirdName { get; set; }
         public string LastName { get; set; }
         public DateTime DateOfBirth { get; set; }
-        public int Gendor { get; set; }
+        public byte Gendor { get; set; }
         public string Address { get; set; }
         public string Phone { get; set; }
         public string Email { get; set; }
@@ -29,21 +29,21 @@ namespace LicensesBusinessLayer
         public string ImagePath { get; set; }
 
 
-        private clsPeople(int ID,string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, int Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
+        private clsPeople(int ID,string NationalNo, string FirstName, string SecondName, string ThirdName, string LastName, DateTime DateOfBirth, byte Gendor, string Address, string Phone, string Email, int NationalityCountryID, string ImagePath)
         {
-            this.ID = ID;
-            this.NationalNo = NationalNo;
-            this.FirstName = FirstName;
-            this.SecondName = SecondName;
-            this.ThirdName = ThirdName;
-            this.LastName = LastName;
-            this.DateOfBirth = DateOfBirth;
-            this.Gendor = Gendor;
-            this.Address = Address;
-            this.Phone = Phone;
-            this.Email = Email;
+            this.ID                   = ID; 
+            this.NationalNo           = NationalNo;
+            this.FirstName            = FirstName;
+            this.SecondName           = SecondName;
+            this.ThirdName            = ThirdName;
+            this.LastName             = LastName;
+            this.DateOfBirth          = DateOfBirth;
+            this.Gendor               = Gendor;
+            this.Address              = Address;
+            this.Phone                = Phone;
+            this.Email                = Email;
             this.NationalityCountryID = NationalityCountryID;
-            this.ImagePath = ImagePath;
+            this.ImagePath            = ImagePath;
 
             Mode = enMode.Update;
         }
@@ -119,7 +119,7 @@ namespace LicensesBusinessLayer
 
         public static clsPeople Find(int ID)
         {
-            int Gendor = -1, NationalityCountryID = -1;
+            byte Gendor = 0; int NationalityCountryID = -1;
             DateTime DateOfBirth = DateTime.Now;
             string NationalNo = "",  FirstName ="",  SecondName ="",ThirdName = "",
             LastName = "", Address = "", Phone = "", Email = "", ImagePath = "";

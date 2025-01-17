@@ -12,7 +12,7 @@ namespace LicensesDataAccess
     {
         public static int AddNewPerson(string NationalNo ,string FirstName,  string SecondName,
              string ThirdName ,  string LastName,  DateTime DateOfBirth,
-             int Gendor,  string Address,  string Phone,  string Email,
+             byte Gendor,  string Address,  string Phone,  string Email,
              int NationalityCountryID,  string ImagePath)
         {
             int PersonID = -1;
@@ -68,7 +68,7 @@ namespace LicensesDataAccess
 
         public static bool UpdatePerson(int ID,string NationalNo, string FirstName, string SecondName,
              string ThirdName, string LastName, DateTime DateOfBirth,
-             int Gendor, string Address, string Phone, string Email,
+             byte Gendor, string Address, string Phone, string Email,
              int NationalityCountryID, string ImagePath)
         {
             int RowsEffected = -1;
@@ -167,14 +167,14 @@ namespace LicensesDataAccess
 
         public static bool GetPersonByID(int ID ,ref string NationalNo, ref string FirstName, ref string SecondName,
             ref string ThirdName, ref string LastName, ref DateTime DateOfBirth,
-           ref int Gendor, ref string Address, ref string Phone, ref string Email,
+           ref byte Gendor, ref string Address, ref string Phone, ref string Email,
            ref int NationalityCountryID, ref string ImagePath)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
             string query = "SELECT * FROM People WHERE PersonID = @PersonID";
            SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("PersonID", ID);
+            command.Parameters.AddWithValue("@PersonID", ID);
 
             try
             {
@@ -182,14 +182,14 @@ namespace LicensesDataAccess
                 SqlDataReader reader = command.ExecuteReader();
                 if(reader.Read())
                 {
-                    isFound = false;
+                    isFound = true;
                     NationalNo = (string)reader["NationalNo"];
                     FirstName = (string)reader["FirstName"];
                     SecondName = (string)reader["SecondName"];
                     ThirdName = (string)reader["ThirdName"];
                     LastName = (string)reader["LastName"];
                     DateOfBirth = (DateTime)reader["DateOfBirth"];
-                    Gendor = (int)reader["Gendor"];
+                    Gendor = (byte)reader["Gendor"];
                     Address = (string)reader["Address"];
                     Phone = (string)reader["Phone"];
                     Email = (string)reader["Email"];
@@ -203,16 +203,17 @@ namespace LicensesDataAccess
                     {
                         ImagePath = "";
                     }
-                    reader.Close();
+                    
                 }
                 else
                 {
                     isFound = false;
                 }
+                reader.Close();
             }
             catch (Exception ex)
             {
-               // Console.WriteLine("Error" + ex.ToString());
+               //Console.WriteLine("Error" + ex.ToString());
                isFound=false;
             }
             finally

@@ -3,20 +3,22 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrol1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddeditperson.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{3C70E07C-93B3-4A0D-95EC-3C832EDDCFAC}|..\\clsPeopleData\\LicensesDataAccess.csproj|d:\\licenses-desktop-app\\clspeopledata\\clscountrydata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BF4E826-7FCC-4A50-AE5B-64438188B091}|..\\LicensesBusinessLayer\\LicensesBusinessLayer.csproj|d:\\licenses-desktop-app\\licensesbusinesslayer\\clscountry.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +28,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,41 +40,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAddEditPerson.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs",
-              "RelativeDocumentMoniker": "frmAddEditPerson.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs*",
-              "RelativeToolTip": "frmAddEditPerson.cs*",
-              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBsAAAALAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T09:12:01.032Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "frmAddEditPerson.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs",
-              "RelativeDocumentMoniker": "frmAddEditPerson.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs [Design]*",
-              "RelativeToolTip": "frmAddEditPerson.cs [Design]*",
+              "Title": "clsCountryData.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsCountryData.cs",
+              "RelativeDocumentMoniker": "..\\clsPeopleData\\clsCountryData.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsCountryData.cs",
+              "RelativeToolTip": "..\\clsPeopleData\\clsCountryData.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAAowKYAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T08:53:50.177Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-17T17:06:19.822Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "UserControl1.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs",
-              "RelativeDocumentMoniker": "UserControl1.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs",
-              "RelativeToolTip": "UserControl1.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAIwCUAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 4,
+              "Title": "clsCountry.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsCountry.cs",
+              "RelativeDocumentMoniker": "..\\LicensesBusinessLayer\\clsCountry.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsCountry.cs",
+              "RelativeToolTip": "..\\LicensesBusinessLayer\\clsCountry.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAIwFkAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T07:36:21.579Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-17T17:02:20.397Z"
             },
             {
               "$type": "Document",
@@ -80,11 +68,37 @@
               "Title": "UserControl1.cs [Design]",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs",
               "RelativeDocumentMoniker": "UserControl1.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs [Design]",
-              "RelativeToolTip": "UserControl1.cs [Design]",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs [Design]*",
+              "RelativeToolTip": "UserControl1.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-16T07:36:19.159Z",
+              "WhenOpened": "2025-01-17T16:33:51.448Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserControl1.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs",
+              "RelativeDocumentMoniker": "UserControl1.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl1.cs*",
+              "RelativeToolTip": "UserControl1.cs*",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAAAFEAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T16:03:23.932Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddEditPerson.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs",
+              "RelativeDocumentMoniker": "frmAddEditPerson.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditPerson.cs",
+              "RelativeToolTip": "frmAddEditPerson.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAWwBoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-17T15:59:32.854Z",
+              "EditorCaption": ""
             }
           ]
         }

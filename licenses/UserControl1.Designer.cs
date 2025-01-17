@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UserControl1));
             this.txtFirstName = new System.Windows.Forms.TextBox();
             this.txtSecondName = new System.Windows.Forms.TextBox();
             this.txtThirdName = new System.Windows.Forms.TextBox();
@@ -57,6 +58,7 @@
             this.llblSetImage = new System.Windows.Forms.LinkLabel();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -153,6 +155,7 @@
             this.rbFemale.TabStop = true;
             this.rbFemale.Text = "Female";
             this.rbFemale.UseVisualStyleBackColor = true;
+            this.rbFemale.CheckedChanged += new System.EventHandler(this.rbFemale_CheckedChanged);
             // 
             // rbMale
             // 
@@ -164,6 +167,7 @@
             this.rbMale.TabStop = true;
             this.rbMale.Text = "Male";
             this.rbMale.UseVisualStyleBackColor = true;
+            this.rbMale.CheckedChanged += new System.EventHandler(this.rbMale_CheckedChanged);
             // 
             // label1
             // 
@@ -296,9 +300,11 @@
             // 
             // pictureBox1
             // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(570, 57);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(137, 166);
+            this.pictureBox1.Size = new System.Drawing.Size(118, 130);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 24;
             this.pictureBox1.TabStop = false;
             // 
@@ -306,12 +312,13 @@
             // 
             this.llblSetImage.AutoSize = true;
             this.llblSetImage.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.llblSetImage.Location = new System.Drawing.Point(605, 235);
+            this.llblSetImage.Location = new System.Drawing.Point(603, 190);
             this.llblSetImage.Name = "llblSetImage";
             this.llblSetImage.Size = new System.Drawing.Size(66, 16);
             this.llblSetImage.TabIndex = 25;
             this.llblSetImage.TabStop = true;
             this.llblSetImage.Text = "Set Image";
+            this.llblSetImage.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblSetImage_LinkClicked);
             // 
             // btnSave
             // 
@@ -323,6 +330,7 @@
             this.btnSave.TabIndex = 26;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -334,11 +342,17 @@
             this.btnClose.TabIndex = 27;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // UserControl1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.llblSetImage);
@@ -408,5 +422,6 @@
         private System.Windows.Forms.LinkLabel llblSetImage;
         private System.Windows.Forms.Button btnSave;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

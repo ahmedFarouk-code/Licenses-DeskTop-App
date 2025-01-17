@@ -12,6 +12,7 @@ namespace licensesApp
 {
     public partial class frmManagePeople : Form
     {
+       
         public frmManagePeople()
         {
             InitializeComponent();
@@ -19,7 +20,7 @@ namespace licensesApp
 
        private void _RefreshPeopleList()
         {
-            dgvPeoplelist.DataSource = clsPeople.GetAllPeople();
+                dgvPeoplelist.DataSource = clsPeople.GetAllPeople();
             _GetRecords();
         }
 
@@ -52,5 +53,19 @@ namespace licensesApp
             frm.ShowDialog();
             _RefreshPeopleList();
         }
+
+        private void btnAddNew_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddEditPerson(-1);
+            frm.ShowDialog();
+            _RefreshPeopleList();
+        }
+
+        private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsPeople.DeletePerson((int)dgvPeoplelist.CurrentRow.Cells[0].Value);
+        }
+
+        
     }
 }
