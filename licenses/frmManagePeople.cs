@@ -12,18 +12,75 @@ namespace licensesApp
 {
     public partial class frmManagePeople : Form
     {
-       
+        DataTable peopleTable = clsPeople.GetAllPeople();
         public frmManagePeople()
         {
             InitializeComponent();
         }
 
-       private void _RefreshPeopleList()
+
+        private void ApplyFilter()
         {
-                dgvPeoplelist.DataSource = clsPeople.GetAllPeople();
-            _GetRecords();
+            if (peopleTable == null || cbFilterBy.SelectedIndex == 0) return;
+
+            string selectedColumn = cbFilterBy.SelectedItem.ToString(); // اسم العمود المختار
+            string filterValue = txtFilterbyval.Text; // النص المراد الفلترة عليه
+
+            try
+            {
+                // الحصول على نوع العمود من DataTable
+                Type columnType = peopleTable.Columns[selectedColumn].DataType;
+
+                // إنشاء DataView لتطبيق الفلترة
+                DataView dv = peopleTable.DefaultView;
+
+                if (!string.IsNullOrWhiteSpace(filterValue))
+                {
+                    // إذا كان نوع العمود نصيًا
+                    if (columnType == typeof(string))
+                    {
+                        dv.RowFilter = $"{selectedColumn} LIKE '%{filterValue}%'";
+                    }
+                    // إذا كان نوع العمود رقميًا
+                    else if (columnType == typeof(int) || columnType == typeof(decimal) || columnType == typeof(double))
+                    {
+                        if (int.TryParse(filterValue, out int intValue))
+                        {
+                            dv.RowFilter = $"{selectedColumn} = {intValue}";
+                        }
+                        else
+                        {
+                            MessageBox.Show("الرجاء إدخال قيمة رقمية صحيحة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            return;
+                        }
+                    }
+                    // التعامل مع أنواع أخرى إذا لزم الأمر
+                    else
+                    {
+                        MessageBox.Show("نوع العمود غير مدعوم للفلترة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        return;
+                    }
+                }
+                else
+                {
+                    dv.RowFilter = ""; // إظهار جميع البيانات إذا كان النص فارغاً
+                }
+
+                dgvPeoplelist.DataSource = dv;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"خطأ أثناء الفلترة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
+        private void _RefreshPeopleList()
+        {
+                dgvPeoplelist.DataSource = peopleTable;
+            cbFilterBy.SelectedIndex = 0;
+        }
+
+       
         private void frmManagePeople_Load(object sender, EventArgs e)
         {
             _RefreshPeopleList();
@@ -63,9 +120,22 @@ namespace licensesApp
 
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            clsPeople.DeletePerson((int)dgvPeoplelist.CurrentRow.Cells[0].Value);
+            
+            if(clsPeople.DeletePerson((int)dgvPeoplelist.CurrentRow.Cells[0].Value));
+            MessageBox.Show("Data Saved Successfully.");
+            _RefreshPeopleList();
         }
 
-        
+        private void txtFilterbyval_TextChanged(object sender, EventArgs e)
+        {
+            ApplyFilter();
+        }
+
+        private void personDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmPersonDetails((int)dgvPeoplelist.CurrentRow.Cells[0].Value);
+             frm.ShowDialog();
+            _RefreshPeopleList();
+        }
     }
 }

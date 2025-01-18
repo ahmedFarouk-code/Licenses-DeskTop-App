@@ -16,8 +16,8 @@ namespace licensesApp
 {
     public partial class UserControl1 : UserControl
     {
-      
-         public enum enMode { AddNew = 0, Update = 1 };
+        private string SaveImagePath = @"D:\Licenses-DeskTop-App\licenses\PeopleImages";
+        public enum enMode { AddNew = 0, Update = 1 };
         private enMode _Mode;
         
         clsPeople _Person;
@@ -90,7 +90,7 @@ namespace licensesApp
             
             else
             {
-
+                llblRemove.Enabled = false;
                 if (_Person.Gendor == 0)
                 {
                     rbMale.Checked = true;
@@ -133,13 +133,15 @@ private void UserControl1_Load(object sender, EventArgs e)
 
         private void rbMale_CheckedChanged(object sender, EventArgs e)
         {
+            if(_Person.ImagePath=="")
             pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_man.PNG");
 
         }
 
         private void rbFemale_CheckedChanged(object sender, EventArgs e)
         {
-            pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_woman.PNG");
+            if (_Person.ImagePath == "")
+                pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_woman.PNG");
 
         }
         public event EventHandler RequestCloseForm;
@@ -158,7 +160,7 @@ private void UserControl1_Load(object sender, EventArgs e)
             _Person.SecondName = txtSecondName.Text;
             _Person.ThirdName = txtThirdName.Text;
             _Person.LastName = txtLastName.Text;
-            _Person.NationalityCountryID = CountryID;
+            _Person.NationalNo = txtNationalNo.Text;
             _Person.Email = txtEmail.Text;
             _Person.Phone = txtPhone.Text;
             _Person.Address = txtAddress.Text;
@@ -176,11 +178,16 @@ private void UserControl1_Load(object sender, EventArgs e)
 
 
             if (pictureBox1.ImageLocation != null)
+               
                 _Person.ImagePath = pictureBox1.ImageLocation;
+            
+               
+            
             else
                 _Person.ImagePath = "";
 
             if (_Person.Save())
+             
                 MessageBox.Show("Data Saved Successfully.");
             else
                 MessageBox.Show("Error: Data Is not Saved Successfully.");
@@ -188,6 +195,140 @@ private void UserControl1_Load(object sender, EventArgs e)
             _Mode = enMode.Update;
            
            
+        }
+
+        private void txtFirstName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtFirstName.Text))
+            {
+                e.Cancel = true;
+                txtFirstName.Focus();
+                errorProvider1.SetError(txtFirstName, "FirstName should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtFirstName, "");
+            }
+        }
+
+        private void txtSecondName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtSecondName.Text))
+            {
+                e.Cancel = true;
+                txtSecondName.Focus();
+                errorProvider1.SetError(txtSecondName, "Second should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtSecondName, "");
+            }
+        }
+
+        private void txtThirdName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtThirdName.Text))
+            {
+                e.Cancel = true;
+                txtThirdName.Focus();
+                errorProvider1.SetError(txtThirdName, "ThirdName should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtThirdName, "");
+            }
+        }
+
+        private void txtNationalNo_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtNationalNo.Text))
+            {
+                e.Cancel = true;
+                txtNationalNo.Focus();
+                errorProvider1.SetError(txtNationalNo, "NationalNo should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtNationalNo, "");
+            }
+        }
+
+        private void txtLastName_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtLastName.Text))
+            {
+                e.Cancel = true;
+                txtLastName.Focus();
+                errorProvider1.SetError(txtLastName, "LastName should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtLastName, "");
+            }
+        }
+
+        private void txtPhone_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtPhone.Text))
+            {
+                e.Cancel = true;
+                txtPhone.Focus();
+                errorProvider1.SetError(txtPhone, "Phone should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtPhone, "");
+            }
+        }
+
+        private void txtEmail_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtEmail.Text))
+            {
+                e.Cancel = true;
+                txtEmail.Focus();
+                errorProvider1.SetError(txtEmail, "Email should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtEmail, "");
+            }
+        }
+
+        private void txtAddress_Validating(object sender, CancelEventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtAddress.Text))
+            {
+                e.Cancel = true;
+                txtAddress.Focus();
+                errorProvider1.SetError(txtAddress, "Address should have a value!");
+            }
+            else
+            {
+                e.Cancel = false;
+                errorProvider1.SetError(txtAddress, "");
+            }
+        }
+
+        private void llblRemove_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            _Person.ImagePath = "";
+            if(rbMale.Checked == true)
+            {
+                pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_man.PNG");
+            }
+            else
+            {
+                pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_woman.PNG");
+            }
+            
         }
     }
 }
