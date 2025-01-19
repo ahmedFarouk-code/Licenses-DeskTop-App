@@ -12,9 +12,11 @@ namespace licensesApp
 {
     public partial class frmMainMenu : Form
     {
-        public frmMainMenu()
+        private int _UserID;
+        public frmMainMenu(int UserID)
         {
             InitializeComponent();
+            _UserID = UserID;
         }
 
         private void peopleToolStripMenuItem_Click(object sender, EventArgs e)

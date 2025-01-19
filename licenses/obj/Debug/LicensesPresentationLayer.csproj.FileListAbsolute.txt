@@ -18,3 +18,4 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControl1.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditPerson.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmPersonDetails.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControlPersonDetails.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmLoginScreen.resources

@@ -13,7 +13,7 @@ namespace LicensesDataAccess
     public class clsUserData
     {
         public static int AddNewUser(int PersonID , string UserName ,
-             string Password , byte IsActive)
+             string Password , bool IsActive)
         {
             int UserID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
@@ -50,7 +50,7 @@ namespace LicensesDataAccess
         }
 
         public static bool UpdateUser(int UserID,  int PersonID,  string UserName,
-             string Password,  byte IsActive)
+             string Password, bool IsActive)
         {
             int rowseffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
@@ -112,7 +112,7 @@ namespace LicensesDataAccess
         }
 
         public static bool GetUserByID(int UserID ,ref int PersonID, ref string UserName,
-           ref string Password, ref byte IsActive)
+           ref string Password, ref bool IsActive)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
@@ -130,7 +130,7 @@ namespace LicensesDataAccess
                     PersonID = (int)reader["PersonID"];
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
-                    IsActive = (byte)reader["IsActive"];
+                    IsActive = (bool)reader["IsActive"];
                 }
                 else
                 {
@@ -152,11 +152,11 @@ namespace LicensesDataAccess
         }
 
         public static bool GetUserByUserNameAndUserName(ref int UserID, ref int PersonID,  string UserName,
-            string Password, ref byte IsActive)
+            string Password, ref bool IsActive)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM User WHERE UserName = @UserName AND Password = @Password";
+            string query = "SELECT * FROM Users WHERE UserName = @UserName AND Password = @Password";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@UserName", UserName);
             command.Parameters.AddWithValue("@Password", Password);
@@ -170,7 +170,7 @@ namespace LicensesDataAccess
                     isFound = true;
                     UserID = (int)reader["UserID"];
                     PersonID = (int)reader["PersonID"];   
-                    IsActive = (byte)reader["IsActive"];
+                    IsActive = (bool)reader["IsActive"];
                 }
                 else
                 {
