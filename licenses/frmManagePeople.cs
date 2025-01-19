@@ -39,7 +39,7 @@ namespace licensesApp
                     // إذا كان نوع العمود نصيًا
                     if (columnType == typeof(string))
                     {
-                        dv.RowFilter = $"{selectedColumn} LIKE '%{filterValue}%'";
+                        dv.RowFilter = $"{selectedColumn} LIKE '{filterValue}%'";
                     }
                     // إذا كان نوع العمود رقميًا
                     else if (columnType == typeof(int) || columnType == typeof(decimal) || columnType == typeof(double))
