@@ -148,7 +148,7 @@
   <data name="addNewUserToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAGzhJREFUeF7tnAdUVle3rr94k/xJjiIoAlIUFLsSW4yxixEsIIiigAiKgAjGhhij
+        vAAADrwBlbxySQAAGzhJREFUeF7tnAdUVle3rr94k/xJjiIoAlIUFLsSW4yxixEsIIiigAiKgAjGhhij
         goXEXlAEUaT33nvvoghix44NDSKiQZr4njm3fIYY8597xzH/DRmZY7xjs7+29nq+Od811wYV/RP/xD/x
         T/wT/8Q/8X8b8vLyou7du3caMGCA9LBhw8aoqakZkzbRz/tIB0jbSeZDhw4dR5Lo37+/aOTIkW3v/pvG
         F198IRz79u0rN3z4cL0xY8YcHzt2bPlXX31VR+etgwcPxqBBg95V3cCBA7NUVVW1JCQkOvXs2VP4jL9V
@@ -578,7 +578,7 @@
   <data name="btnAddNewUser.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vQAADr0BR/uQrQAAGzhJREFUeF7tnAdUVle3rr94k/xJjiIoAlIUFLsSW4yxixEsIIiigAiKgAjGhhij
+        vAAADrwBlbxySQAAGzhJREFUeF7tnAdUVle3rr94k/xJjiIoAlIUFLsSW4yxixEsIIiigAiKgAjGhhij
         goXEXlAEUaT33nvvoghix44NDSKiQZr4njm3fIYY8597xzH/DRmZY7xjs7+29nq+Od811wYV/RP/xD/x
         T/wT/8Q/8X8b8vLyou7du3caMGCA9LBhw8aoqakZkzbRz/tIB0jbSeZDhw4dR5Lo37+/aOTIkW3v/pvG
         F198IRz79u0rN3z4cL0xY8YcHzt2bPlXX31VR+etgwcPxqBBg95V3cCBA7NUVVW1JCQkOvXs2VP4jL9V

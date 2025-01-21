@@ -35,5 +35,12 @@ namespace licensesApp
             Form frm = new frmManageUsers();
             frm.ShowDialog();
         }
+
+        private void currentUserInfoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmUserDetails(_UserID);
+            frm.ShowDialog();
+            
+        }
     }
 }

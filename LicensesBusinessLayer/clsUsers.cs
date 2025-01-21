@@ -90,6 +90,16 @@ namespace LicensesBusinessLayer
                 return null;
         }
 
+        public static clsUsers FindByUserID(int UserID)
+        {
+            int PersonID = -1; string UserName = "", Password = "";
+            bool IsActive = false;
+
+            if (clsUserData.GetUserByUserID( UserID, ref PersonID, ref UserName, ref Password, ref IsActive))
+                return new clsUsers(UserID, PersonID, UserName, Password, IsActive);
+            else
+                return null;
+        }
 
         public static clsUsers Find(string UserName ,string Password)
         {

@@ -116,6 +116,11 @@ namespace licensesApp
             _RefreshYsersList();
         }
 
-        
+        private void showDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmUserDetails((int)dgvUsersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshYsersList();
+        }
     }
 }
