@@ -43,6 +43,7 @@ namespace licensesApp
             lblPhone.Text = _Person.Phone;
             lblAddress.Text = _Person.Address;
             lblDateOfBirth.Text = _Person.DateOfBirth.ToString();
+            lblCountry.Text = clsCountry.Find(_Person.NationalityCountryID).CountryName;
             if (_Person.ImagePath != "")
             {
 

@@ -42,5 +42,12 @@ namespace licensesApp
             frm.ShowDialog();
             
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmChangePassword(_UserID);
+            frm.ShowDialog();
+            
+        }
     }
 }

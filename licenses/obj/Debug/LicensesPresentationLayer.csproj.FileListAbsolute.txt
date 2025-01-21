@@ -22,3 +22,4 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmLoginScreen.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmManageUsers.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditUser.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmUserDetails.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmChangePassword.resources

@@ -122,5 +122,12 @@ namespace licensesApp
             frm.ShowDialog();
             _RefreshYsersList();
         }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmChangePassword((int)dgvUsersList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+            _RefreshYsersList();
+        }
     }
 }
