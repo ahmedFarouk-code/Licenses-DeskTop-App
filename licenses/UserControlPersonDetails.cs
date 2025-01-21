@@ -24,14 +24,13 @@ namespace licensesApp
             Form frm = new frmAddEditPerson(PersonID);
             frm.ShowDialog();
         }
-
-        private void groupBox1_Enter(object sender, EventArgs e)
+        public void ReloadData()
         {
             _Person = clsPeople.Find(PersonID);
 
             if (_Person == null)
             {
-                //MessageBox.Show("This form will be closed because No Person with ID = " + PersonID);
+                MessageBox.Show("this person not found");
 
 
                 return;
@@ -60,7 +59,7 @@ namespace licensesApp
 
             else
             {
-               
+
                 if (_Person.Gendor == 0)
                 {
                     lblGendor.Text = "Male";
@@ -72,6 +71,12 @@ namespace licensesApp
                     pictureBox1.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_woman.PNG");
                 }
             }
+        }
+
+        private void UserControlPersonDetails_Load(object sender, EventArgs e)
+        {
+
+            ReloadData();
         }
     }
 }

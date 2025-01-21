@@ -23,15 +23,26 @@ namespace licensesApp
         private  void isHaveAccesse()
         {
             _User = clsUsers.Find(txtUserName.Text, txtPassword.Text);
-            if (_User != null)
+           
+                if (_User != null)
                 {
-                 Form frm = new frmMainMenu(_User.UserID);
-                 frm.ShowDialog();
+                  if(_User.IsActive)
+                  {
+                    Form frm = new frmMainMenu(_User.UserID);
+                    frm.ShowDialog();
+                  }
+                  else
+                  {
+                    MessageBox.Show("Your Account Is Not Active (Contact Your Admin)", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            else
-            {
-                MessageBox.Show("User Not Found");
-            }
+
+                }
+
+                else
+                {
+                    MessageBox.Show("User Name Or Password Is Incorrect", "Login Failed", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                }
+            
         }
 
         private void btnLogIn_Click(object sender, EventArgs e)

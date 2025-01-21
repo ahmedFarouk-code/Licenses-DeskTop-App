@@ -26,6 +26,7 @@ namespace LicensesBusinessLayer
             this.UserName = UserName;
             this.Password = Password;
             this.IsActive = IsActive;
+            Mode = enMode.Update;
         }
 
         public clsUsers()
@@ -35,6 +36,7 @@ namespace LicensesBusinessLayer
             this.UserName = "";
             this.Password = "";
             this.IsActive = false;
+            Mode = enMode.AddNew;
         }
 
         private  bool _AddNewUser()
@@ -77,12 +79,12 @@ namespace LicensesBusinessLayer
             return false;
         }
 
-        public static clsUsers Find(int UserID)
+        public static clsUsers Find(int PersonID)
         {
-            int PersonID = -1; string UserName = "", Password = "";
+            int UserID = -1; string UserName = "", Password = "";
             bool IsActive = false;
 
-            if (clsUserData.GetUserByID(UserID, ref PersonID, ref UserName, ref Password, ref IsActive))
+            if (clsUserData.GetUserByID(ref UserID,  PersonID, ref UserName, ref Password, ref IsActive))
                 return new clsUsers(UserID, PersonID, UserName, Password, IsActive);
             else
                 return null;
@@ -106,10 +108,12 @@ namespace LicensesBusinessLayer
             return clsUserData.DeleteUser(UserID);
         }
 
-        public static bool isExistUser(int UserID)
+        public static bool isExistUser(int PersonID)
         {
-            return clsUserData.IsUserExist(UserID);
+            return clsUserData.IsUserExist(PersonID);
         }
+
+        
 
     }
 }

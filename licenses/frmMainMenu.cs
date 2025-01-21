@@ -24,5 +24,16 @@ namespace licensesApp
             Form frm = new frmManagePeople();
             frm.ShowDialog();
         }
+
+        private void signOutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void usersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManageUsers();
+            frm.ShowDialog();
+        }
     }
 }

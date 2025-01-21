@@ -17,8 +17,8 @@ namespace LicensesDataAccess
         {
             int UserID = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"INSERT INTO Users(UserID ,PersonID ,UserName ,Password ,IsActive)
-                                   VALUES(@UserID ,@PersonID ,@UserName ,@Password ,@IsActive);
+            string query = @"INSERT INTO Users(PersonID ,UserName ,Password ,IsActive)
+                                   VALUES(@PersonID ,@UserName ,@Password ,@IsActive);
                                       SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -55,13 +55,19 @@ namespace LicensesDataAccess
             int rowseffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
             string query = @"UPDATE  Users
-                               SET   PersonID=@PersonID
-                                     UserName=@UserName
-                                     Password=@Password
+                               SET 
+                                     PersonID=@PersonID,
+                                     UserName=@UserName,
+                                     Password=@Password,
                                      IsActive=@IsActive
                                WHERE UserID=@UserID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@UserName", UserName);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
+            command.Parameters.AddWithValue("@Password", Password);
+            command.Parameters.AddWithValue("@IsActive", IsActive);
+           
 
             try
             {
@@ -111,14 +117,14 @@ namespace LicensesDataAccess
                 return dt;
         }
 
-        public static bool GetUserByID(int UserID ,ref int PersonID, ref string UserName,
+        public static bool GetUserByID(ref int UserID , int PersonID, ref string UserName,
            ref string Password, ref bool IsActive)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM User WHERE UserID = @UserID";
+            string query = "SELECT * FROM Users WHERE PersonID = @PersonID";
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
 
             try
             {
@@ -127,7 +133,7 @@ namespace LicensesDataAccess
                 if (reader.Read())
                 {
                     isFound = true;
-                    PersonID = (int)reader["PersonID"];
+                    UserID = (int)reader["UserID"];
                     UserName = (string)reader["UserName"];
                     Password = (string)reader["Password"];
                     IsActive = (bool)reader["IsActive"];
@@ -195,7 +201,7 @@ namespace LicensesDataAccess
         {
             int RowsEffected = -1;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = @"DELETE  User
+            string query = @"DELETE  Users
                             WHERE UserID = @UserID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("UserID", UserID);
@@ -218,17 +224,17 @@ namespace LicensesDataAccess
             return (RowsEffected > 0);
         }
 
-        public static bool IsUserExist(int UserID)
+        public static bool IsUserExist(int PersonID)
         {
             bool isFound = false;
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
 
-            string query = "SELECT Found=1 FROM User WHERE UserID = @UserID";
+            string query = "SELECT Found=1 FROM Users WHERE PersonID = @PersonID";
 
             SqlCommand command = new SqlCommand(query, connection);
 
-            command.Parameters.AddWithValue("@UserID", UserID);
+            command.Parameters.AddWithValue("@PersonID", PersonID);
 
             try
             {

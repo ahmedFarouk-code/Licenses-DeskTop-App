@@ -76,6 +76,7 @@
             this.userControl11.Size = new System.Drawing.Size(835, 399);
             this.userControl11.TabIndex = 4;
             this.userControl11.RequestCloseForm += new System.EventHandler(this.MyUserControl_RequestCloseForm);
+           
             // 
             // frmAddEditPerson
             // 

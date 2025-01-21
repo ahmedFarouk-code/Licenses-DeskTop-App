@@ -50,14 +50,14 @@ namespace licensesApp
                         }
                         else
                         {
-                            MessageBox.Show("الرجاء إدخال قيمة رقمية صحيحة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                            MessageBox.Show("Please enter a valid numerical value.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                             return;
                         }
                     }
                     // التعامل مع أنواع أخرى إذا لزم الأمر
                     else
                     {
-                        MessageBox.Show("نوع العمود غير مدعوم للفلترة.", "تحذير", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        MessageBox.Show("Column type is not supported for filtering.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         return;
                     }
                 }
@@ -70,7 +70,7 @@ namespace licensesApp
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"خطأ أثناء الفلترة: {ex.Message}", "خطأ", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show($"Error while filtering: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
