@@ -16,6 +16,7 @@ namespace licensesApp
         public UserControlPersonDetails()
         {
             InitializeComponent();
+           
         }
         public int PersonID { get; set; }
         clsPeople _Person;

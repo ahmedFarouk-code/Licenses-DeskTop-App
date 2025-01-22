@@ -74,6 +74,7 @@
             this.Controls.Add(this.label1);
             this.Name = "frmPersonDetails";
             this.Text = "PersonDetails";
+           
             this.ResumeLayout(false);
             this.PerformLayout();
 

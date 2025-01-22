@@ -18,11 +18,14 @@ namespace licensesApp
             InitializeComponent();
             _PersonID = PersonID;
             userControlPersonDetails1.PersonID = _PersonID;
+            userControlPersonDetails1.ReloadData();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+       
     }
 }
