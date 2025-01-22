@@ -3,20 +3,23 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{3C70E07C-93B3-4A0D-95EC-3C832EDDCFAC}|..\\clsPeopleData\\LicensesDataAccess.csproj|d:\\licenses-desktop-app\\clspeopledata\\clsapplicationtypesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmanageapplicationtypes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmanageusers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmupdateapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmupdateapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmupdateapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmupdateapplicationtype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -39,51 +42,64 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMainMenu.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmMainMenu.cs",
-              "RelativeDocumentMoniker": "frmMainMenu.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmMainMenu.cs",
-              "RelativeToolTip": "frmMainMenu.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAqwDUAAAAAAAAAAAAAAA==",
+              "Title": "clsApplicationTypesData.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsApplicationTypesData.cs",
+              "RelativeDocumentMoniker": "..\\clsPeopleData\\clsApplicationTypesData.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsApplicationTypesData.cs",
+              "RelativeToolTip": "..\\clsPeopleData\\clsApplicationTypesData.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIA7wCsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:36:31.349Z",
+              "WhenOpened": "2025-01-22T18:41:44.596Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmMainMenu.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmMainMenu.cs",
-              "RelativeDocumentMoniker": "frmMainMenu.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmMainMenu.cs [Design]",
-              "RelativeToolTip": "frmMainMenu.cs [Design]",
+              "Title": "frmManageApplicationTypes.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmManageApplicationTypes.cs",
+              "RelativeDocumentMoniker": "frmManageApplicationTypes.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmManageApplicationTypes.cs",
+              "RelativeToolTip": "frmManageApplicationTypes.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAAwAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:36:26.224Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmManageUsers.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmManageUsers.cs",
-              "RelativeDocumentMoniker": "frmManageUsers.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmManageUsers.cs",
-              "RelativeToolTip": "frmManageUsers.cs",
-              "ViewState": "AgIAAGsAAAAAAAAAAAA5wIEAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:36:10.659Z",
+              "WhenOpened": "2025-01-22T18:42:33.568Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "frmManageUsers.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmManageUsers.cs",
-              "RelativeDocumentMoniker": "frmManageUsers.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmManageUsers.cs [Design]",
-              "RelativeToolTip": "frmManageUsers.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "frmManageApplicationTypes.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmManageApplicationTypes.cs",
+              "RelativeDocumentMoniker": "frmManageApplicationTypes.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmManageApplicationTypes.cs [Design]",
+              "RelativeToolTip": "frmManageApplicationTypes.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-21T23:36:09.002Z",
+              "WhenOpened": "2025-01-22T18:42:30.627Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmUpdateApplicationType.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmUpdateApplicationType.cs",
+              "RelativeDocumentMoniker": "frmUpdateApplicationType.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmUpdateApplicationType.cs",
+              "RelativeToolTip": "frmUpdateApplicationType.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAIA1wDsAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T18:09:38.535Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "frmUpdateApplicationType.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmUpdateApplicationType.cs",
+              "RelativeDocumentMoniker": "frmUpdateApplicationType.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmUpdateApplicationType.cs [Design]",
+              "RelativeToolTip": "frmUpdateApplicationType.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-22T17:17:20.804Z",
               "EditorCaption": " [Design]"
             }
           ]

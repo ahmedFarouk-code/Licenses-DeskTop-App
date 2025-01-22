@@ -49,5 +49,11 @@ namespace licensesApp
             frm.ShowDialog();
             
         }
+
+        private void manageApplicationTypesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManageApplicationTypes();
+            frm.ShowDialog();
+        }
     }
 }
