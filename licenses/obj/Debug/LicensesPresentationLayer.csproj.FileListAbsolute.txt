@@ -25,3 +25,5 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmUserDetails.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmChangePassword.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmManageApplicationTypes.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmUpdateApplicationType.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmManageTestTypes.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmEditTestType.resources

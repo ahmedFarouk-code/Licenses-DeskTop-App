@@ -201,7 +201,7 @@
             "Gendor",
             "Address",
             "Phone",
-            "Emal",
+            "Email",
             "NationalityCountryID",
             "ImagePath"});
             this.cbFilterBy.Location = new System.Drawing.Point(96, 123);

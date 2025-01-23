@@ -55,5 +55,11 @@ namespace licensesApp
             Form frm = new frmManageApplicationTypes();
             frm.ShowDialog();
         }
+
+        private void manageTestTyoesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmManageTestTypes();
+            frm.ShowDialog();
+        }
     }
 }
