@@ -30,11 +30,16 @@ namespace licensesApp
         public frmAddEditUser(int PersonID)
         {
             InitializeComponent();
-            _PersonID = PersonID;
-            if (_PersonID == -1)
-                _Mode = enMode.AddNew;
-            else
+           _PersonID = PersonID;
+           if (_PersonID == -1)
+               _Mode = enMode.AddNew;
+
+           else
+           {
                 _Mode = enMode.Update;
+               
+            }
+            UserControl2PersonDetailsWithFilter.PersonID = _PersonID;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -42,117 +47,17 @@ namespace licensesApp
             this.Close();
         }
 
-        private void ApplyFilter()
-        {
-            if (peopleTable == null || txtFilterbyval.Text == "") return;
+        
 
-            string selectedColumn = cbFilterBy.SelectedItem.ToString(); // اسم العمود المختار
-            string filterValue = txtFilterbyval.Text; // النص المراد الفلترة عليه
+       
 
-            try
-            {
-                // الحصول على نوع العمود من DataTable
-                Type columnType = peopleTable.Columns[selectedColumn].DataType;
+       
 
-                DataRow[] ResultRows;
-
-                if (!string.IsNullOrWhiteSpace(filterValue))
-                {
-                    // إذا كان نوع العمود نصيًا
-                    if (columnType == typeof(string))
-                    {
-                        ResultRows = peopleTable.Select(selectedColumn+"='"+ filterValue+"'");
-                        foreach (DataRow RecordRow in ResultRows)
-                        {
-
-                            _Person = clsPeople.Find(Convert.ToInt32(RecordRow["PersonID"]));
-
-                        }
-                    }
-                    // إذا كان نوع العمود رقميًا
-                    else if (columnType == typeof(int) || columnType == typeof(decimal) || columnType == typeof(double))
-                    {
-                        if (int.TryParse(filterValue, out int intValue))
-                        {
-                            ResultRows = peopleTable.Select(selectedColumn + "='" + intValue + "'");
-                            foreach (DataRow RecordRow in ResultRows)
-                            {
-                                
-                                _Person = clsPeople.Find(Convert.ToInt32(RecordRow["PersonID"]));
-                                
-                            }
-                        }
-                        else
-                        {
-                            MessageBox.Show("Please enter a valid numerical value.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                            return;
-                        }
-                    }
-                    // التعامل مع أنواع أخرى إذا لزم الأمر
-                    else
-                    {
-                        MessageBox.Show("Column type is not supported for filtering.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                        return;
-                    }
-
-                }
-                   if(_Person != null)
-                    userControlPersonDetails1.PersonID = _Person.ID;
-
-               
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Error while filtering: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }
-
-        private void FindPerson()
-        {
-            ApplyFilter();
-            if (_Person != null)
-            {
-                userControlPersonDetails1.ReloadData();
-                if (clsUsers.isExistUser(_Person.ID) && _PersonID == -1)
-                {
-                    MessageBox.Show("Selected Person already has,choose another one", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    _Person = null;
-                    return;
-                }
-
-                _PersonID = _Person.ID;
-                _User = clsUsers.Find(_Person.ID);
-            }
-            else
-            {
-                MessageBox.Show("this Person is Not found", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
-        private void btnFindPerson_Click(object sender, EventArgs e)
-        {
-            FindPerson();
-        }
-
-        private void btnAddPerson_Click(object sender, EventArgs e)
-        {
-            Form frm = new frmAddEditPerson(-1);
-            frm.ShowDialog();
-        }
+        
 
         private void btnNext_Click(object sender, EventArgs e)
         {
-            
-                if (_Person == null)
-                {
-                    MessageBox.Show("Select a person", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                    TabControl1.SelectedTab = tpPersonInfo;
-                }
-                else
-                {
-                    TabControl1.SelectedTab = tpLoginInfo;
-                }
-           
+         TabControl1.SelectedTab = tpLoginInfo;
         }
 
 
@@ -205,15 +110,14 @@ namespace licensesApp
         private void btnSave_Click(object sender, EventArgs e)
         {
 
-            if(_Person != null )
-            {
+            
                 if (_Mode == enMode.AddNew)
                 {
                     _User = new clsUsers();
 
                     
                 }
-                _User.PersonID = _Person.ID;
+                _User.PersonID = UserControl2PersonDetailsWithFilter.PersonID;
                 _User.UserName = txtUserName.Text;
                 _User.Password = txtPassword.Text;
                 if(cbIsActive.Checked)
@@ -233,15 +137,12 @@ namespace licensesApp
 
                 _Mode = enMode.Update;
 
-            }
-            else
-            {
-                MessageBox.Show("Data Saved Faild !!! (Select a Person)." ,"Warrning" ,MessageBoxButtons.OK);
-            }
+           
+            
 
         }
 
-        private void _Load()
+        private  void _Load()
         {
             if (_PersonID == -1)
                 _Mode = enMode.AddNew;
@@ -252,23 +153,23 @@ namespace licensesApp
             if (_Mode == enMode.AddNew)
             {
                 _User = new clsUsers();
-
+               
                 return;
             }
-           
 
            
-
+            UserControl2PersonDetailsWithFilter.PersonID = _PersonID;
+            _User = clsUsers.Find( _PersonID );
+            
             txtTitleName.Text = "Update User Info";
-                cbFilterBy.SelectedIndex = 0;
-                txtFilterbyval.Text = _PersonID.ToString();
-                FindPerson();
-                gbFilter.Enabled = false;
+               
+               
+                
 
               
                 if (_User == null)
                 {
-                    //MessageBox.Show("This form will be closed because No Person with ID = " + PersonID);
+                    MessageBox.Show("This form will be closed because No Person with ID");
                     return;
                 }
                 lblUserID.Text = _User.UserID.ToString();

@@ -132,6 +132,12 @@
     <Compile Include="UserControl1.Designer.cs">
       <DependentUpon>UserControl1.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControl2PersonDetailsWithFilter.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControl2PersonDetailsWithFilter.Designer.cs">
+      <DependentUpon>UserControl2PersonDetailsWithFilter.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControlPersonDetails.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -188,6 +194,9 @@
     </Compile>
     <EmbeddedResource Include="UserControl1.resx">
       <DependentUpon>UserControl1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControl2PersonDetailsWithFilter.resx">
+      <DependentUpon>UserControl2PersonDetailsWithFilter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControlPersonDetails.resx">
       <DependentUpon>UserControlPersonDetails.cs</DependentUpon>
