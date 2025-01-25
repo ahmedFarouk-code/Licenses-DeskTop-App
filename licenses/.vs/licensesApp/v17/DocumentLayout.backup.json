@@ -3,20 +3,12 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrol2persondetailswithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrol2persondetailswithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddedituser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrol2persondetailswithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrol2persondetailswithfilter.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\users\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:users\\frmmainmenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,53 +30,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "frmAddEditUser.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditUser.cs",
-              "RelativeDocumentMoniker": "frmAddEditUser.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditUser.cs [Design]",
-              "RelativeToolTip": "frmAddEditUser.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmListLocalDLA.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmListLocalDLA.cs",
+              "RelativeDocumentMoniker": "frmListLocalDLA.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmListLocalDLA.cs [Design]",
+              "RelativeToolTip": "frmListLocalDLA.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T19:19:39.32Z",
+              "WhenOpened": "2025-01-25T09:49:19.319Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmAddEditUser.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditUser.cs",
-              "RelativeDocumentMoniker": "frmAddEditUser.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditUser.cs",
-              "RelativeToolTip": "frmAddEditUser.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAcwB8AAAAMAAAAAAAAAA==",
+              "Title": "frmMainMenu.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Users\\frmMainMenu.cs",
+              "RelativeDocumentMoniker": "Users\\frmMainMenu.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Users\\frmMainMenu.cs [Design]",
+              "RelativeToolTip": "Users\\frmMainMenu.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T17:26:01.564Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "UserControl2PersonDetailsWithFilter.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControl2PersonDetailsWithFilter.cs",
-              "RelativeDocumentMoniker": "UserControl2PersonDetailsWithFilter.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl2PersonDetailsWithFilter.cs*",
-              "RelativeToolTip": "UserControl2PersonDetailsWithFilter.cs*",
-              "ViewState": "AgIAAHsAAAAAAAAAAAAwwJAAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T16:01:10.986Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UserControl2PersonDetailsWithFilter.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControl2PersonDetailsWithFilter.cs",
-              "RelativeDocumentMoniker": "UserControl2PersonDetailsWithFilter.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControl2PersonDetailsWithFilter.cs [Design]*",
-              "RelativeToolTip": "UserControl2PersonDetailsWithFilter.cs [Design]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-24T16:01:09.267Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-01-25T09:38:12.59Z"
             }
           ]
         }
