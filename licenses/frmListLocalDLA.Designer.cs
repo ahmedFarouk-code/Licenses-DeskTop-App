@@ -82,7 +82,7 @@
             this.dgvLocalApplicationList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvLocalApplicationList.Location = new System.Drawing.Point(2, 233);
             this.dgvLocalApplicationList.Name = "dgvLocalApplicationList";
-            this.dgvLocalApplicationList.Size = new System.Drawing.Size(796, 224);
+            this.dgvLocalApplicationList.Size = new System.Drawing.Size(882, 224);
             this.dgvLocalApplicationList.TabIndex = 4;
             // 
             // label2
@@ -100,7 +100,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(800, 462);
+            this.ClientSize = new System.Drawing.Size(896, 541);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dgvLocalApplicationList);
             this.Controls.Add(this.btnAddNewApplication);
@@ -109,6 +109,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmListLocalDLA";
             this.Text = "frmListLocalDLA";
+            this.Load += new System.EventHandler(this.frmListLocalDLA_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalApplicationList)).EndInit();
             this.ResumeLayout(false);

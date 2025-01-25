@@ -61,5 +61,11 @@ namespace licensesApp
             Form frm = new frmManageTestTypes();
             frm.ShowDialog();
         }
+
+        private void localDrivingLicenseApplicationsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmListLocalDLA();
+             frm.ShowDialog();
+        }
     }
 }
