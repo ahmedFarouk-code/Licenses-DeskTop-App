@@ -67,5 +67,10 @@ namespace licensesApp
             Form frm = new frmListLocalDLA();
              frm.ShowDialog();
         }
+
+        private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           
+        }
     }
 }
