@@ -70,7 +70,8 @@ namespace licensesApp
 
         private void localLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           
+            Form frm = new frmAddEditLDLA(-1 , _UserID ,-1);
+            frm.ShowDialog();
         }
     }
 }

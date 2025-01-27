@@ -29,3 +29,4 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmManageTestTypes.resour
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmEditTestType.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControl2PersonDetailsWithFilter.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmListLocalDLA.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditLDLA.resources

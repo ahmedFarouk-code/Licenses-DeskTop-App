@@ -52,6 +52,12 @@
     <Compile Include="Applications\frmListLocalDLA.Designer.cs">
       <DependentUpon>frmListLocalDLA.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAddEditLDLA.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAddEditLDLA.Designer.cs">
+      <DependentUpon>frmAddEditLDLA.cs</DependentUpon>
+    </Compile>
     <Compile Include="Tests\frmEditTestType.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -152,6 +158,9 @@
     </Compile>
     <EmbeddedResource Include="Applications\frmListLocalDLA.resx">
       <DependentUpon>frmListLocalDLA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAddEditLDLA.resx">
+      <DependentUpon>frmAddEditLDLA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmEditTestType.resx">
       <DependentUpon>frmEditTestType.cs</DependentUpon>
