@@ -47,7 +47,7 @@ namespace LicensesBusinessLayer
             this.ApplicationID = -1;
             this.ApplicantPersonID = -1;
             this.ApplicationDate = DateTime.Now;
-            this.ApplicationTypeID = -1;
+            this.ApplicationTypeID = 1;
             this.ApplicationStatus = 1;
             this.LastStatusDate = DateTime.Now;
             this.PaidFees = 0;
@@ -93,7 +93,12 @@ namespace LicensesBusinessLayer
                             return false;
                         }
                     }
-               
+
+                    case enMode.Update:
+
+                    return _UpdateApplication();
+
+
             }
             return false;
         }
@@ -101,7 +106,7 @@ namespace LicensesBusinessLayer
 
         public static clsApplications Find(int ApplicationID)
         {
-            int ApplicantPersonID = -1, ApplicationTypeID = -1, CreatedByUserID = -1;
+            int ApplicantPersonID = -1, ApplicationTypeID = 1, CreatedByUserID = -1;
             DateTime ApplicationDate = DateTime.Now , LastStatusDate = DateTime.Now ;
             byte ApplicationStatus = 0;
             decimal PaidFees = 0;

@@ -182,7 +182,29 @@ namespace licensesApp
         {
             Form frm = new frmAddEditLDLA(_UserID, (int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+        }
 
+        private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(MessageBox.Show("Are you sure to Cancel this application" ,"Cancel" ,MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                clsLDLA LDLA = clsLDLA.Find(((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value));
+                clsApplications App = clsApplications.Find(LDLA.ApplicationID);
+
+                App.ApplicationStatus = 2;
+                App.Mode = clsApplications.enMode.Update;
+                if(App.Save())
+                {
+                    MessageBox.Show("Cancel App Successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Error: Cancel App not Saved Successfully.");
+                }
+
+
+
+            }
         }
     }
 }

@@ -71,7 +71,10 @@ namespace LicensesBusinessLayer
                             return false;
                         }
                     }
-               
+                    case enMode.Update:
+                    return _UpdateUser();
+
+
             }
             return false;
         }

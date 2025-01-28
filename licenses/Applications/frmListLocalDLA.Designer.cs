@@ -35,10 +35,11 @@
             this.cbFilterby = new System.Windows.Forms.ComboBox();
             this.btnAddNewApplication = new System.Windows.Forms.Button();
             this.dgvLocalApplicationList = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.txtFilterByValue = new System.Windows.Forms.TextBox();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.editApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
+            this.txtFilterByValue = new System.Windows.Forms.TextBox();
+            this.cancelApplicationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalApplicationList)).BeginInit();
             this.contextMenuStrip1.SuspendLayout();
@@ -97,6 +98,21 @@
             this.dgvLocalApplicationList.Size = new System.Drawing.Size(1019, 224);
             this.dgvLocalApplicationList.TabIndex = 4;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editApplicationToolStripMenuItem,
+            this.cancelApplicationToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 70);
+            // 
+            // editApplicationToolStripMenuItem
+            // 
+            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
+            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.editApplicationToolStripMenuItem.Text = "Edit Application";
+            this.editApplicationToolStripMenuItem.Click += new System.EventHandler(this.editApplicationToolStripMenuItem_Click);
+            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -114,19 +130,12 @@
             this.txtFilterByValue.Size = new System.Drawing.Size(121, 20);
             this.txtFilterByValue.TabIndex = 6;
             // 
-            // contextMenuStrip1
+            // cancelApplicationToolStripMenuItem
             // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.editApplicationToolStripMenuItem});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(159, 26);
-            // 
-            // editApplicationToolStripMenuItem
-            // 
-            this.editApplicationToolStripMenuItem.Name = "editApplicationToolStripMenuItem";
-            this.editApplicationToolStripMenuItem.Size = new System.Drawing.Size(158, 22);
-            this.editApplicationToolStripMenuItem.Text = "Edit Application";
-            this.editApplicationToolStripMenuItem.Click += new System.EventHandler(this.editApplicationToolStripMenuItem_Click);
+            this.cancelApplicationToolStripMenuItem.Name = "cancelApplicationToolStripMenuItem";
+            this.cancelApplicationToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cancelApplicationToolStripMenuItem.Text = "Cancel Application";
+            this.cancelApplicationToolStripMenuItem.Click += new System.EventHandler(this.cancelApplicationToolStripMenuItem_Click);
             // 
             // frmListLocalDLA
             // 
@@ -163,5 +172,6 @@
         private System.Windows.Forms.TextBox txtFilterByValue;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem editApplicationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cancelApplicationToolStripMenuItem;
     }
 }

@@ -49,7 +49,7 @@ namespace LicensesDataAccess
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
             string query = @"INSERT INTO LocalDrivingLicenseApplications (ApplicationID, LicenseClassID) 
-                                                VALUES(@ApplicationID, @LicenseClassID);
+                                                VALUES(@ApplicationID, @LicenseClassID)
                                                 SELECT SCOPE_IDENTITY();";
 
             SqlCommand command = new SqlCommand(query, connection);
@@ -84,7 +84,7 @@ namespace LicensesDataAccess
             string query = @"UPDATE  LocalDrivingLicenseApplications
                                SET 
                                      ApplicationID=@ApplicationID,
-                                     LicenseClassID=@LicenseClassID,
+                                     LicenseClassID=@LicenseClassID
                                WHERE LocalDrivingLicenseApplicationID=@LocalDrivingLicenseApplicationID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
