@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace LicensesBusinessLayer
 {
@@ -14,7 +15,7 @@ namespace LicensesBusinessLayer
         public enMode Mode = enMode.AddNew;
 
 
-        public int ID {  get; set; }
+        public int ApplicationID {  get; set; }
         public int ApplicantPersonID  { get; set; }
         public DateTime ApplicationDate { get; set; }
         public int ApplicationTypeID { get; set; }
@@ -24,10 +25,10 @@ namespace LicensesBusinessLayer
         public int CreatedByUserID { get; set; }
 
 
-        private clsApplications(int ID, int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID,
+        private clsApplications(int ApplicationID, int ApplicantPersonID, DateTime ApplicationDate, int ApplicationTypeID,
             byte ApplicationStatus, DateTime LastStatusDate, decimal PaidFees, int CreatedByUserID)
         {
-            this.ID = ID;
+            this.ApplicationID = ApplicationID;
             this.ApplicantPersonID = ApplicantPersonID;
             this.ApplicationDate = ApplicationDate;
             this.ApplicationTypeID = ApplicationTypeID;
@@ -43,7 +44,7 @@ namespace LicensesBusinessLayer
 
         public clsApplications()
         {
-            this.ID = -1;
+            this.ApplicationID = -1;
             this.ApplicantPersonID = -1;
             this.ApplicationDate = DateTime.Now;
             this.ApplicationTypeID = -1;
@@ -63,10 +64,56 @@ namespace LicensesBusinessLayer
 
         private bool _AddNewApplication()
         {
-            this.ID = clsApplicationsData.AddNewApplication(this.ApplicantPersonID, this.ApplicationDate, this.ApplicationTypeID,
+            this.ApplicationID = clsApplicationsData.AddNewApplication(this.ApplicantPersonID, this.ApplicationDate, this.ApplicationTypeID,
             this.ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUserID);
 
-            return (this.ID != -1);
+            return (this.ApplicationID != -1);
+        }
+
+        private bool _UpdateApplication()
+        {
+            return clsApplicationsData.UpdateApplication(this.ApplicationID, this.ApplicantPersonID, this.ApplicationDate, this.ApplicationTypeID,
+            this.ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUserID);
+        }
+
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    {
+                        if (_AddNewApplication())
+                        {
+                            Mode = enMode.Update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+               
+            }
+            return false;
+        }
+
+
+        public static clsApplications Find(int ApplicationID)
+        {
+            int ApplicantPersonID = -1, ApplicationTypeID = -1, CreatedByUserID = -1;
+            DateTime ApplicationDate = DateTime.Now , LastStatusDate = DateTime.Now ;
+            byte ApplicationStatus = 0;
+            decimal PaidFees = 0;
+            if (clsApplicationsData.GetApplicationByID( ApplicationID, ref  ApplicantPersonID, ref  ApplicationDate, ref  ApplicationTypeID,
+           ref  ApplicationStatus, ref  LastStatusDate, ref  PaidFees, ref  CreatedByUserID))
+
+                return new clsApplications( ApplicationID,  ApplicantPersonID,  ApplicationDate,  ApplicationTypeID,
+             ApplicationStatus,  LastStatusDate,  PaidFees,  CreatedByUserID);
+
+            else
+                return null;
+
         }
     }
 }

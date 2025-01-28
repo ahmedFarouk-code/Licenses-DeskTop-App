@@ -13,9 +13,11 @@ namespace licensesApp
 {
     public partial class frmListLocalDLA : Form
     {
-        public frmListLocalDLA()
+        private int _UserID;
+        public frmListLocalDLA(int UserID)
         {
             InitializeComponent();
+            _UserID = UserID;
             cbFilterby.SelectedIndex = 0;
         }
         DataTable LDLAList = new DataTable();
@@ -176,6 +178,11 @@ namespace licensesApp
 
         }
 
-       
+        private void editApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddEditLDLA(_UserID, (int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
+            frm.ShowDialog();
+
+        }
     }
 }

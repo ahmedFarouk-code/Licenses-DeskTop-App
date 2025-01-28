@@ -30,21 +30,21 @@
         {
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpPersonInfo = new System.Windows.Forms.TabPage();
+            this.userControl2PersonDetailsWithFilter1 = new licensesApp.UserControl2PersonDetailsWithFilter();
             this.tpAppInfo = new System.Windows.Forms.TabPage();
+            this.cbLicenseClass = new System.Windows.Forms.ComboBox();
+            this.lblCreatedBy = new System.Windows.Forms.Label();
+            this.lblAppFees = new System.Windows.Forms.Label();
+            this.lblAPPDate = new System.Windows.Forms.Label();
+            this.lblDLApplicationID = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.lblDLApplicationID = new System.Windows.Forms.Label();
-            this.lblAPPDate = new System.Windows.Forms.Label();
-            this.lblAppFees = new System.Windows.Forms.Label();
-            this.lblCreatedBy = new System.Windows.Forms.Label();
-            this.cbLicenseClass = new System.Windows.Forms.ComboBox();
-            this.userControl2PersonDetailsWithFilter1 = new licensesApp.UserControl2PersonDetailsWithFilter();
             this.tabControl1.SuspendLayout();
             this.tpPersonInfo.SuspendLayout();
             this.tpAppInfo.SuspendLayout();
@@ -71,6 +71,13 @@
             this.tpPersonInfo.Text = "PersonInfo";
             this.tpPersonInfo.UseVisualStyleBackColor = true;
             // 
+            // userControl2PersonDetailsWithFilter1
+            // 
+            this.userControl2PersonDetailsWithFilter1.Location = new System.Drawing.Point(6, 6);
+            this.userControl2PersonDetailsWithFilter1.Name = "userControl2PersonDetailsWithFilter1";
+            this.userControl2PersonDetailsWithFilter1.Size = new System.Drawing.Size(607, 345);
+            this.userControl2PersonDetailsWithFilter1.TabIndex = 0;
+            // 
             // tpAppInfo
             // 
             this.tpAppInfo.Controls.Add(this.cbLicenseClass);
@@ -90,6 +97,104 @@
             this.tpAppInfo.TabIndex = 1;
             this.tpAppInfo.Text = "Application Info";
             this.tpAppInfo.UseVisualStyleBackColor = true;
+            // 
+            // cbLicenseClass
+            // 
+            this.cbLicenseClass.FormattingEnabled = true;
+            this.cbLicenseClass.Location = new System.Drawing.Point(202, 127);
+            this.cbLicenseClass.Name = "cbLicenseClass";
+            this.cbLicenseClass.Size = new System.Drawing.Size(216, 21);
+            this.cbLicenseClass.TabIndex = 9;
+            // 
+            // lblCreatedBy
+            // 
+            this.lblCreatedBy.AutoSize = true;
+            this.lblCreatedBy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCreatedBy.Location = new System.Drawing.Point(199, 226);
+            this.lblCreatedBy.Name = "lblCreatedBy";
+            this.lblCreatedBy.Size = new System.Drawing.Size(28, 16);
+            this.lblCreatedBy.TabIndex = 8;
+            this.lblCreatedBy.Text = "???";
+            // 
+            // lblAppFees
+            // 
+            this.lblAppFees.AutoSize = true;
+            this.lblAppFees.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppFees.Location = new System.Drawing.Point(199, 174);
+            this.lblAppFees.Name = "lblAppFees";
+            this.lblAppFees.Size = new System.Drawing.Size(28, 16);
+            this.lblAppFees.TabIndex = 7;
+            this.lblAppFees.Text = "???";
+            // 
+            // lblAPPDate
+            // 
+            this.lblAPPDate.AutoSize = true;
+            this.lblAPPDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAPPDate.Location = new System.Drawing.Point(199, 81);
+            this.lblAPPDate.Name = "lblAPPDate";
+            this.lblAPPDate.Size = new System.Drawing.Size(28, 16);
+            this.lblAPPDate.TabIndex = 6;
+            this.lblAPPDate.Text = "???";
+            // 
+            // lblDLApplicationID
+            // 
+            this.lblDLApplicationID.AutoSize = true;
+            this.lblDLApplicationID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDLApplicationID.Location = new System.Drawing.Point(199, 34);
+            this.lblDLApplicationID.Name = "lblDLApplicationID";
+            this.lblDLApplicationID.Size = new System.Drawing.Size(40, 16);
+            this.lblDLApplicationID.TabIndex = 5;
+            this.lblDLApplicationID.Text = "[???]";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(19, 226);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(84, 16);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Created By:";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(19, 174);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(117, 16);
+            this.label4.TabIndex = 3;
+            this.label4.Text = "Application Fees:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(19, 127);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(97, 16);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "License Class:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(19, 81);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(119, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "Application Date:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(19, 34);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(126, 16);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "D.L.Application ID:";
             // 
             // lblTitle
             // 
@@ -111,6 +216,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnClose
             // 
@@ -122,111 +228,6 @@
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(19, 34);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(126, 16);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "D.L.Application ID:";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(19, 81);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 16);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Application Date:";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(19, 127);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(97, 16);
-            this.label3.TabIndex = 2;
-            this.label3.Text = "License Class:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(19, 174);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(117, 16);
-            this.label4.TabIndex = 3;
-            this.label4.Text = "Application Fees:";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(19, 226);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 16);
-            this.label5.TabIndex = 4;
-            this.label5.Text = "Created By:";
-            // 
-            // lblDLApplicationID
-            // 
-            this.lblDLApplicationID.AutoSize = true;
-            this.lblDLApplicationID.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDLApplicationID.Location = new System.Drawing.Point(199, 34);
-            this.lblDLApplicationID.Name = "lblDLApplicationID";
-            this.lblDLApplicationID.Size = new System.Drawing.Size(40, 16);
-            this.lblDLApplicationID.TabIndex = 5;
-            this.lblDLApplicationID.Text = "[???]";
-            // 
-            // lblAPPDate
-            // 
-            this.lblAPPDate.AutoSize = true;
-            this.lblAPPDate.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAPPDate.Location = new System.Drawing.Point(199, 81);
-            this.lblAPPDate.Name = "lblAPPDate";
-            this.lblAPPDate.Size = new System.Drawing.Size(28, 16);
-            this.lblAPPDate.TabIndex = 6;
-            this.lblAPPDate.Text = "???";
-            // 
-            // lblAppFees
-            // 
-            this.lblAppFees.AutoSize = true;
-            this.lblAppFees.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAppFees.Location = new System.Drawing.Point(199, 174);
-            this.lblAppFees.Name = "lblAppFees";
-            this.lblAppFees.Size = new System.Drawing.Size(28, 16);
-            this.lblAppFees.TabIndex = 7;
-            this.lblAppFees.Text = "???";
-            // 
-            // lblCreatedBy
-            // 
-            this.lblCreatedBy.AutoSize = true;
-            this.lblCreatedBy.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCreatedBy.Location = new System.Drawing.Point(199, 226);
-            this.lblCreatedBy.Name = "lblCreatedBy";
-            this.lblCreatedBy.Size = new System.Drawing.Size(28, 16);
-            this.lblCreatedBy.TabIndex = 8;
-            this.lblCreatedBy.Text = "???";
-            // 
-            // cbLicenseClass
-            // 
-            this.cbLicenseClass.FormattingEnabled = true;
-            this.cbLicenseClass.Location = new System.Drawing.Point(202, 127);
-            this.cbLicenseClass.Name = "cbLicenseClass";
-            this.cbLicenseClass.Size = new System.Drawing.Size(216, 21);
-            this.cbLicenseClass.TabIndex = 9;
-            // 
-            // userControl2PersonDetailsWithFilter1
-            // 
-            this.userControl2PersonDetailsWithFilter1.Location = new System.Drawing.Point(6, 6);
-            this.userControl2PersonDetailsWithFilter1.Name = "userControl2PersonDetailsWithFilter1";
-            this.userControl2PersonDetailsWithFilter1.Size = new System.Drawing.Size(607, 345);
-            this.userControl2PersonDetailsWithFilter1.TabIndex = 0;
             // 
             // frmAddEditLDLA
             // 

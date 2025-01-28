@@ -120,6 +120,7 @@
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
             this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.internationalLicenseToolStripMenuItem.Text = "International license";
+           
             // 
             // renewDeivingLicenseToolStripMenuItem
             // 

@@ -13,26 +13,45 @@ namespace licensesApp
 {
     public partial class frmAddEditLDLA : Form
     {
-        public enum enMode { AddNew = 0, Update = 1 };
-        public enMode Mode = enMode.AddNew;
+        public enum enMode { AddNewL = 0, Update = 1 ,Cancel = 2  };
+        private enMode _Mode = enMode.AddNewL;
 
-        int _PersonID;
+       
         int _UserID;
+
         int _ApplicationID;
-        public frmAddEditLDLA(int PersonID ,int UserID , int ApplicationID)
+        clsApplications _Application;
+
+        int _LDLAid;
+        clsLDLA _LDLA;
+        
+
+
+
+        public frmAddEditLDLA(int UserID , int LDLAid)
         {
             InitializeComponent();
-            _PersonID = PersonID;
+            
             _UserID = UserID;
-            if(_ApplicationID == -1)
+            _LDLAid = LDLAid;
+            if (_LDLAid == -1)
             {
-                Mode = enMode.AddNew;
+                _Mode = enMode.AddNewL;
+               
+            }
+            else if(_LDLAid == -2)
+            {
+                _Mode = enMode.Cancel;
+                
             }
             else
             {
-                Mode = enMode.Update;
+                _Mode = enMode.Update;
+               
             }
-            UserControl2PersonDetailsWithFilter.PersonID = _PersonID;
+
+
+            //UserControl2PersonDetailsWithFilter.PersonID = _PersonID;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -40,9 +59,76 @@ namespace licensesApp
             this.Close();
         }
 
+
+        private void _FillCountry()
+        {
+            DataTable dt = clsLicenseClasses.GetAllLicenseClasses();
+            foreach (DataRow row in dt.Rows)
+            {
+                cbLicenseClass.Items.Add(row["ClassName"]);
+            }
+        }
+
+        private void _Load()
+        {
+            if (_LDLAid == -1)
+                _Mode = enMode.AddNewL;
+            else if (_LDLAid == -2)
+                _Mode = enMode.Cancel;
+            else
+                _Mode = enMode.Update;
+
+            _FillCountry();
+            if (_Mode == enMode.AddNewL)
+            {
+                _LDLA = new clsLDLA();
+                _Application = new clsApplications();
+
+                lblAPPDate.Text = DateTime.Now.ToString();
+                lblCreatedBy.Text = _UserID.ToString();
+                lblAppFees.Text = 15.ToString();
+                cbLicenseClass.SelectedIndex = 0;
+
+                return;
+            }
+
+           _LDLA = clsLDLA.Find(_LDLAid);
+            _ApplicationID = Convert.ToInt32 (_LDLA.ApplicationID);
+            _Application = clsApplications.Find(_ApplicationID);
+            UserControl2PersonDetailsWithFilter.PersonID = _Application.ApplicantPersonID;
+           
+
+            lblTitle.Text = "UpdateApplication Info";
+
+
+
+
+
+            if (_LDLA == null || _Application == null)
+            {
+                MessageBox.Show("This form will be closed because No Application with this ID");
+                return;
+            }
+            lblDLApplicationID.Text = _LDLA.LocalDrivingLicenseApplicationID.ToString();
+            lblAPPDate.Text = _Application.ApplicationDate.ToString();
+            lblCreatedBy.Text = _Application.CreatedByUserID.ToString();
+            lblAppFees.Text = _Application.PaidFees.ToString();
+            //cbLicenseClass.SelectedIndex = cbLicenseClass.FindString(clsLicenseClasses.Find(_LDLA.LicenseClassID).LicenseClasseName);
+
+            _Mode = enMode.Update;
+
+        }
+
+
         private void frmAddEditLDLA_Load(object sender, EventArgs e)
         {
+            _Load();
 
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

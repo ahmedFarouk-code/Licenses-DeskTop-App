@@ -121,7 +121,7 @@ namespace licensesApp
         private void deleteToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
-            if(clsPeople.DeletePerson((int)dgvPeoplelist.CurrentRow.Cells[0].Value));
+            if(clsPeople.DeletePerson((int)dgvPeoplelist.CurrentRow.Cells[0].Value))
             MessageBox.Show("Data Saved Successfully.");
             _RefreshPeopleList();
         }
