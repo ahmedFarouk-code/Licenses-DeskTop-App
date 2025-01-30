@@ -176,5 +176,66 @@ namespace LicensesDataAccess
             return isFound;
         }
 
+        public static bool IsApplicationExist(int PersonID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+
+            string query = "SELECT Found=1 FROM Applications WHERE ApplicantPersonID = @ApplicantPersonID  AND ApplicationStatus = @ApplicationStatus";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@ApplicantPersonID", PersonID);
+            command.Parameters.AddWithValue("@ApplicationStatus", 1);
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+        public static bool DeleteApplication(int ApplicationID)
+        {
+            int RowsEffected = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = @"DELETE  Applications
+                            WHERE ApplicationID = @ApplicationID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("ApplicationID", ApplicationID);
+
+            try
+            {
+                connection.Open();
+                RowsEffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error" + ex.ToString());
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowsEffected > 0);
+        }
+
     }
 }

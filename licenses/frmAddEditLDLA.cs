@@ -134,7 +134,16 @@ namespace licensesApp
                 _LDLA = new clsLDLA();
                 _Application = new clsApplications();
 
+                int LDLALicenseClassID = clsLicenseClasses.Find(cbLicenseClass.Text).ID;
+             
+                if (clsApplications.IsApplicationExist(UserControl2PersonDetailsWithFilter.PersonID) && clsLDLA.IsLDLAExist(LDLALicenseClassID) )
+                {
+                    MessageBox.Show("Choose another License Class , the sellected person already have an active application for the selected class with id = " + LDLALicenseClassID);
 
+                    return;
+                }
+                
+                        
             }
 
            

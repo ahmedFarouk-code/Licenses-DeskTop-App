@@ -95,8 +95,9 @@
             this.replacementForLostDamagedLicenseToolStripMenuItem,
             this.retakeTestToolStripMenuItem});
             this.drivingLicensesServicesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("drivingLicensesServicesToolStripMenuItem.Image")));
+            this.drivingLicensesServicesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.drivingLicensesServicesToolStripMenuItem.Name = "drivingLicensesServicesToolStripMenuItem";
-            this.drivingLicensesServicesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.drivingLicensesServicesToolStripMenuItem.Size = new System.Drawing.Size(273, 78);
             this.drivingLicensesServicesToolStripMenuItem.Text = "Driving Licenses Services";
             // 
             // newDrivingLicenseToolStripMenuItem
@@ -104,12 +105,14 @@
             this.newDrivingLicenseToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.localLicenseToolStripMenuItem,
             this.internationalLicenseToolStripMenuItem});
+            this.newDrivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("newDrivingLicenseToolStripMenuItem.Image")));
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
             this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
             // 
             // localLicenseToolStripMenuItem
             // 
+            this.localLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localLicenseToolStripMenuItem.Image")));
             this.localLicenseToolStripMenuItem.Name = "localLicenseToolStripMenuItem";
             this.localLicenseToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.localLicenseToolStripMenuItem.Text = "Local License";
@@ -117,25 +120,28 @@
             // 
             // internationalLicenseToolStripMenuItem
             // 
+            this.internationalLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internationalLicenseToolStripMenuItem.Image")));
             this.internationalLicenseToolStripMenuItem.Name = "internationalLicenseToolStripMenuItem";
             this.internationalLicenseToolStripMenuItem.Size = new System.Drawing.Size(187, 22);
             this.internationalLicenseToolStripMenuItem.Text = "International license";
-           
             // 
             // renewDeivingLicenseToolStripMenuItem
             // 
+            this.renewDeivingLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("renewDeivingLicenseToolStripMenuItem.Image")));
             this.renewDeivingLicenseToolStripMenuItem.Name = "renewDeivingLicenseToolStripMenuItem";
             this.renewDeivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.renewDeivingLicenseToolStripMenuItem.Text = "Renew Deiving License";
             // 
             // replacementForLostDamagedLicenseToolStripMenuItem
             // 
+            this.replacementForLostDamagedLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("replacementForLostDamagedLicenseToolStripMenuItem.Image")));
             this.replacementForLostDamagedLicenseToolStripMenuItem.Name = "replacementForLostDamagedLicenseToolStripMenuItem";
             this.replacementForLostDamagedLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.replacementForLostDamagedLicenseToolStripMenuItem.Text = "Replacement for Lost Damaged License";
             // 
             // retakeTestToolStripMenuItem
             // 
+            this.retakeTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("retakeTestToolStripMenuItem.Image")));
             this.retakeTestToolStripMenuItem.Name = "retakeTestToolStripMenuItem";
             this.retakeTestToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.retakeTestToolStripMenuItem.Text = "Retake Test";
@@ -146,12 +152,14 @@
             this.localDrivingLicenseApplicationsToolStripMenuItem,
             this.internationalDrivingLicenseApplicationsToolStripMenuItem});
             this.manageApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationsToolStripMenuItem.Image")));
+            this.manageApplicationsToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageApplicationsToolStripMenuItem.Name = "manageApplicationsToolStripMenuItem";
-            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.manageApplicationsToolStripMenuItem.Size = new System.Drawing.Size(273, 78);
             this.manageApplicationsToolStripMenuItem.Text = "Manage Applications";
             // 
             // localDrivingLicenseApplicationsToolStripMenuItem
             // 
+            this.localDrivingLicenseApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localDrivingLicenseApplicationsToolStripMenuItem.Image")));
             this.localDrivingLicenseApplicationsToolStripMenuItem.Name = "localDrivingLicenseApplicationsToolStripMenuItem";
             this.localDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
             this.localDrivingLicenseApplicationsToolStripMenuItem.Text = "Local Driving License Applications";
@@ -159,6 +167,7 @@
             // 
             // internationalDrivingLicenseApplicationsToolStripMenuItem
             // 
+            this.internationalDrivingLicenseApplicationsToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("internationalDrivingLicenseApplicationsToolStripMenuItem.Image")));
             this.internationalDrivingLicenseApplicationsToolStripMenuItem.Name = "internationalDrivingLicenseApplicationsToolStripMenuItem";
             this.internationalDrivingLicenseApplicationsToolStripMenuItem.Size = new System.Drawing.Size(304, 22);
             this.internationalDrivingLicenseApplicationsToolStripMenuItem.Text = "International Driving License Applications";
@@ -166,23 +175,26 @@
             // detainLicensesToolStripMenuItem
             // 
             this.detainLicensesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("detainLicensesToolStripMenuItem.Image")));
+            this.detainLicensesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.detainLicensesToolStripMenuItem.Name = "detainLicensesToolStripMenuItem";
-            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.detainLicensesToolStripMenuItem.Size = new System.Drawing.Size(273, 78);
             this.detainLicensesToolStripMenuItem.Text = "Detain Licenses";
             // 
             // manageApplicationTypesToolStripMenuItem
             // 
             this.manageApplicationTypesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageApplicationTypesToolStripMenuItem.Image")));
+            this.manageApplicationTypesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageApplicationTypesToolStripMenuItem.Name = "manageApplicationTypesToolStripMenuItem";
-            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.manageApplicationTypesToolStripMenuItem.Size = new System.Drawing.Size(273, 78);
             this.manageApplicationTypesToolStripMenuItem.Text = "Manage Application Types";
             this.manageApplicationTypesToolStripMenuItem.Click += new System.EventHandler(this.manageApplicationTypesToolStripMenuItem_Click);
             // 
             // manageTestTyoesToolStripMenuItem
             // 
             this.manageTestTyoesToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("manageTestTyoesToolStripMenuItem.Image")));
+            this.manageTestTyoesToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.manageTestTyoesToolStripMenuItem.Name = "manageTestTyoesToolStripMenuItem";
-            this.manageTestTyoesToolStripMenuItem.Size = new System.Drawing.Size(217, 22);
+            this.manageTestTyoesToolStripMenuItem.Size = new System.Drawing.Size(273, 78);
             this.manageTestTyoesToolStripMenuItem.Text = "Manage Test Types";
             this.manageTestTyoesToolStripMenuItem.Click += new System.EventHandler(this.manageTestTyoesToolStripMenuItem_Click);
             // 

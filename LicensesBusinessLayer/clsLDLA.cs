@@ -95,5 +95,15 @@ namespace LicensesBusinessLayer
 
         }
 
+        public static bool IsLDLAExist(int ClassID)
+        {
+            return clsLDLAData.IstLDLAExist(ClassID);
+        }
+
+        public static bool DeletLDLA(int LocalDrivingLicenseApplicationID)
+        {
+            return clsLDLAData.DeleteLDLA(LocalDrivingLicenseApplicationID);
+        }
+
     }
 }

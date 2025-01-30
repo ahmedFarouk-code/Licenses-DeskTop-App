@@ -120,5 +120,15 @@ namespace LicensesBusinessLayer
                 return null;
 
         }
+
+        public static bool IsApplicationExist(int PersonID)
+        {
+            return clsApplicationsData.IsApplicationExist(PersonID);
+        }
+
+        public static bool DeleteApplication(int ApplicationID)
+        {
+            return clsApplicationsData.DeleteApplication(ApplicationID);
+        }
     }
 }

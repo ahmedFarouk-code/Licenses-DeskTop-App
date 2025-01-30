@@ -3,15 +3,12 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BF4E826-7FCC-4A50-AE5B-64438188B091}|..\\LicensesBusinessLayer\\LicensesBusinessLayer.csproj|d:\\licenses-desktop-app\\licensesbusinesslayer\\clsapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmaddeditldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddeditldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmaddeditldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmaddeditldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -21,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -33,42 +30,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsApplications.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsApplications.cs",
-              "RelativeDocumentMoniker": "..\\LicensesBusinessLayer\\clsApplications.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsApplications.cs",
-              "RelativeToolTip": "..\\LicensesBusinessLayer\\clsApplications.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAAE8AAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T23:34:15.933Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmListLocalDLA.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
-              "RelativeDocumentMoniker": "Applications\\frmListLocalDLA.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs*",
-              "RelativeToolTip": "Applications\\frmListLocalDLA.cs*",
-              "ViewState": "AgIAALQAAAAAAAAAAAAAAMIAAAA5AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T22:38:55.071Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "frmAddEditLDLA.cs",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditLDLA.cs",
               "RelativeDocumentMoniker": "frmAddEditLDLA.cs",
               "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditLDLA.cs",
               "RelativeToolTip": "frmAddEditLDLA.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAYwKgAAABMAAAAAAAAAA==",
+              "ViewState": "AgIAAH0AAAAAAAAAAAA4wIIAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-28T20:52:22.204Z",
+              "WhenOpened": "2025-01-29T21:07:56.295Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAddEditLDLA.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditLDLA.cs",
+              "RelativeDocumentMoniker": "frmAddEditLDLA.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAddEditLDLA.cs [Design]",
+              "RelativeToolTip": "frmAddEditLDLA.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-29T21:07:53.42Z"
             }
           ]
         }

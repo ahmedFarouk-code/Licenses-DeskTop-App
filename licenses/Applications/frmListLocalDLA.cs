@@ -206,5 +206,33 @@ namespace licensesApp
 
             }
         }
+
+        private void deleteApplicationToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("Are you sure to Delete this application", "Delete", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                clsLDLA LDLA = clsLDLA.Find(((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value));
+                clsApplications App = clsApplications.Find(LDLA.ApplicationID);
+
+                
+                if (clsLDLA.DeletLDLA(LDLA.LocalDrivingLicenseApplicationID)&&
+                    clsApplications.DeleteApplication(App.ApplicationID))
+                {
+                    MessageBox.Show("Cancel App Successfully.");
+                }
+                else
+                {
+                    MessageBox.Show("Error: Cancel App not Saved Successfully.");
+                }
+              
+
+
+            }
+        }
+
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+            
+        }
     }
 }

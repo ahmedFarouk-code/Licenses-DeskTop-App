@@ -150,5 +150,67 @@ namespace LicensesDataAccess
 
             return isFound;
         }
+
+        public static bool IstLDLAExist(int ClassID)
+        {
+            bool isFound = false;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+
+            string query = "SELECT Found=1 FROM LocalDrivingLicenseApplications WHERE LicenseClassID = @LicenseClassID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@LicenseClassID", ClassID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+
+                isFound = reader.HasRows;
+
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error: " + ex.Message);
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
+
+
+        public static bool DeleteLDLA(int ID)
+        {
+            int RowsEffected = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = @"DELETE  LocalDrivingLicenseApplications
+                            WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("LocalDrivingLicenseApplicationID", ID);
+
+            try
+            {
+                connection.Open();
+                RowsEffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                // Console.WriteLine("Error" + ex.ToString());
+
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return (RowsEffected > 0);
+        }
     }
 }
