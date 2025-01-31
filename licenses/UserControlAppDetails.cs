@@ -51,23 +51,29 @@ namespace licensesApp
 
             lblDLAid.Text = _LDLA.LocalDrivingLicenseApplicationID.ToString();
             lblAppLiadForLicens.Text = clsLicenseClasses.Find(_LDLA.LicenseClassID).LicenseClasseName;
-            lblPassedTests.Text = PassedTests.ToString();
+            lblPassedTests.Text = PassedTests + "/3";
 
             //Application Basic Info:
 
             lblID.Text = _Application.ApplicationID.ToString();
-            lblStatus.Text = _Application.ApplicationStatus.ToString();
+            lblStatuse.Text = _Application.ApplicationStatus.ToString();
             lblFees.Text = _Application.PaidFees.ToString();
             lblApplicant.Text = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
             lblDate.Text = _Application.ApplicationDate.ToString();
-            lblStatus.Text = _Application.LastStatusDate.ToString();
+            lblStatussDate.Text = _Application.LastStatusDate.ToString();
             lblCreatedBy.Text = clsUsers.Find(_Application.CreatedByUserID).UserName;
-
+            lblType.Text = clsApplicationTypes.Find(_Application.ApplicationTypeID).ApplicationTypeTitle;
         }
 
         private void UserControlAppDetails_Load(object sender, EventArgs e)
         {
             _Load();
+        }
+
+        private void llblViewPersonInfo_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            Form frm = new frmPersonDetails(_Person.ID);
+            frm.ShowDialog();
         }
     }
 }
