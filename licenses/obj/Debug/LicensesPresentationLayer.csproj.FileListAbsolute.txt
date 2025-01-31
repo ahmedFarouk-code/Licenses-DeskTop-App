@@ -30,3 +30,5 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmEditTestType.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControl2PersonDetailsWithFilter.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmListLocalDLA.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditLDLA.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAppApointments.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControlAppDetails.resources

@@ -234,5 +234,12 @@ namespace licensesApp
         {
             
         }
+
+        private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAppApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value);
+            frm.ShowDialog();
+        }
     }
 }

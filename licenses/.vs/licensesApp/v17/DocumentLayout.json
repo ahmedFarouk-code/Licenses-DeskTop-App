@@ -3,12 +3,20 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +38,53 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmListLocalDLA.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
-              "RelativeDocumentMoniker": "Applications\\frmListLocalDLA.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
-              "RelativeToolTip": "Applications\\frmListLocalDLA.cs",
-              "ViewState": "AgIAAMwAAAAAAAAAAAAlwOoAAAAMAAAAAAAAAA==",
+              "DocumentIndex": 3,
+              "Title": "UserControlAppDetails.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs",
+              "RelativeDocumentMoniker": "UserControlAppDetails.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs",
+              "RelativeToolTip": "UserControlAppDetails.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIAzwEYAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:21:07.626Z",
+              "WhenOpened": "2025-01-31T08:21:03.998Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmListLocalDLA.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
-              "RelativeDocumentMoniker": "Applications\\frmListLocalDLA.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs [Design]",
-              "RelativeToolTip": "Applications\\frmListLocalDLA.cs [Design]",
+              "DocumentIndex": 2,
+              "Title": "UserControlAppDetails.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs",
+              "RelativeDocumentMoniker": "UserControlAppDetails.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs [Design]",
+              "RelativeToolTip": "UserControlAppDetails.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-30T15:11:30.032Z",
+              "WhenOpened": "2025-01-31T08:08:57.33Z",
               "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmAppApointments.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
+              "RelativeDocumentMoniker": "frmAppApointments.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs [Design]",
+              "RelativeToolTip": "frmAppApointments.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T07:38:42.409Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmAppApointments.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
+              "RelativeDocumentMoniker": "frmAppApointments.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
+              "RelativeToolTip": "frmAppApointments.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAbAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-31T07:44:14.873Z",
+              "EditorCaption": ""
             }
           ]
         }
