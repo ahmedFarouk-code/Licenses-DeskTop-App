@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace licensesApp
 {
@@ -232,13 +233,54 @@ namespace licensesApp
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
-            
+
+             if ((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 0)
+            {
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleVisionTestToolStripMenuItem"].Enabled = true;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleWrittenTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleStreetTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.Enabled = true;
+                issueDrivingLicenseToolStripMenuItem.Enabled=false;
+            }
+
+            else if ((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 1)
+            {
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleVisionTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleWrittenTestToolStripMenuItem"].Enabled = true;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleStreetTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.Enabled = true;
+                issueDrivingLicenseToolStripMenuItem.Enabled = false;
+            }
+
+            else if ((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 2)
+            {
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleVisionTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleWrittenTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleStreetTestToolStripMenuItem"].Enabled = true;
+                sechduleTestsToolStripMenuItem.Enabled = true;
+                issueDrivingLicenseToolStripMenuItem.Enabled = false;
+            }
+
+            else if((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 3)
+            {
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleVisionTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleWrittenTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.DropDownItems["scheduleStreetTestToolStripMenuItem"].Enabled = false;
+                sechduleTestsToolStripMenuItem.Enabled = false;
+                issueDrivingLicenseToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmAppVisionApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value);
+            frm.ShowDialog();
+        }
+
+        private void btnAddNewApplication_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmAddEditLDLA(_UserID, -1);
             frm.ShowDialog();
         }
     }

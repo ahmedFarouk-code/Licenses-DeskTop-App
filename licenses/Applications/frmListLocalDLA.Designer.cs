@@ -96,6 +96,7 @@
             this.btnAddNewApplication.Size = new System.Drawing.Size(63, 53);
             this.btnAddNewApplication.TabIndex = 3;
             this.btnAddNewApplication.UseVisualStyleBackColor = true;
+            this.btnAddNewApplication.Click += new System.EventHandler(this.btnAddNewApplication_Click);
             // 
             // dgvLocalApplicationList
             // 
@@ -119,7 +120,7 @@
             this.showLicenseToolStripMenuItem,
             this.showPersonLicenseHistoryToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 202);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(246, 180);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // showApplicationDetailsToolStripMenuItem

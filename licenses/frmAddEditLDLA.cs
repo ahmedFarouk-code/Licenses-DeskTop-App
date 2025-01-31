@@ -86,7 +86,7 @@ namespace licensesApp
                 _Application = new clsApplications();
 
                 lblAPPDate.Text = DateTime.Now.ToString();
-                lblCreatedBy.Text = _UserID.ToString();
+                lblCreatedBy.Text =  (clsUsers.FindByUserID(_UserID) .UserName);
                 lblAppFees.Text = 15.ToString();
                 cbLicenseClass.SelectedIndex = 0;
 

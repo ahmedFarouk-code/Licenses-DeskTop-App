@@ -109,7 +109,7 @@
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
             this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
-            // 
+           
             // localLicenseToolStripMenuItem
             // 
             this.localLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localLicenseToolStripMenuItem.Image")));
