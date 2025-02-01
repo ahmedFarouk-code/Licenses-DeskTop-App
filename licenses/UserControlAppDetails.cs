@@ -61,7 +61,7 @@ namespace licensesApp
             lblApplicant.Text = _Person.FirstName + " " + _Person.SecondName + " " + _Person.ThirdName + " " + _Person.LastName;
             lblDate.Text = _Application.ApplicationDate.ToString();
             lblStatussDate.Text = _Application.LastStatusDate.ToString();
-            lblCreatedBy.Text = clsUsers.Find(_Application.CreatedByUserID).UserName;
+            lblCreatedBy.Text = clsUsers.FindByUserID(_Application.CreatedByUserID).UserName;
             lblType.Text = clsApplicationTypes.Find(_Application.ApplicationTypeID).ApplicationTypeTitle;
         }
 
