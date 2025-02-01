@@ -17,15 +17,17 @@ namespace licensesApp
         private int _LDLAi;
         private int _PassedTests;
         private int _TestTypeid;
+        private int _UserID;
         enum enAppointMentType { Vision = 1 ,Written = 2 , Street = 3}
         enAppointMentType _TestType;
-
-        public frmAppApointments(int lDLAi, int passedTests , int TestType)
+       
+        public frmAppApointments(int lDLAi, int passedTests , int TestType ,int UserID)
         {
             InitializeComponent();
             _LDLAi = lDLAi;
             _PassedTests = passedTests;
             _TestTypeid = TestType;
+            _UserID = UserID;
             UserControlAppDetails.LDLid = _LDLAi;
             UserControlAppDetails.PassedTests = _PassedTests;
             if (_TestTypeid == 1)
@@ -104,9 +106,10 @@ namespace licensesApp
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
-            Form frm = new frmScheduleTest(_LDLAi, -1, _TestTypeid);
+            Form frm = new frmScheduleTest(_LDLAi, -1, _TestTypeid , _UserID);
+            
             frm.ShowDialog();
 
-    }
+        }
     }
 }

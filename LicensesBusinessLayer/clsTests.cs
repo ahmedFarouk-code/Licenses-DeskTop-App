@@ -18,5 +18,10 @@ namespace LicensesBusinessLayer
             return clsTestsData.GetAllTests();
         }
 
+        public static bool isPassed(int AppointmentID)
+        {
+            return clsTests.isPassed(AppointmentID);
+        }
+
     }
 }

@@ -134,5 +134,100 @@ namespace LicensesDataAccess
 
             return isFound;
         }
+
+        public static int AddNewAppointment(int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
+            decimal PaidFees, int CreatedByUserID, bool IsLocked,
+            int RetakeTestApplicationID)
+        {
+            int TestAppointmentID = -1;
+
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = @"INSERT INTO TestAppointments (TestTypeID,LocalDrivingLicenseApplicationID, AppointmentDate, PaidFees,
+                              CreatedByUserID, IsLocked, RetakeTestApplicationID) 
+                              VALUES(@TestTypeID,@LocalDrivingLicenseApplicationID, @AppointmentDate, @PaidFees,
+                              @CreatedByUserID, @IsLocked, @RetakeTestApplicationID);
+                              SELECT SCOPE_IDENTITY();";
+
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
+            command.Parameters.AddWithValue("@PaidFees", PaidFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@IsLocked", IsLocked);
+            if (RetakeTestApplicationID != 0)
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+            else
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", System.DBNull.Value);
+            try
+            {
+                connection.Open();
+                object result = command.ExecuteScalar();
+                if (result != null && int.TryParse(result.ToString(), out int insertedID))
+                {
+                    TestAppointmentID = insertedID;
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Error: " + ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+            return TestAppointmentID;
+        }
+
+
+        public static bool UpdateAppointment(int TestAppointmentID, int TestTypeID, int LocalDrivingLicenseApplicationID, DateTime AppointmentDate,
+            decimal PaidFees, int CreatedByUserID, bool IsLocked,
+            int RetakeTestApplicationID)
+        {
+            int RowsEffected = -1;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = @"UPDATE TestAppointments
+                               SET
+                                   TestTypeID = @TestTypeID,
+                                   LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID,
+                                   AppointmentDate = @AppointmentDate,
+                                   PaidFees = @PaidFees,
+                                   CreatedByUserID = @CreatedByUserID,
+                                   IsLocked = @IsLocked,
+                                   RetakeTestApplicationID = @RetakeTestApplicationID
+                                   where TestAppointmentID = @TestAppointmentID";
+
+            SqlCommand command = new SqlCommand(query, connection);
+
+            command.Parameters.AddWithValue("@TestAppointmentID", TestAppointmentID);
+            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+            command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
+            command.Parameters.AddWithValue("@AppointmentDate", AppointmentDate);
+            command.Parameters.AddWithValue("@PaidFees", PaidFees);
+            command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
+            command.Parameters.AddWithValue("@IsLocked", IsLocked);
+
+            if (RetakeTestApplicationID != 0)
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+            else
+                command.Parameters.AddWithValue("@RetakeTestApplicationID", System.DBNull.Value);
+            try
+            {
+                connection.Open();
+                RowsEffected = command.ExecuteNonQuery();
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return (RowsEffected > 0);
+
+        }
     }
 }

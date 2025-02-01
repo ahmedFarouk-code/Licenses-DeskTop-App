@@ -97,5 +97,45 @@ namespace LicensesBusinessLayer
                 return null;
 
         }
+
+        private bool _AddNewAppointment()
+        {
+            this.TestAppointmentID = clsTestAppointmentsData.AddNewAppointment(this.TestTypeID, this.LocalDrivingLicenseApplicationID, this.AppointmentDate,
+                this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID);
+
+            return (this.TestAppointmentID != -1);
+        }
+
+
+        private bool _UpdateAppointment()
+        {
+            return clsTestAppointmentsData.UpdateAppointment(this.TestAppointmentID ,this.TestTypeID, this.LocalDrivingLicenseApplicationID, this.AppointmentDate,
+                this.PaidFees, this.CreatedByUserID, this.IsLocked, this.RetakeTestApplicationID);
+        }
+
+        public bool Save()
+        {
+            switch (Mode)
+            {
+                case enMode.AddNew:
+                    {
+                        if (_AddNewAppointment())
+                        {
+                            Mode = enMode.Update;
+                            return true;
+                        }
+                        else
+                        {
+                            return false;
+                        }
+                    }
+                case enMode.Update:
+
+                    return _UpdateAppointment();
+
+            }
+
+            return false;
+        }
     }
 }

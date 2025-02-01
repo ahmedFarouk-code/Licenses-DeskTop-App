@@ -23,10 +23,12 @@ namespace licensesApp
         private clsLDLA _LDLA;
         private clsApplications _Application;
         private clsPeople _Person;
+        private clsTestAppointments _Appointments; 
 
         public static int TestAppoID {  get; set; }
         public static int TesTypeID { get; set; }
         public static int LDLAid { get; set; }
+        public static int UserID {  get; set; }
         
 
         public UrScheduleTestAndRetake()
@@ -62,6 +64,8 @@ namespace licensesApp
                 {
                     return;
                 }
+
+               
             }
 
             else
@@ -124,6 +128,7 @@ namespace licensesApp
             }
            
             lblTrail.Text = Trial.ToString();
+           
 
             dateTimePicker1.Value = DateTime.Now;
             lblFees.Text = clsTestTypes.Find(TesTypeID).TestTypeFees.ToString();
@@ -133,15 +138,15 @@ namespace licensesApp
                 gbRetakeTestInfo.Enabled = false;
                 lblTitle.Text = "Schedule Test";
                 lblRFees.Text = "5";
-                //lblTotalFees.Text = clsTestTypes.Find(TesTypeID).TestTypeFees.ToString();
+                lblTotalFees.Text = clsTestTypes.Find(TesTypeID).TestTypeFees.ToString();
             }
             else
             {
                 gbRetakeTestInfo.Enabled = true;
                 lblTitle.Text = "Schedule Retake Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = (Convert.ToInt32(lblRFees.Text) + Convert.ToInt32(lblFees.Text)).ToString();
-                //lblRTestAAppID.Text = _TestAppointments.RetakeTestApplicationID.ToString();
+                lblTotalFees.Text = (5 + Convert.ToInt32(lblFees.Text)).ToString();
+                lblRTestAAppID.Text = _TestAppointments.RetakeTestApplicationID.ToString();
             }
 
             
@@ -154,5 +159,33 @@ namespace licensesApp
         {
             _Load();
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (_Mode == enMode.AddNew)
+            {
+                _Appointments = new clsTestAppointments();
+
+            }
+
+            _Appointments.TestTypeID = TesTypeID;
+            _Appointments.LocalDrivingLicenseApplicationID =  Convert.ToInt32(lblDLAid.Text);
+            _Appointments.AppointmentDate = dateTimePicker1.Value;
+            _Appointments.PaidFees = Convert.ToDecimal(lblFees.Text);
+            _Appointments.CreatedByUserID = UserID;
+            _Appointments.IsLocked = false;
+            _Appointments.RetakeTestApplicationID = 0;
+
+            if (_Appointments.Save())
+
+                MessageBox.Show("Data Saved Successfully.");
+            else
+                MessageBox.Show("Error: Data Is not Saved Successfully.");
+
+            _Mode = enMode.Update;
+        }
+
+
     }
+
 }

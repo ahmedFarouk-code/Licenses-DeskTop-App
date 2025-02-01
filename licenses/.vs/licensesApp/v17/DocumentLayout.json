@@ -3,19 +3,11 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmscheduletest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -39,51 +31,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmScheduleTest.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmScheduleTest.cs",
-              "RelativeDocumentMoniker": "frmScheduleTest.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmScheduleTest.cs",
-              "RelativeToolTip": "frmScheduleTest.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAwwCUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:49:04.69Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmScheduleTest.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmScheduleTest.cs",
-              "RelativeDocumentMoniker": "frmScheduleTest.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmScheduleTest.cs [Design]",
-              "RelativeToolTip": "frmScheduleTest.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:49:02.39Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "UrScheduleTestAndRetake.cs",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
               "RelativeDocumentMoniker": "UrScheduleTestAndRetake.cs",
               "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
               "RelativeToolTip": "UrScheduleTestAndRetake.cs",
-              "ViewState": "AgIAAIwAAAAAAAAAAAAAAJ4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAowEIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:46:24.662Z",
+              "WhenOpened": "2025-02-01T22:48:01.911Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "UrScheduleTestAndRetake.cs [Design]",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
               "RelativeDocumentMoniker": "UrScheduleTestAndRetake.cs",
               "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs [Design]",
               "RelativeToolTip": "UrScheduleTestAndRetake.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T16:43:55.693Z",
+              "WhenOpened": "2025-02-01T22:00:55.383Z",
               "EditorCaption": " [Design]"
             }
           ]

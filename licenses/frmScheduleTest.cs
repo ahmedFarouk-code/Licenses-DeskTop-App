@@ -15,16 +15,21 @@ namespace licensesApp
         private int _TestAppoID;
         private int _TesTypeID;
         private int _LDLAid;
-        public frmScheduleTest(int LDLAid, int TestAppoID, int TesTypeID)
+        private int _UserID;
+        public frmScheduleTest(int LDLAid, int TestAppoID, int TesTypeID , int UserID)
         {
             InitializeComponent();
             _TestAppoID = TestAppoID;
             _TesTypeID = TesTypeID;
             _LDLAid = LDLAid;
+            _UserID = UserID;
             UrScheduleTestAndRetake.TestAppoID = _TestAppoID;
             UrScheduleTestAndRetake.TesTypeID = _TesTypeID;
             UrScheduleTestAndRetake.LDLAid = _LDLAid;
-            
+            UrScheduleTestAndRetake.UserID = _UserID;
+
+
+
         }
 
         private void frmScheduleTest_Load(object sender, EventArgs e)
@@ -32,6 +37,12 @@ namespace licensesApp
             UrScheduleTestAndRetake.TestAppoID = _TestAppoID;
             UrScheduleTestAndRetake.TesTypeID = _TesTypeID;
             UrScheduleTestAndRetake.LDLAid = _TesTypeID;
+            UrScheduleTestAndRetake.UserID = _UserID;
+        }
+
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

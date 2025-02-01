@@ -43,11 +43,15 @@
             // 
             // dgvAppointmentList
             // 
+            this.dgvAppointmentList.AllowUserToAddRows = false;
+            this.dgvAppointmentList.AllowUserToDeleteRows = false;
+            this.dgvAppointmentList.AllowUserToOrderColumns = true;
             this.dgvAppointmentList.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAppointmentList.GridColor = System.Drawing.SystemColors.Control;
             this.dgvAppointmentList.Location = new System.Drawing.Point(38, 559);
             this.dgvAppointmentList.Name = "dgvAppointmentList";
+            this.dgvAppointmentList.ReadOnly = true;
             this.dgvAppointmentList.Size = new System.Drawing.Size(760, 150);
             this.dgvAppointmentList.TabIndex = 1;
             // 
