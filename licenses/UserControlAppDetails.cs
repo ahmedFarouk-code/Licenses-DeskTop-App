@@ -30,20 +30,18 @@ namespace licensesApp
             _LDLA = clsLDLA.Find(LDLid);
             if(_LDLA == null )
             {
-                MessageBox.Show("_LDLA is Null", "Erorr", MessageBoxButtons.OK);
+                
                 return;
             }
 
             _Application = clsApplications.Find(_LDLA.ApplicationID);
             if (_LDLA == null)
             {
-                MessageBox.Show("_Application is Null", "Erorr", MessageBoxButtons.OK);
                 return;
             }
             _Person = clsPeople.Find(_Application.ApplicantPersonID);
             if (_LDLA == null)
             {
-                MessageBox.Show("_Person is Null", "Erorr", MessageBoxButtons.OK);
                 return;
             }
 

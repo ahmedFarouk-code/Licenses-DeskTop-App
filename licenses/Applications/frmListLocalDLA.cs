@@ -273,8 +273,8 @@ namespace licensesApp
 
         private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAppVisionApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
-                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value);
+            Form frm = new frmAppApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value ,1);
             frm.ShowDialog();
         }
 

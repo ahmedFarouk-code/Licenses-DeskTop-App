@@ -31,4 +31,6 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControl2PersonDetails
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmListLocalDLA.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditLDLA.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControlAppDetails.resources
-D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAppVisionApointments.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmScheduleTest.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAppApointments.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UrScheduleTestAndRetake.resources
