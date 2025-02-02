@@ -18,6 +18,7 @@ namespace licensesApp
         private int _PassedTests;
         private int _TestTypeid;
         private int _UserID;
+        DataTable dt = new DataTable();
         enum enAppointMentType { Vision = 1 ,Written = 2 , Street = 3}
         enAppointMentType _TestType;
        
@@ -58,7 +59,7 @@ namespace licensesApp
                 pictureBox1.Image = Image.FromFile("D:\\Licenses-DeskTop-App\\licenses\\Images\\road.png");
                 lblTitle.Text = "Street Test Appointments";
             }
-            DataTable dt = new DataTable();
+             dt = new DataTable();
 
             DataColumn dtColumn;
 
@@ -95,7 +96,7 @@ namespace licensesApp
                 }
             }
             dgvAppointmentList.DataSource = dt;
-
+            lblRecords.Text = dt.Rows.Count.ToString();
 
         }
 
@@ -106,10 +107,29 @@ namespace licensesApp
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
         {
+            foreach(DataRow dtRecordRow in dt.Rows)
+            {
+                if ((bool)dtRecordRow["Is Locked"] == false)
+                {
+                    MessageBox.Show("Person already have an active appointment for this test , you connot Add new appointment" , "Not Allowed" , MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+            }
             Form frm = new frmScheduleTest(_LDLAi, -1, _TestTypeid , _UserID);
-            
             frm.ShowDialog();
 
+        }
+
+        private void editToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmScheduleTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _TestTypeid, _UserID);
+            frm.ShowDialog();
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

@@ -28,7 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAppApointments));
             this.dgvAppointmentList = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.takeTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnAddAppointment = new System.Windows.Forms.Button();
@@ -38,6 +43,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.userControlAppDetails1 = new licensesApp.UserControlAppDetails();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointmentList)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,14 +52,40 @@
             this.dgvAppointmentList.AllowUserToAddRows = false;
             this.dgvAppointmentList.AllowUserToDeleteRows = false;
             this.dgvAppointmentList.AllowUserToOrderColumns = true;
-            this.dgvAppointmentList.BackgroundColor = System.Drawing.SystemColors.Control;
+            this.dgvAppointmentList.BackgroundColor = System.Drawing.Color.White;
             this.dgvAppointmentList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAppointmentList.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvAppointmentList.GridColor = System.Drawing.SystemColors.Control;
             this.dgvAppointmentList.Location = new System.Drawing.Point(38, 559);
             this.dgvAppointmentList.Name = "dgvAppointmentList";
             this.dgvAppointmentList.ReadOnly = true;
             this.dgvAppointmentList.Size = new System.Drawing.Size(760, 150);
             this.dgvAppointmentList.TabIndex = 1;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.editToolStripMenuItem,
+            this.takeTestToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(177, 160);
+            // 
+            // editToolStripMenuItem
+            // 
+            this.editToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("editToolStripMenuItem.Image")));
+            this.editToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.editToolStripMenuItem.Name = "editToolStripMenuItem";
+            this.editToolStripMenuItem.Size = new System.Drawing.Size(176, 78);
+            this.editToolStripMenuItem.Text = "Edit";
+            this.editToolStripMenuItem.Click += new System.EventHandler(this.editToolStripMenuItem_Click);
+            // 
+            // takeTestToolStripMenuItem
+            // 
+            this.takeTestToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("takeTestToolStripMenuItem.Image")));
+            this.takeTestToolStripMenuItem.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.takeTestToolStripMenuItem.Name = "takeTestToolStripMenuItem";
+            this.takeTestToolStripMenuItem.Size = new System.Drawing.Size(176, 78);
+            this.takeTestToolStripMenuItem.Text = "Take Test";
             // 
             // pictureBox1
             // 
@@ -77,9 +109,11 @@
             // 
             // btnAddAppointment
             // 
-            this.btnAddAppointment.Location = new System.Drawing.Point(735, 518);
+            this.btnAddAppointment.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnAddAppointment.BackgroundImage")));
+            this.btnAddAppointment.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnAddAppointment.Location = new System.Drawing.Point(708, 499);
             this.btnAddAppointment.Name = "btnAddAppointment";
-            this.btnAddAppointment.Size = new System.Drawing.Size(45, 35);
+            this.btnAddAppointment.Size = new System.Drawing.Size(72, 54);
             this.btnAddAppointment.TabIndex = 4;
             this.btnAddAppointment.UseVisualStyleBackColor = true;
             this.btnAddAppointment.Click += new System.EventHandler(this.btnAddAppointment_Click);
@@ -123,6 +157,7 @@
             this.button1.TabIndex = 8;
             this.button1.Text = "Close";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // userControlAppDetails1
             // 
@@ -135,6 +170,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(810, 753);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label4);
@@ -149,6 +185,7 @@
             this.Text = "frmAppApointments";
             this.Load += new System.EventHandler(this.frmAppVisionApointments_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAppointmentList)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -166,5 +203,8 @@
         private System.Windows.Forms.Label lblRecords;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem editToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem takeTestToolStripMenuItem;
     }
 }

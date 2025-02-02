@@ -56,15 +56,23 @@ namespace licensesApp
         }
        private void _Load()
         {
+            if (TesTypeID == 1)
+            {
+                _TesType = enTestType.Vision;
+            }
+            else if (TesTypeID == 2)
+            {
+                _TesType = enTestType.Written;
+            }
+            else
+            {
+                _TesType = enTestType.Street;
+            }
+
+
             if (_Mode == enMode.AddNew)
             {
                 _TestAppointments = new clsTestAppointments();
-                _LDLA = clsLDLA.Find(LDLAid);
-                if (_LDLA == null)
-                {
-                    return;
-                }
-
                
             }
 
@@ -75,12 +83,22 @@ namespace licensesApp
                 {
                     return;
                 }
-                _LDLA = clsLDLA.Find(_TestAppointments.LocalDrivingLicenseApplicationID);
-                if (_LDLA == null)
+                if(_TestAppointments.IsLocked == true)
                 {
-                    return;
+                    dateTimePicker1.Enabled = false;
+                    btnSave.Enabled = false;
+                    lblAlreadySat.Visible = true;
+                    lblAlreadySat.Text = "Person already sat for the test, appointment locked";
+
                 }
             }
+
+            _LDLA = clsLDLA.Find(LDLAid);
+            if (_LDLA == null)
+            {
+                return;
+            }
+
             _Application = clsApplications.Find(_LDLA.ApplicationID);
             if (_Application == null)
             {
@@ -121,7 +139,7 @@ namespace licensesApp
             {
                 if((int)rowAppointment["TestTypeID"] == TesTypeID &&
                     (int)rowAppointment["LocalDrivingLicenseApplicationID"] == _LDLA.LocalDrivingLicenseApplicationID &&
-                    (int)rowAppointment["LocalDrivingLicenseApplicationID"] >0)
+                    rowAppointment["RetakeTestApplicationID"] == null)
                 {
                     Trial++;
                 }
@@ -145,7 +163,7 @@ namespace licensesApp
                 gbRetakeTestInfo.Enabled = true;
                 lblTitle.Text = "Schedule Retake Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = (5 + Convert.ToInt32(lblFees.Text)).ToString();
+                lblTotalFees.Text = (5 + clsTestTypes.Find(TesTypeID).TestTypeFees).ToString();
                 lblRTestAAppID.Text = _TestAppointments.RetakeTestApplicationID.ToString();
             }
 
@@ -167,6 +185,12 @@ namespace licensesApp
                 _Appointments = new clsTestAppointments();
 
             }
+           else
+            {
+                _Appointments = clsTestAppointments.FindByID(TestAppoID);
+            }
+
+           
 
             _Appointments.TestTypeID = TesTypeID;
             _Appointments.LocalDrivingLicenseApplicationID =  Convert.ToInt32(lblDLAid.Text);

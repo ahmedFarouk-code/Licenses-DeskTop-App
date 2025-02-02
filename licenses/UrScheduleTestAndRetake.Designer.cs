@@ -51,6 +51,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblTotalFees = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblAlreadySat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbRetakeTestInfo.SuspendLayout();
@@ -67,6 +68,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblAlreadySat);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.label14);
             this.groupBox1.Controls.Add(this.label13);
@@ -304,6 +306,18 @@
             this.label8.TabIndex = 10;
             this.label8.Text = "R.Test.App.ID:";
             // 
+            // lblAlreadySat
+            // 
+            this.lblAlreadySat.AutoSize = true;
+            this.lblAlreadySat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlreadySat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAlreadySat.Location = new System.Drawing.Point(93, 180);
+            this.lblAlreadySat.Name = "lblAlreadySat";
+            this.lblAlreadySat.Size = new System.Drawing.Size(36, 19);
+            this.lblAlreadySat.TabIndex = 18;
+            this.lblAlreadySat.Text = "???";
+            this.lblAlreadySat.Visible = false;
+            // 
             // UrScheduleTestAndRetake
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -346,5 +360,6 @@
         private System.Windows.Forms.Label lblTotalFees;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Label lblAlreadySat;
     }
 }

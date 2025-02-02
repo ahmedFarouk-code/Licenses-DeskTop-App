@@ -112,8 +112,10 @@ namespace LicensesDataAccess
                     PaidFees = (decimal)reader["PaidFees"];
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsLocked = (bool)reader["IsLocked"];
-                    RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
-
+                    if (RetakeTestApplicationID !=0)
+                        command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
+                    else
+                        command.Parameters.AddWithValue("@RetakeTestApplicationID", System.DBNull.Value);
 
                 }
                 else
