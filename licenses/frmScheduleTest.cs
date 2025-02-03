@@ -13,21 +13,20 @@ namespace licensesApp
     public partial class frmScheduleTest : Form
     {
         private int _TestAppoID;
-        private int _TesTypeID;
         private int _LDLAid;
         private int _UserID;
-        public frmScheduleTest(int LDLAid, int TestAppoID, int TesTypeID , int UserID)
+        private int _TestType;
+        public frmScheduleTest(int LDLAid, int TestAppoID , int UserID ,int TestType)
         {
             InitializeComponent();
             _TestAppoID = TestAppoID;
-            _TesTypeID = TesTypeID;
             _LDLAid = LDLAid;
             _UserID = UserID;
+            _TestType = TestType;
             UrScheduleTestAndRetake.TestAppoID = _TestAppoID;
-            UrScheduleTestAndRetake.TesTypeID = _TesTypeID;
             UrScheduleTestAndRetake.LDLAid = _LDLAid;
             UrScheduleTestAndRetake.UserID = _UserID;
-
+            UrScheduleTestAndRetake.TestType = _TestType;
 
 
         }
@@ -35,9 +34,9 @@ namespace licensesApp
         private void frmScheduleTest_Load(object sender, EventArgs e)
         {
             UrScheduleTestAndRetake.TestAppoID = _TestAppoID;
-            UrScheduleTestAndRetake.TesTypeID = _TesTypeID;
-            UrScheduleTestAndRetake.LDLAid = _TesTypeID;
+            UrScheduleTestAndRetake.LDLAid = _LDLAid;
             UrScheduleTestAndRetake.UserID = _UserID;
+            UrScheduleTestAndRetake.TestType = _TestType;
         }
 
         private void btnClose_Click(object sender, EventArgs e)

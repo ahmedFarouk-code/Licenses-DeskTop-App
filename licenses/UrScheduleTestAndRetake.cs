@@ -16,9 +16,6 @@ namespace licensesApp
         enum enMode { AddNew =0 , Update = 1 }
         enMode _Mode = enMode.AddNew;
 
-        enum enTestType {Vision = 1 , Written = 3 ,Street = 3 }
-        enTestType _TesType = enTestType.Vision;
-
         private clsTestAppointments _TestAppointments;
         private clsLDLA _LDLA;
         private clsApplications _Application;
@@ -26,26 +23,14 @@ namespace licensesApp
         private clsTestAppointments _Appointments; 
 
         public static int TestAppoID {  get; set; }
-        public static int TesTypeID { get; set; }
         public static int LDLAid { get; set; }
         public static int UserID {  get; set; }
-        
+        public static int TestType { get; set; }
 
         public UrScheduleTestAndRetake()
         {
             InitializeComponent();
-            if(TesTypeID == 1)
-            {
-                _TesType = enTestType.Vision;
-            }
-           else if(TesTypeID == 2)
-           {
-                _TesType = enTestType.Written;
-            }
-           else
-           {
-                _TesType = enTestType.Street;
-           }
+           
 
             if(TestAppoID == -1)
             { _Mode = enMode.AddNew; }
@@ -56,18 +41,20 @@ namespace licensesApp
         }
        private void _Load()
         {
-            if (TesTypeID == 1)
+            if(TestType == 1)
             {
-                _TesType = enTestType.Vision;
+                groupBox1.Text = "Vision Test";
             }
-            else if (TesTypeID == 2)
+            if (TestType == 2)
             {
-                _TesType = enTestType.Written;
+                groupBox1.Text = "written Test";
             }
-            else
+            if (TestType == 3)
             {
-                _TesType = enTestType.Street;
+                groupBox1.Text = "Street Test";
             }
+
+
 
 
             if (_Mode == enMode.AddNew)
@@ -111,22 +98,7 @@ namespace licensesApp
                 }
             
 
-            if (_TesType == enTestType.Vision)
-            {
-                pictureBox1.Image = Image.FromFile("D:\\Licenses-DeskTop-App\\licenses\\Images\\eye.png");
-                groupBox1.Text = "Vision Test";
-            }
-            else if(_TesType == enTestType.Written)
-            {
-                pictureBox1.Image = Image.FromFile("D:\\Licenses-DeskTop-App\\licenses\\Images\\pen.png");
-                groupBox1.Text = "Written Test";
-            }
-            else
-            {
-                pictureBox1.Image = Image.FromFile("D:\\Licenses-DeskTop-App\\licenses\\Images\\road.png");
-                groupBox1.Text = "Street Test";
-            }
-
+            
 
             lblDLAid.Text = _LDLA.LocalDrivingLicenseApplicationID.ToString();
             lblDClass.Text = clsLicenseClasses.Find (_LDLA.LicenseClassID).LicenseClasseName;
@@ -137,9 +109,8 @@ namespace licensesApp
             int Trial = 0;
             foreach (DataRow rowAppointment in dtAppointment.Rows)
             {
-                if((int)rowAppointment["TestTypeID"] == TesTypeID &&
-                    (int)rowAppointment["LocalDrivingLicenseApplicationID"] == _LDLA.LocalDrivingLicenseApplicationID &&
-                    rowAppointment["RetakeTestApplicationID"] == null)
+                if((int)rowAppointment["LocalDrivingLicenseApplicationID"] == _LDLA.LocalDrivingLicenseApplicationID &&
+                    rowAppointment["RetakeTestApplicationID"] != null)
                 {
                     Trial++;
                 }
@@ -149,21 +120,21 @@ namespace licensesApp
            
 
             dateTimePicker1.Value = DateTime.Now;
-            lblFees.Text = clsTestTypes.Find(TesTypeID).TestTypeFees.ToString();
+            lblFees.Text = clsTestTypes.Find(TestType).TestTypeFees.ToString();
 
             if (lblTrail.Text == "0")
             {
                 gbRetakeTestInfo.Enabled = false;
                 lblTitle.Text = "Schedule Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = clsTestTypes.Find(TesTypeID).TestTypeFees.ToString();
+                lblTotalFees.Text = clsTestTypes.Find(TestType).TestTypeFees.ToString();
             }
             else
             {
                 gbRetakeTestInfo.Enabled = true;
                 lblTitle.Text = "Schedule Retake Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = (5 + clsTestTypes.Find(TesTypeID).TestTypeFees).ToString();
+                lblTotalFees.Text = (5 + clsTestTypes.Find(TestType).TestTypeFees).ToString();
                 lblRTestAAppID.Text = _TestAppointments.RetakeTestApplicationID.ToString();
             }
 
@@ -192,7 +163,7 @@ namespace licensesApp
 
            
 
-            _Appointments.TestTypeID = TesTypeID;
+            _Appointments.TestTypeID = TestType;
             _Appointments.LocalDrivingLicenseApplicationID =  Convert.ToInt32(lblDLAid.Text);
             _Appointments.AppointmentDate = dateTimePicker1.Value;
             _Appointments.PaidFees = Convert.ToDecimal(lblFees.Text);
@@ -208,7 +179,7 @@ namespace licensesApp
 
             _Mode = enMode.Update;
         }
-
+       
 
     }
 

@@ -273,14 +273,28 @@ namespace licensesApp
 
         private void scheduleVisionTestToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form frm = new frmAppApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
-                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value ,1, _UserID);
+            Form frm = new frmAppVisionApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value , _UserID);
             frm.ShowDialog();
         }
 
         private void btnAddNewApplication_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddEditLDLA(_UserID, -1);
+            frm.ShowDialog();
+        }
+
+        private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmWrittenAppointment((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
+            frm.ShowDialog();
+        }
+
+        private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmstreetAppointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
             frm.ShowDialog();
         }
     }

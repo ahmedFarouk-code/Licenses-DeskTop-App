@@ -58,17 +58,53 @@
     <Compile Include="frmAddEditLDLA.Designer.cs">
       <DependentUpon>frmAddEditLDLA.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmAppApointments.cs">
+    <Compile Include="frmAppVisionApointments.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmAppApointments.Designer.cs">
-      <DependentUpon>frmAppApointments.cs</DependentUpon>
+    <Compile Include="frmAppVisionApointments.Designer.cs">
+      <DependentUpon>frmAppVisionApointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIssueDriverLicenseForTheFirstTime.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIssueDriverLicenseForTheFirstTime.Designer.cs">
+      <DependentUpon>frmIssueDriverLicenseForTheFirstTime.cs</DependentUpon>
     </Compile>
     <Compile Include="frmScheduleTest.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmScheduleTest.Designer.cs">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmstreetAppointments.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmstreetAppointments.Designer.cs">
+      <DependentUpon>frmstreetAppointments.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmStreetTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmStreetTest.Designer.cs">
+      <DependentUpon>frmStreetTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmVisionTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVisionTest.Designer.cs">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWrittenAppointment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWrittenAppointment.Designer.cs">
+      <DependentUpon>frmWrittenAppointment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWrittenTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWrittenTest.Designer.cs">
+      <DependentUpon>frmWrittenTest.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\frmEditTestType.cs">
       <SubType>Form</SubType>
@@ -186,11 +222,29 @@
     <EmbeddedResource Include="frmAddEditLDLA.resx">
       <DependentUpon>frmAddEditLDLA.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmAppApointments.resx">
-      <DependentUpon>frmAppApointments.cs</DependentUpon>
+    <EmbeddedResource Include="frmAppVisionApointments.resx">
+      <DependentUpon>frmAppVisionApointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIssueDriverLicenseForTheFirstTime.resx">
+      <DependentUpon>frmIssueDriverLicenseForTheFirstTime.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmstreetAppointments.resx">
+      <DependentUpon>frmstreetAppointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmStreetTest.resx">
+      <DependentUpon>frmStreetTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVisionTest.resx">
+      <DependentUpon>frmVisionTest.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWrittenAppointment.resx">
+      <DependentUpon>frmWrittenAppointment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWrittenTest.resx">
+      <DependentUpon>frmWrittenTest.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmEditTestType.resx">
       <DependentUpon>frmEditTestType.cs</DependentUpon>

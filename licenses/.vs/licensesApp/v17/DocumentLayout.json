@@ -3,20 +3,16 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmappapointments.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:usercontrolappdetails.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:urscheduletestandretake.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +22,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -38,52 +34,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmAppApointments.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
-              "RelativeDocumentMoniker": "frmAppApointments.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
-              "RelativeToolTip": "frmAppApointments.cs",
-              "ViewState": "AgIAAEYAAAAAAAAAAAAswGIAAAA3AAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "UserControlAppDetails.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs",
+              "RelativeDocumentMoniker": "UserControlAppDetails.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UserControlAppDetails.cs",
+              "RelativeToolTip": "UserControlAppDetails.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAIBBwBAAAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T09:56:07.882Z",
+              "WhenOpened": "2025-02-03T06:10:58.096Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmAppApointments.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs",
-              "RelativeDocumentMoniker": "frmAppApointments.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmAppApointments.cs [Design]",
-              "RelativeToolTip": "frmAppApointments.cs [Design]",
+              "DocumentIndex": 0,
+              "Title": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeDocumentMoniker": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeToolTip": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAhwB8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-02T09:57:47.847Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "UrScheduleTestAndRetake.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
-              "RelativeDocumentMoniker": "UrScheduleTestAndRetake.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
-              "RelativeToolTip": "UrScheduleTestAndRetake.cs",
-              "ViewState": "AgIAAJoAAAAAAAAAAAAowLUAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T22:48:01.911Z",
+              "WhenOpened": "2025-02-03T06:10:36.128Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "UrScheduleTestAndRetake.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs",
-              "RelativeDocumentMoniker": "UrScheduleTestAndRetake.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\UrScheduleTestAndRetake.cs [Design]",
-              "RelativeToolTip": "UrScheduleTestAndRetake.cs [Design]",
+              "Title": "frmIssueDriverLicenseForTheFirstTime.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeDocumentMoniker": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs [Design]",
+              "RelativeToolTip": "frmIssueDriverLicenseForTheFirstTime.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-01T22:00:55.383Z",
+              "WhenOpened": "2025-02-03T06:06:01.826Z",
               "EditorCaption": " [Design]"
             }
           ]

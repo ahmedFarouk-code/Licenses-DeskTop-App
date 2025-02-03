@@ -209,7 +209,7 @@ namespace LicensesDataAccess
             command.Parameters.AddWithValue("@CreatedByUserID", CreatedByUserID);
             command.Parameters.AddWithValue("@IsLocked", IsLocked);
 
-            if (RetakeTestApplicationID != 0)
+            if (RetakeTestApplicationID != -1)
                 command.Parameters.AddWithValue("@RetakeTestApplicationID", RetakeTestApplicationID);
             else
                 command.Parameters.AddWithValue("@RetakeTestApplicationID", System.DBNull.Value);

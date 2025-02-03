@@ -32,5 +32,10 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmListLocalDLA.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAddEditLDLA.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UserControlAppDetails.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmScheduleTest.resources
-D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAppApointments.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.UrScheduleTestAndRetake.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmAppVisionApointments.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmVisionTest.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmWrittenAppointment.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmWrittenTest.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmstreetAppointments.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmStreetTest.resources

@@ -30,6 +30,7 @@
         {
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lblAlreadySat = new System.Windows.Forms.Label();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -51,7 +52,6 @@
             this.label18 = new System.Windows.Forms.Label();
             this.lblTotalFees = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
-            this.lblAlreadySat = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.gbRetakeTestInfo.SuspendLayout();
@@ -91,6 +91,18 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "groupBox1";
+            // 
+            // lblAlreadySat
+            // 
+            this.lblAlreadySat.AutoSize = true;
+            this.lblAlreadySat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAlreadySat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lblAlreadySat.Location = new System.Drawing.Point(93, 180);
+            this.lblAlreadySat.Name = "lblAlreadySat";
+            this.lblAlreadySat.Size = new System.Drawing.Size(36, 19);
+            this.lblAlreadySat.TabIndex = 18;
+            this.lblAlreadySat.Text = "???";
+            this.lblAlreadySat.Visible = false;
             // 
             // dateTimePicker1
             // 
@@ -214,7 +226,7 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Tahoma", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblTitle.Location = new System.Drawing.Point(241, 159);
+            this.lblTitle.Location = new System.Drawing.Point(280, 155);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(48, 25);
             this.lblTitle.TabIndex = 3;
@@ -305,18 +317,6 @@
             this.label8.Size = new System.Drawing.Size(101, 16);
             this.label8.TabIndex = 10;
             this.label8.Text = "R.Test.App.ID:";
-            // 
-            // lblAlreadySat
-            // 
-            this.lblAlreadySat.AutoSize = true;
-            this.lblAlreadySat.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAlreadySat.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lblAlreadySat.Location = new System.Drawing.Point(93, 180);
-            this.lblAlreadySat.Name = "lblAlreadySat";
-            this.lblAlreadySat.Size = new System.Drawing.Size(36, 19);
-            this.lblAlreadySat.TabIndex = 18;
-            this.lblAlreadySat.Text = "???";
-            this.lblAlreadySat.Visible = false;
             // 
             // UrScheduleTestAndRetake
             // 
