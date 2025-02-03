@@ -75,5 +75,23 @@ namespace LicensesBusinessLayer
             return false;
         }
 
+
+        public static clsDrivers Find(int PersonID)
+        {
+            int DriverID = 0; int CreatedByUserID = -1;
+            DateTime CreatedDate = DateTime.Now;
+
+
+            if (clsDriversData.GetPersonByPersonID(ref DriverID, PersonID,
+                ref CreatedByUserID, ref CreatedDate))
+
+                return new clsDrivers(DriverID, PersonID,
+                 CreatedByUserID, CreatedDate);
+
+            else
+                return null;
+
+        }
+
     }
 }

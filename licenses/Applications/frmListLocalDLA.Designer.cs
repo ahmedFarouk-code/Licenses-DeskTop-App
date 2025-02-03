@@ -192,6 +192,7 @@
             this.issueDrivingLicenseToolStripMenuItem.Name = "issueDrivingLicenseToolStripMenuItem";
             this.issueDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(245, 22);
             this.issueDrivingLicenseToolStripMenuItem.Text = "Issue Driving License (First Time)";
+            this.issueDrivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.issueDrivingLicenseToolStripMenuItem_Click);
             // 
             // showLicenseToolStripMenuItem
             // 

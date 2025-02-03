@@ -74,6 +74,10 @@ namespace licensesApp
             frm.ShowDialog();
         }
 
-        
+        private void driversToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmMannageDrivers();
+            frm.ShowDialog();
+        }
     }
 }

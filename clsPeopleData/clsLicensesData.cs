@@ -114,15 +114,15 @@ namespace LicensesDataAccess
         }
 
 
-        public static DataTable GetAllLicenseByDriver(int DriverID)
+        public static DataTable GetAllLicense()
         {
             DataTable dt = new DataTable();
 
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM Licenses where DriverID = @DriverID";
+            string query = "SELECT * FROM Licenses ";
 
             SqlCommand command = new SqlCommand(query, connection);
-            command.Parameters.AddWithValue("@DriverID", DriverID);
+
 
             try
             {

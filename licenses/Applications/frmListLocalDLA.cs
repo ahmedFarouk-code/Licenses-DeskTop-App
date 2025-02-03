@@ -297,5 +297,12 @@ namespace licensesApp
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
             frm.ShowDialog();
         }
+
+        private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmIssueDriverLicenseForTheFirstTime((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
+                (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
+            frm.ShowDialog();
+        }
     }
 }

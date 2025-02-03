@@ -27,6 +27,8 @@ namespace licensesApp
             _LDLid = LDLid;
             _PassedTests = PassedTests;
             _UserID = UserID;
+            UserControlAppDetails.LDLid = _LDLid;
+            UserControlAppDetails.PassedTests = _PassedTests;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -58,8 +60,20 @@ namespace licensesApp
             Driver.CreatedByUserID = _UserID;
             Driver.CreatedDate = DateTime.Now;
 
+           
+
+            if (Driver.Save())
+            {
+               // MessageBox.Show("Data save successful" , "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+               // MessageBox.Show("Data save Faild", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             clsLicenses Licenses = new clsLicenses();
             Licenses.ApplicationID = _Applications.ApplicationID;
+            Licenses.DriverID = clsDrivers.Find(_Applications.ApplicantPersonID).DriverID;
             Licenses.LicenseClass = _LDLA.LicenseClassID;
             Licenses.IssueDate = DateTime.Now;
             Licenses.ExpirationDate = DateTime.Now.AddDays(_LicenseClasses.DefaultValidityLength);
@@ -69,9 +83,9 @@ namespace licensesApp
             Licenses.IssueReason = 1;
             Licenses.CreatedByUserID = _UserID;
 
-            if (Driver.Save() && Licenses.Save())
+            if (Licenses.Save())
             {
-                MessageBox.Show("Data save successful" + Licenses.LicenseID, "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Data save successful", "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             else
             {

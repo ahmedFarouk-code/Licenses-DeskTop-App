@@ -82,9 +82,9 @@ namespace LicensesBusinessLayer
         }
 
 
-        public static DataTable GetAllLicenseByDriver(int DriverID)
+        public static DataTable GetAllLicense()
         {
-            return clsLicensesData.GetAllLicenseByDriver(DriverID);
+            return clsLicensesData.GetAllLicense();
         }
 
         public bool Save()

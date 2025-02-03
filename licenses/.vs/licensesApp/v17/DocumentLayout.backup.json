@@ -3,8 +3,19 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmannagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmannagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmmannagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmmannagedrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{9BF4E826-7FCC-4A50-AE5B-64438188B091}|..\\LicensesBusinessLayer\\LicensesBusinessLayer.csproj|d:\\licenses-desktop-app\\licensesbusinesslayer\\clsdrivers.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmissuedriverlicenseforthefirsttime.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -27,13 +38,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmMannageDrivers.cs [Design]",
+              "Title": "frmMannageDrivers.cs",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmMannageDrivers.cs",
               "RelativeDocumentMoniker": "frmMannageDrivers.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmMannageDrivers.cs [Design]*",
-              "RelativeToolTip": "frmMannageDrivers.cs [Design]*",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmMannageDrivers.cs*",
+              "RelativeToolTip": "frmMannageDrivers.cs*",
+              "ViewState": "AgIAAEsAAAAAAAAAAAAxwF0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T16:52:22.996Z",
+              "WhenOpened": "2025-02-03T21:03:26.371Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "clsDrivers.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsDrivers.cs",
+              "RelativeDocumentMoniker": "..\\LicensesBusinessLayer\\clsDrivers.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsDrivers.cs",
+              "RelativeToolTip": "..\\LicensesBusinessLayer\\clsDrivers.cs",
+              "ViewState": "AgIAAEkAAAAAAAAAAAAvwFAAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T20:18:11.472Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeDocumentMoniker": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeToolTip": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAxwEkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T19:43:06.106Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "frmIssueDriverLicenseForTheFirstTime.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs",
+              "RelativeDocumentMoniker": "frmIssueDriverLicenseForTheFirstTime.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIssueDriverLicenseForTheFirstTime.cs [Design]",
+              "RelativeToolTip": "frmIssueDriverLicenseForTheFirstTime.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-03T19:43:02.187Z",
               "EditorCaption": " [Design]"
             }
           ]

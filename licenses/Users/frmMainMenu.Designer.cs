@@ -109,7 +109,7 @@
             this.newDrivingLicenseToolStripMenuItem.Name = "newDrivingLicenseToolStripMenuItem";
             this.newDrivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.newDrivingLicenseToolStripMenuItem.Text = "New Driving License";
-           
+            // 
             // localLicenseToolStripMenuItem
             // 
             this.localLicenseToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("localLicenseToolStripMenuItem.Image")));
@@ -218,6 +218,7 @@
             this.driversToolStripMenuItem.Size = new System.Drawing.Size(84, 92);
             this.driversToolStripMenuItem.Text = "Drivers";
             this.driversToolStripMenuItem.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.driversToolStripMenuItem.Click += new System.EventHandler(this.driversToolStripMenuItem_Click);
             // 
             // usersToolStripMenuItem
             // 

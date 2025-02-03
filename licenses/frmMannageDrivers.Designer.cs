@@ -36,7 +36,7 @@
             this.lblRecordes = new System.Windows.Forms.Label();
             this.btnClose = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
-            this.cbFilterBy = new System.Windows.Forms.ComboBox();
+            this.cbFilterby = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriversList)).BeginInit();
             this.SuspendLayout();
@@ -64,10 +64,14 @@
             // 
             // dgvDriversList
             // 
+            this.dgvDriversList.AllowUserToAddRows = false;
+            this.dgvDriversList.AllowUserToDeleteRows = false;
+            this.dgvDriversList.AllowUserToOrderColumns = true;
             this.dgvDriversList.BackgroundColor = System.Drawing.Color.White;
             this.dgvDriversList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDriversList.Location = new System.Drawing.Point(3, 200);
             this.dgvDriversList.Name = "dgvDriversList";
+            this.dgvDriversList.ReadOnly = true;
             this.dgvDriversList.Size = new System.Drawing.Size(795, 190);
             this.dgvDriversList.TabIndex = 2;
             // 
@@ -100,6 +104,7 @@
             this.btnClose.TabIndex = 5;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // label3
             // 
@@ -111,19 +116,19 @@
             this.label3.TabIndex = 6;
             this.label3.Text = "FilterBy:";
             // 
-            // cbFilterBy
+            // cbFilterby
             // 
-            this.cbFilterBy.FormattingEnabled = true;
-            this.cbFilterBy.Items.AddRange(new object[] {
+            this.cbFilterby.FormattingEnabled = true;
+            this.cbFilterby.Items.AddRange(new object[] {
             "None",
             "DriverID",
             "PersonID",
             "National No",
             "Full Name"});
-            this.cbFilterBy.Location = new System.Drawing.Point(78, 175);
-            this.cbFilterBy.Name = "cbFilterBy";
-            this.cbFilterBy.Size = new System.Drawing.Size(166, 21);
-            this.cbFilterBy.TabIndex = 7;
+            this.cbFilterby.Location = new System.Drawing.Point(78, 175);
+            this.cbFilterby.Name = "cbFilterby";
+            this.cbFilterby.Size = new System.Drawing.Size(166, 21);
+            this.cbFilterby.TabIndex = 7;
             // 
             // frmMannageDrivers
             // 
@@ -131,7 +136,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.cbFilterBy);
+            this.Controls.Add(this.cbFilterby);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.lblRecordes);
@@ -141,6 +146,7 @@
             this.Controls.Add(this.pictureBox1);
             this.Name = "frmMannageDrivers";
             this.Text = "frmMannageDrivers";
+            this.Load += new System.EventHandler(this.frmMannageDrivers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDriversList)).EndInit();
             this.ResumeLayout(false);
@@ -157,6 +163,6 @@
         private System.Windows.Forms.Label lblRecordes;
         private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cbFilterBy;
+        private System.Windows.Forms.ComboBox cbFilterby;
     }
 }
