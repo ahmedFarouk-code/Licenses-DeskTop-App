@@ -4,6 +4,8 @@ using System.ComponentModel;
 using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
+using System.Net;
+using System.Security.Policy;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -146,6 +148,64 @@ namespace LicensesDataAccess
             }
             return dt;
 
+        }
+
+
+        public static bool GetLicenseByAppID(ref int LicenseID, int ApplicationID, ref int DriverID, ref int LicenseClass,
+            ref DateTime IssueDate, ref DateTime ExpirationDate, ref string Notes,
+            ref decimal PaidFees, ref bool IsActive, ref byte IssueReason, ref int CreatedByUserID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "SELECT * FROM Licenses WHERE ApplicationID = @ApplicationID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@ApplicationID", ApplicationID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    LicenseID = (int)reader["LicenseID"];
+                    DriverID = (int)reader["DriverID"];
+                    LicenseClass = (int)reader["LicenseClass"];
+                    IssueDate = (DateTime)reader["IssueDate"];
+                    ExpirationDate = (DateTime)reader["ExpirationDate"];
+                    PaidFees = (decimal)reader["PaidFees"];
+                    IsActive = (bool)reader["IsActive"];
+                    IssueReason = (byte)reader["IssueReason"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+                    if (reader["Notes"] != System.DBNull.Value)
+                    {
+                        Notes = (string)reader["Notes"];
+                    }
+                    else
+                    {
+                        Notes = "";
+                    }
+
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error" + ex.ToString());
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
         }
     }
 }
