@@ -39,3 +39,5 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmWrittenAppointment.res
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmWrittenTest.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmstreetAppointments.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmStreetTest.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmIssueDriverLicenseForTheFirstTime.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmMannageDrivers.resources
