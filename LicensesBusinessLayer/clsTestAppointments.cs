@@ -57,16 +57,16 @@ namespace LicensesBusinessLayer
             Mode = enMode.AddNew;
         }
         
-        public static clsTestAppointments FindByLDLAidAndTestType(int TestTypeID, int LocalDrivingLicenseApplicationID)
+        public static clsTestAppointments FindByLDLAidAndTestType( int LocalDrivingLicenseApplicationID)
         {
-            int TestAppointmentID = -1, RetakeTestApplicationID = -1, CreatedByUserID = -1;
+            int TestAppointmentID = -1, RetakeTestApplicationID = -1, CreatedByUserID = -1, TestTypeID = -1;
             DateTime AppointmentDate = DateTime.Now;
             decimal PaidFees = 0;
             bool IsLocked = false;
 
 
 
-            if (clsTestAppointmentsData.GetAppointmentByLDLAidAndTestType(ref TestAppointmentID, TestTypeID, LocalDrivingLicenseApplicationID,
+            if (clsTestAppointmentsData.GetAppointmentByLDLAid(ref TestAppointmentID,ref TestTypeID, LocalDrivingLicenseApplicationID,
                 ref AppointmentDate,ref PaidFees, ref CreatedByUserID,ref IsLocked, ref RetakeTestApplicationID))
 
                 return new clsTestAppointments( TestAppointmentID, TestTypeID, LocalDrivingLicenseApplicationID,

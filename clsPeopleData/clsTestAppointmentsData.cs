@@ -43,15 +43,15 @@ namespace LicensesDataAccess
 
         }
 
-        public static bool GetAppointmentByLDLAidAndTestType(ref int TestAppointmentID,  int TestTypeID,  int LocalDrivingLicenseApplicationID,
+        public static bool GetAppointmentByLDLAid(ref int TestAppointmentID,ref  int TestTypeID,  int LocalDrivingLicenseApplicationID,
             ref DateTime AppointmentDate,ref decimal PaidFees, ref int CreatedByUserID, ref bool IsLocked,ref int RetakeTestApplicationID)
         {
             bool isFound = false;
             SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
-            string query = "SELECT * FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID AND TestTypeID = @TestTypeID";
+            string query = "SELECT * FROM TestAppointments WHERE LocalDrivingLicenseApplicationID = @LocalDrivingLicenseApplicationID";
             SqlCommand command = new SqlCommand(query, connection);
             command.Parameters.AddWithValue("@LocalDrivingLicenseApplicationID", LocalDrivingLicenseApplicationID);
-            command.Parameters.AddWithValue("@TestTypeID", TestTypeID);
+           
 
             try
             {
@@ -66,7 +66,9 @@ namespace LicensesDataAccess
                     CreatedByUserID = (int)reader["CreatedByUserID"];
                     IsLocked = (bool)reader["IsLocked"];
                     RetakeTestApplicationID = (int)reader["RetakeTestApplicationID"];
-                   
+                    TestTypeID = (int)reader["TestTypeID"];
+
+
 
                 }
                 else

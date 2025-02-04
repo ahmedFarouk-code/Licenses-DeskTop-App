@@ -64,6 +64,12 @@
     <Compile Include="Appointments\frmAppVisionApointments.Designer.cs">
       <DependentUpon>frmAppVisionApointments.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmDriverLIcenseInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDriverLIcenseInfo.Designer.cs">
+      <DependentUpon>frmDriverLIcenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIssueDriverLicenseForTheFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -236,6 +242,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Appointments\frmAppVisionApointments.resx">
       <DependentUpon>frmAppVisionApointments.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDriverLIcenseInfo.resx">
+      <DependentUpon>frmDriverLIcenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmIssueDriverLicenseForTheFirstTime.resx">
       <DependentUpon>frmIssueDriverLicenseForTheFirstTime.cs</DependentUpon>

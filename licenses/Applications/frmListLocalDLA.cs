@@ -299,7 +299,7 @@ namespace licensesApp
                     deleteApplicationToolStripMenuItem.Enabled = true;
                     cancelApplicationToolStripMenuItem.Enabled = true;
                     sechduleTestsToolStripMenuItem.Enabled = true;
-                    issueDrivingLicenseToolStripMenuItem.Enabled = false;
+                    issueDrivingLicenseToolStripMenuItem.Enabled = true;
                     showLicenseToolStripMenuItem.Enabled = false;
                 }
             }
@@ -348,6 +348,12 @@ namespace licensesApp
          
             Form frm = new frmLicenseHistory(App.ApplicantPersonID);
 
+            frm.ShowDialog();
+        }
+
+        private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmDriverLIcenseInfo((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
         }
     }
