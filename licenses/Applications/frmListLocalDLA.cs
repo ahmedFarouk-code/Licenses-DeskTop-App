@@ -64,6 +64,8 @@ namespace licensesApp
 
         private void GetLDLAInfo()
         {
+            LDLAList.Columns.Clear();
+            LDLAList.Rows.Clear();
             _LDLA_TableColumns();
 
             DataTable LDLA = new DataTable();
@@ -165,7 +167,45 @@ namespace licensesApp
 
         }
 
-   
+        private void FilterDataGridView()
+        {
+            if (LDLAList.Rows.Count == 0) return; // التأكد من وجود بيانات
+
+            string columnName = cbFilterby.SelectedItem.ToString(); // اسم العمود المحدد
+            string filterValue = txtFilterByValue.Text.Trim(); // قيمة البحث
+
+            if (string.IsNullOrEmpty(filterValue))
+            {
+                LDLAList.DefaultView.RowFilter = ""; // إزالة الفلترة إذا كان الحقل فارغًا
+            }
+            else
+            {
+                // تطبيق الفلترة بناءً على نوع البيانات
+                if (LDLAList.Columns[columnName].DataType == typeof(int) || LDLAList.Columns[columnName].DataType == typeof(byte))
+                {
+                    // البحث الرقمي
+                    LDLAList.DefaultView.RowFilter = $"[{columnName}] = {filterValue}";
+                }
+                else if (LDLAList.Columns[columnName].DataType == typeof(string))
+                {
+                    // البحث النصي (باستخدام LIKE)
+                    LDLAList.DefaultView.RowFilter = $"[{columnName}] LIKE '%{filterValue}%'";
+                }
+                else if (LDLAList.Columns[columnName].DataType == typeof(DateTime))
+                {
+                    // البحث بالتواريخ
+                    DateTime dt;
+                    if (DateTime.TryParse(filterValue, out dt))
+                    {
+                        LDLAList.DefaultView.RowFilter = $"[{columnName}] = #{dt:MM/dd/yyyy}#";
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid date format. Please enter a valid date.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    }
+                }
+            }
+        }
 
 
         private void frmListLocalDLA_Load(object sender, EventArgs e)
@@ -183,6 +223,7 @@ namespace licensesApp
         {
             Form frm = new frmAddEditLDLA(_UserID, (int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void cancelApplicationToolStripMenuItem_Click(object sender, EventArgs e)
@@ -197,6 +238,7 @@ namespace licensesApp
                 if(App.Save())
                 {
                     MessageBox.Show("Cancel App Successfully.");
+                    GetLDLAInfo();
                 }
                 else
                 {
@@ -220,6 +262,7 @@ namespace licensesApp
                     clsApplications.DeleteApplication(App.ApplicationID))
                 {
                     MessageBox.Show("Cancel App Successfully.");
+                    GetLDLAInfo();
                 }
                 else
                 {
@@ -312,12 +355,14 @@ namespace licensesApp
             Form frm = new frmAppVisionApointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value , _UserID);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void btnAddNewApplication_Click(object sender, EventArgs e)
         {
             Form frm = new frmAddEditLDLA(_UserID, -1);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void scheduleWrittenTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -325,6 +370,7 @@ namespace licensesApp
             Form frm = new frmWrittenAppointment((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void scheduleStreetTestToolStripMenuItem_Click(object sender, EventArgs e)
@@ -332,6 +378,7 @@ namespace licensesApp
             Form frm = new frmstreetAppointments((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void issueDrivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
@@ -339,6 +386,7 @@ namespace licensesApp
             Form frm = new frmIssueDriverLicenseForTheFirstTime((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
@@ -349,12 +397,19 @@ namespace licensesApp
             Form frm = new frmLicenseHistory(App.ApplicantPersonID);
 
             frm.ShowDialog();
+            GetLDLAInfo();
         }
 
         private void showLicenseToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmDriverLIcenseInfo((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
             frm.ShowDialog();
+            GetLDLAInfo();
+        }
+
+        private void txtFilterByValue_TextChanged(object sender, EventArgs e)
+        {
+            FilterDataGridView();
         }
     }
 }

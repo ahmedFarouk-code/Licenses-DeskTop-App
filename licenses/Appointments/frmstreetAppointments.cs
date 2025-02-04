@@ -30,6 +30,7 @@ namespace licensesApp
         private void _Load()
         {
 
+            dgvAppointmentList.Columns.Clear();
             dt = new DataTable();
 
             DataColumn dtColumn;
@@ -88,12 +89,14 @@ namespace licensesApp
             }
             Form frm = new frmScheduleTest(_LDLAi, -1, _UserID, 3);
             frm.ShowDialog();
+            _Load();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmScheduleTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID, 3);
             frm.ShowDialog();
+            _Load();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,6 +108,7 @@ namespace licensesApp
         {
             Form frm = new frmStreetTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID);
             frm.ShowDialog();
+            _Load();
         }
     }
 }

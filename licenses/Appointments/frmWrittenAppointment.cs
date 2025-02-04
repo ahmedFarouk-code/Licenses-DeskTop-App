@@ -29,8 +29,8 @@ namespace licensesApp
 
         private void _Load()
         {
-
-            dt = new DataTable();
+            dgvAppointmentList.Columns.Clear();
+             dt = new DataTable();
 
             DataColumn dtColumn;
 
@@ -80,6 +80,7 @@ namespace licensesApp
         {
             Form frm = new frmScheduleTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID, 2);
             frm.ShowDialog();
+            _Load();
         }
 
         private void btnAddAppointment_Click(object sender, EventArgs e)
@@ -91,9 +92,11 @@ namespace licensesApp
                     MessageBox.Show("Person already have an active appointment for this test , you connot Add new appointment", "Not Allowed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
+                
             }
             Form frm = new frmScheduleTest(_LDLAi, -1, _UserID, 2);
             frm.ShowDialog();
+            _Load();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,6 +108,7 @@ namespace licensesApp
         {
             Form frm = new frmWrittenTest (_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID);
             frm.ShowDialog();
+            _Load();
         }
 
        

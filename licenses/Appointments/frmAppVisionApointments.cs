@@ -33,7 +33,8 @@ namespace licensesApp
 
         private void _Load()
         {
-            
+           
+            dgvAppointmentList.Columns.Clear();
              dt = new DataTable();
 
             DataColumn dtColumn;
@@ -58,6 +59,7 @@ namespace licensesApp
             dtColumn.ColumnName = "Is Locked";
             dt.Columns.Add(dtColumn);
 
+
             DataTable AppointMentsTable = clsTestAppointments.GetAllTestAppointments();
 
             
@@ -77,6 +79,7 @@ namespace licensesApp
 
         private void frmAppVisionApointments_Load(object sender, EventArgs e)
         {
+
             _Load();
         }
 
@@ -92,13 +95,14 @@ namespace licensesApp
             }
             Form frm = new frmScheduleTest(_LDLAi, -1 , _UserID ,1);
             frm.ShowDialog();
-
+            _Load();
         }
 
         private void editToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Form frm = new frmScheduleTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID ,1);
             frm.ShowDialog();
+            _Load();
 
         }
 
@@ -111,6 +115,7 @@ namespace licensesApp
         {
             Form frm = new frmVisionTest(_LDLAi, (int)dgvAppointmentList.CurrentRow.Cells[0].Value, _UserID);
             frm.ShowDialog();
+            _Load();
         }
     }
 }
