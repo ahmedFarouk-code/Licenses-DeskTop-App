@@ -55,6 +55,16 @@ namespace licensesApp
                 return;
             }
 
+            _Applications.ApplicationStatus = 3;
+            if (_Applications.Save())
+            {
+                // MessageBox.Show("Data save successful" , "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                // MessageBox.Show("Data save Faild", "Faild", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+
             clsDrivers Driver = new clsDrivers();
             Driver.PersonID = _Applications.ApplicantPersonID;
             Driver.CreatedByUserID = _UserID;

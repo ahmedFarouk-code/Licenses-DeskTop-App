@@ -41,3 +41,4 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmstreetAppointments.res
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmStreetTest.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmIssueDriverLicenseForTheFirstTime.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmMannageDrivers.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmLicenseHistory.resources

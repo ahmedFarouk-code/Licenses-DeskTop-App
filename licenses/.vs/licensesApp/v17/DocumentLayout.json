@@ -3,14 +3,16 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3C70E07C-93B3-4A0D-95EC-3C832EDDCFAC}|..\\clsPeopleData\\LicensesDataAccess.csproj|d:\\licenses-desktop-app\\clspeopledata\\clslicensesdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{9BF4E826-7FCC-4A50-AE5B-64438188B091}|..\\LicensesBusinessLayer\\LicensesBusinessLayer.csproj|d:\\licenses-desktop-app\\licensesbusinesslayer\\clslicenses.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\applications\\frmlistlocaldla.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -36,41 +38,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "clsLicensesData.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsLicensesData.cs",
-              "RelativeDocumentMoniker": "..\\clsPeopleData\\clsLicensesData.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\clsPeopleData\\clsLicensesData.cs",
-              "RelativeToolTip": "..\\clsPeopleData\\clsLicensesData.cs",
-              "ViewState": "AgIAAKEAAAAAAAAAAAAxwK4AAABIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T22:18:36.783Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "clsLicenses.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsLicenses.cs",
-              "RelativeDocumentMoniker": "..\\LicensesBusinessLayer\\clsLicenses.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\LicensesBusinessLayer\\clsLicenses.cs",
-              "RelativeToolTip": "..\\LicensesBusinessLayer\\clsLicenses.cs",
-              "ViewState": "AgIAAGkAAAAAAAAAAAAswAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T22:20:19.106Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
               "Title": "frmListLocalDLA.cs",
               "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
               "RelativeDocumentMoniker": "Applications\\frmListLocalDLA.cs",
               "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs",
               "RelativeToolTip": "Applications\\frmListLocalDLA.cs",
-              "ViewState": "AgIAABIBAAAAAAAAAAAQwBwBAAAQAAAAAAAAAA==",
+              "ViewState": "AgIAAJEAAAAAAAAAAAAYwLEAAAA7AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T21:22:25.59Z",
+              "WhenOpened": "2025-02-04T12:09:01.136Z",
               "EditorCaption": ""
             },
             {
@@ -82,7 +58,32 @@
               "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Applications\\frmListLocalDLA.cs [Design]",
               "RelativeToolTip": "Applications\\frmListLocalDLA.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-03T21:21:39.543Z",
+              "WhenOpened": "2025-02-04T12:01:18.725Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLicenseHistory.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmLicenseHistory.cs",
+              "RelativeDocumentMoniker": "frmLicenseHistory.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmLicenseHistory.cs",
+              "RelativeToolTip": "frmLicenseHistory.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAUwGMAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T00:57:14.989Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmLicenseHistory.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmLicenseHistory.cs",
+              "RelativeDocumentMoniker": "frmLicenseHistory.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmLicenseHistory.cs [Design]",
+              "RelativeToolTip": "frmLicenseHistory.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-04T00:46:05.251Z",
               "EditorCaption": " [Design]"
             }
           ]

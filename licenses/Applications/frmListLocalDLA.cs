@@ -283,8 +283,8 @@ namespace licensesApp
 
                 clsLDLA LDLA1 = clsLDLA.Find((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
                 clsApplications Application1 = clsApplications.Find(LDLA1.ApplicationID);
-                clsLicenses licenses1 = clsLicenses.FindByAppID(Application1.ApplicationID);
-                if (licenses1.IsActive == true)
+                
+                if (Application1.ApplicationStatus == 3)
                 {
                     editApplicationToolStripMenuItem.Enabled = false;
                     deleteApplicationToolStripMenuItem.Enabled = false;
@@ -338,6 +338,16 @@ namespace licensesApp
         {
             Form frm = new frmIssueDriverLicenseForTheFirstTime((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value,
                 (int)dgvLocalApplicationList.CurrentRow.Cells[5].Value, _UserID);
+            frm.ShowDialog();
+        }
+
+        private void showPersonLicenseHistoryToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            clsLDLA Ldla = clsLDLA.Find((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
+            clsApplications App = clsApplications.Find(Ldla.ApplicationID);
+         
+            Form frm = new frmLicenseHistory(App.ApplicantPersonID);
+
             frm.ShowDialog();
         }
     }
