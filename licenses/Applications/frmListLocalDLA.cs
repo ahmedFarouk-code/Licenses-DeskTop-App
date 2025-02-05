@@ -411,5 +411,13 @@ namespace licensesApp
         {
             FilterDataGridView();
         }
+
+        private void showApplicationDetailsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int PersonId = (clsPeople.FindByNationalNo((string)dgvLocalApplicationList.CurrentRow.Cells[2].Value).ID);
+            Form frm = new frmPersonDetails(PersonId);
+            frm.ShowDialog();
+            GetLDLAInfo();
+        }
     }
 }

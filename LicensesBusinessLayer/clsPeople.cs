@@ -139,6 +139,29 @@ namespace LicensesBusinessLayer
 
         }
 
+
+        public static clsPeople FindByNationalNo(string NationalNo)
+        {
+            byte Gendor = 0; int NationalityCountryID = -1, ID = -1;
+            DateTime DateOfBirth = DateTime.Now;
+            string FirstName = "", SecondName = "", ThirdName = "",
+            LastName = "", Address = "", Phone = "", Email = "", ImagePath = "";
+
+            if (clsPeopleData.GetPersonByNationalNo(ref ID,  NationalNo, ref FirstName, ref SecondName,
+           ref ThirdName, ref LastName, ref DateOfBirth,
+          ref Gendor, ref Address, ref Phone, ref Email,
+          ref NationalityCountryID, ref ImagePath))
+
+                return new clsPeople(ID, NationalNo, FirstName, SecondName,
+             ThirdName, LastName, DateOfBirth,
+            Gendor, Address, Phone, Email,
+            NationalityCountryID, ImagePath);
+
+            else
+                return null;
+
+        }
+
         public static bool isExistPerson(int ID)
         {
             return clsPeopleData.IsPersonExist(ID);
