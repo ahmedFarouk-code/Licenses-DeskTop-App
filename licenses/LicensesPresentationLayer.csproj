@@ -148,6 +148,12 @@
     <Compile Include="Controls\UserControlAppDetails.Designer.cs">
       <DependentUpon>UserControlAppDetails.cs</DependentUpon>
     </Compile>
+    <Compile Include="urDriverLIcenseInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="urDriverLIcenseInfo.Designer.cs">
+      <DependentUpon>urDriverLIcenseInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -284,6 +290,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserControlAppDetails.resx">
       <DependentUpon>UserControlAppDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="urDriverLIcenseInfo.resx">
+      <DependentUpon>urDriverLIcenseInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>

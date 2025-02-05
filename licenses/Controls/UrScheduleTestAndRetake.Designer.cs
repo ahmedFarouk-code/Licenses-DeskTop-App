@@ -325,7 +325,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "UrScheduleTestAndRetake";
             this.Size = new System.Drawing.Size(641, 673);
-            this.Load += new System.EventHandler(this.UrScheduleTestAndRetake_Load);
+           
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

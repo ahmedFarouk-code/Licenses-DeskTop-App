@@ -135,7 +135,7 @@ namespace licensesApp
             _Test.CreatedByUserID = _UserID;
             _TestAppointments.IsLocked = true;
 
-            _Application.ApplicationStatus = 3; 
+            
 
             if (_TestAppointments.Save() && _Test.Save() && _Application.Save())
             {

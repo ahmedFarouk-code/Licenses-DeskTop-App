@@ -20,36 +20,31 @@ namespace licensesApp
         private clsLDLA _LDLA;
         private clsApplications _Application;
         private clsPeople _Person;
-        private clsTestAppointments _Appointments; 
+        private clsTestAppointments _Appointments;
 
-        public static int TestAppoID {  get; set; }
-        public static int LDLAid { get; set; }
-        public static int UserID {  get; set; }
-        public static int TestType { get; set; }
+        int _TestAppoID; int _LDLAid; int _UserID; int _TestType;
 
         public UrScheduleTestAndRetake()
         {
             InitializeComponent();
-           
 
-            if(TestAppoID == -1)
+        }
+       public void LoadInfo(int TestAppoID , int LDLAid , int UserID , int TestType)
+        {
+             _TestAppoID = TestAppoID ;  _LDLAid = LDLAid;  _UserID = UserID;  _TestType = TestType;
+            if (TestAppoID == -1)
             { _Mode = enMode.AddNew; }
             else { _Mode = enMode.Update; }
 
-           
-
-        }
-       private void _Load()
-        {
-            if(TestType == 1)
+            if (_TestType == 1)
             {
                 groupBox1.Text = "Vision Test";
             }
-            if (TestType == 2)
+            if (_TestType == 2)
             {
                 groupBox1.Text = "written Test";
             }
-            if (TestType == 3)
+            if (_TestType == 3)
             {
                 groupBox1.Text = "Street Test";
             }
@@ -65,7 +60,7 @@ namespace licensesApp
 
             else
             {
-                _TestAppointments = clsTestAppointments.FindByID(TestAppoID);
+                _TestAppointments = clsTestAppointments.FindByID(_TestAppoID);
                 if (_TestAppointments == null)
                 {
                     return;
@@ -80,7 +75,7 @@ namespace licensesApp
                 }
             }
 
-            _LDLA = clsLDLA.Find(LDLAid);
+            _LDLA = clsLDLA.Find(_LDLAid);
             if (_LDLA == null)
             {
                 return;
@@ -120,21 +115,21 @@ namespace licensesApp
            
 
             dateTimePicker1.Value = DateTime.Now;
-            lblFees.Text = clsTestTypes.Find(TestType).TestTypeFees.ToString();
+            lblFees.Text = clsTestTypes.Find(_TestType).TestTypeFees.ToString();
 
             if (lblTrail.Text == "0")
             {
                 gbRetakeTestInfo.Enabled = false;
                 lblTitle.Text = "Schedule Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = clsTestTypes.Find(TestType).TestTypeFees.ToString();
+                lblTotalFees.Text = clsTestTypes.Find(_TestType).TestTypeFees.ToString();
             }
             else
             {
                 gbRetakeTestInfo.Enabled = true;
                 lblTitle.Text = "Schedule Retake Test";
                 lblRFees.Text = "5";
-                lblTotalFees.Text = (5 + clsTestTypes.Find(TestType).TestTypeFees).ToString();
+                lblTotalFees.Text = (5 + clsTestTypes.Find(_TestType).TestTypeFees).ToString();
                 lblRTestAAppID.Text = _TestAppointments.RetakeTestApplicationID.ToString();
             }
 
@@ -144,10 +139,7 @@ namespace licensesApp
 
         }
 
-        private void UrScheduleTestAndRetake_Load(object sender, EventArgs e)
-        {
-            _Load();
-        }
+       
 
         private void btnSave_Click(object sender, EventArgs e)
         {
@@ -158,16 +150,16 @@ namespace licensesApp
             }
            else
             {
-                _Appointments = clsTestAppointments.FindByID(TestAppoID);
+                _Appointments = clsTestAppointments.FindByID(_TestAppoID);
             }
 
            
 
-            _Appointments.TestTypeID = TestType;
+            _Appointments.TestTypeID = _TestType;
             _Appointments.LocalDrivingLicenseApplicationID =  Convert.ToInt32(lblDLAid.Text);
             _Appointments.AppointmentDate = dateTimePicker1.Value;
             _Appointments.PaidFees = Convert.ToDecimal(lblFees.Text);
-            _Appointments.CreatedByUserID = UserID;
+            _Appointments.CreatedByUserID = _UserID;
             _Appointments.IsLocked = false;
             _Appointments.RetakeTestApplicationID = 0;
 

@@ -276,8 +276,18 @@ namespace licensesApp
 
         private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
         {
+            if ((string)dgvLocalApplicationList.CurrentRow.Cells[6].Value == "Canceld")
+            {
+                editApplicationToolStripMenuItem.Enabled = false;
+                deleteApplicationToolStripMenuItem.Enabled = true;
+                cancelApplicationToolStripMenuItem.Enabled = false;
+                issueDrivingLicenseToolStripMenuItem.Enabled = false;
+                showLicenseToolStripMenuItem.Enabled = false;
+                sechduleTestsToolStripMenuItem.Enabled = false;
+                return;
+            }
 
-             if ((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 0)
+                if ((int)dgvLocalApplicationList.CurrentRow.Cells[5].Value == 0)
             {
                 editApplicationToolStripMenuItem.Enabled = true;
                 deleteApplicationToolStripMenuItem.Enabled = true;
@@ -346,6 +356,8 @@ namespace licensesApp
                     showLicenseToolStripMenuItem.Enabled = false;
                 }
             }
+
+
 
            
         }

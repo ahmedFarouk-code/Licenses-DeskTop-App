@@ -43,3 +43,4 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmIssueDriverLicenseForT
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmMannageDrivers.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmLicenseHistory.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmDriverLIcenseInfo.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.urDriverLIcenseInfo.resources

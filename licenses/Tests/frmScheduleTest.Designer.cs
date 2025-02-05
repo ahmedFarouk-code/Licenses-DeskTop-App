@@ -59,7 +59,7 @@
             this.Controls.Add(this.urScheduleTestAndRetake1);
             this.Name = "frmScheduleTest";
             this.Text = "frmScheduleTest";
-            this.Load += new System.EventHandler(this.frmScheduleTest_Load);
+
             this.ResumeLayout(false);
 
         }

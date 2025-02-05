@@ -93,7 +93,10 @@ namespace licensesApp
             Licenses.IssueReason = 1;
             Licenses.CreatedByUserID = _UserID;
 
-            if (Licenses.Save())
+            _Applications.ApplicationStatus = 3;
+
+
+            if (Licenses.Save() && _Applications.Save())
             {
                 MessageBox.Show("Data save successful", "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
