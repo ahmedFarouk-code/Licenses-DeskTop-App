@@ -120,6 +120,25 @@ namespace LicensesBusinessLayer
                 return null;
 
         }
+        
+
+
+            public static clsApplications FindPerIDAndTypeID(int ApplicantPersonID , int ApplicationTypeID)
+        {
+            int ApplicationID = -1, CreatedByUserID = -1;
+            DateTime ApplicationDate = DateTime.Now, LastStatusDate = DateTime.Now;
+            byte ApplicationStatus = 0;
+            decimal PaidFees = 0;
+            if (clsApplicationsData.PerIDAndTypeID(ref ApplicationID,  ApplicantPersonID, ref ApplicationDate,  ApplicationTypeID,
+           ref ApplicationStatus, ref LastStatusDate, ref PaidFees, ref CreatedByUserID))
+
+                return new clsApplications(ApplicationID, ApplicantPersonID, ApplicationDate, ApplicationTypeID,
+             ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID);
+
+            else
+                return null;
+
+        }
 
         public static bool IsApplicationExist(int PersonID)
         {

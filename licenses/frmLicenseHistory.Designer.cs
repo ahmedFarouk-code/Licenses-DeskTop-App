@@ -40,12 +40,15 @@
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.dgvIDLforPeson = new System.Windows.Forms.DataGridView();
             this.userControl2PersonDetailsWithFilter1 = new licensesApp.UserControl2PersonDetailsWithFilter();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpLocal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicense)).BeginInit();
+            this.tpInternational.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIDLforPeson)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -114,15 +117,20 @@
             // 
             // dgvLocalLicense
             // 
+            this.dgvLocalLicense.AllowUserToAddRows = false;
+            this.dgvLocalLicense.AllowUserToDeleteRows = false;
+            this.dgvLocalLicense.AllowUserToOrderColumns = true;
             this.dgvLocalLicense.BackgroundColor = System.Drawing.Color.White;
             this.dgvLocalLicense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvLocalLicense.Location = new System.Drawing.Point(3, 0);
+            this.dgvLocalLicense.Location = new System.Drawing.Point(3, 3);
             this.dgvLocalLicense.Name = "dgvLocalLicense";
+            this.dgvLocalLicense.ReadOnly = true;
             this.dgvLocalLicense.Size = new System.Drawing.Size(753, 114);
             this.dgvLocalLicense.TabIndex = 0;
             // 
             // tpInternational
             // 
+            this.tpInternational.Controls.Add(this.dgvIDLforPeson);
             this.tpInternational.Location = new System.Drawing.Point(4, 22);
             this.tpInternational.Name = "tpInternational";
             this.tpInternational.Padding = new System.Windows.Forms.Padding(3);
@@ -162,6 +170,19 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // dgvIDLforPeson
+            // 
+            this.dgvIDLforPeson.AllowUserToAddRows = false;
+            this.dgvIDLforPeson.AllowUserToDeleteRows = false;
+            this.dgvIDLforPeson.AllowUserToOrderColumns = true;
+            this.dgvIDLforPeson.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIDLforPeson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIDLforPeson.Location = new System.Drawing.Point(6, 3);
+            this.dgvIDLforPeson.Name = "dgvIDLforPeson";
+            this.dgvIDLforPeson.ReadOnly = true;
+            this.dgvIDLforPeson.Size = new System.Drawing.Size(750, 114);
+            this.dgvIDLforPeson.TabIndex = 0;
+            // 
             // userControl2PersonDetailsWithFilter1
             // 
             this.userControl2PersonDetailsWithFilter1.Location = new System.Drawing.Point(178, 68);
@@ -188,7 +209,9 @@
             this.tabControl1.ResumeLayout(false);
             this.tpLocal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicense)).EndInit();
+            this.tpInternational.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvIDLforPeson)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -208,5 +231,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvLocalLicense;
+        private System.Windows.Forms.DataGridView dgvIDLforPeson;
     }
 }

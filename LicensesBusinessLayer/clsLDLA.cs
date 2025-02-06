@@ -95,6 +95,21 @@ namespace LicensesBusinessLayer
 
         }
 
+        public static clsLDLA FindByAppID(int ApplicationID)
+        {
+            int LocalDrivingLicenseApplicationID = -1, LicenseClassID = -1;
+
+            if (clsLDLAData.GetLDLAByAppID(ref LocalDrivingLicenseApplicationID,
+                                              ApplicationID, ref LicenseClassID))
+
+                return new clsLDLA(LocalDrivingLicenseApplicationID,
+                                               ApplicationID, LicenseClassID);
+
+            else
+                return null;
+
+        }
+
         public static bool IsLDLAExist(int ClassID)
         {
             return clsLDLAData.IstLDLAExist(ClassID);

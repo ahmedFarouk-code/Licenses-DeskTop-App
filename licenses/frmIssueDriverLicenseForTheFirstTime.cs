@@ -95,7 +95,7 @@ namespace licensesApp
 
             _Applications.ApplicationStatus = 3;
 
-
+            
             if (Licenses.Save() && _Applications.Save())
             {
                 MessageBox.Show("Data save successful", "successful", MessageBoxButtons.OK, MessageBoxIcon.Information);

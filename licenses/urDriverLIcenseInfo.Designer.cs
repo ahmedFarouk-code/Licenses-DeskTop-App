@@ -93,17 +93,18 @@
             this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.groupBox1.Size = new System.Drawing.Size(924, 309);
+            this.groupBox1.Size = new System.Drawing.Size(913, 309);
             this.groupBox1.TabIndex = 3;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Driver License Info";
             // 
             // pbPersonImage
             // 
-            this.pbPersonImage.Location = new System.Drawing.Point(738, 53);
+            this.pbPersonImage.Location = new System.Drawing.Point(751, 53);
             this.pbPersonImage.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pbPersonImage.Name = "pbPersonImage";
             this.pbPersonImage.Size = new System.Drawing.Size(154, 177);
+            this.pbPersonImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbPersonImage.TabIndex = 4;
             this.pbPersonImage.TabStop = false;
             // 
@@ -399,7 +400,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.groupBox1);
             this.Name = "urDriverLIcenseInfo";
-            this.Size = new System.Drawing.Size(944, 340);
+            this.Size = new System.Drawing.Size(933, 332);
             this.Load += new System.EventHandler(this.urDriverLIcenseInfo_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

@@ -57,6 +57,25 @@ namespace licensesApp
             lblIsActive.Text = _licenses.IsActive.ToString();
             lblClass.Text = _classes.LicenseClasseName;
             lblisDetained.Text = "No";
+            if (_Person.ImagePath != "")
+            {
+                pbPersonImage.Load(_Person.ImagePath);
+            }
+
+            else
+            {
+                
+                if (_Person.Gendor == 0)
+                {
+
+                    pbPersonImage.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_man.PNG");
+                }
+                else
+                {
+
+                    pbPersonImage.Load("D:\\Licenses-DeskTop-App\\licenses\\Images\\person_woman.PNG");
+                }
+            }
         }
 
         private void urDriverLIcenseInfo_Load(object sender, EventArgs e)

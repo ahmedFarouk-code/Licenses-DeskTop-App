@@ -405,8 +405,8 @@ namespace licensesApp
         {
             clsLDLA Ldla = clsLDLA.Find((int)dgvLocalApplicationList.CurrentRow.Cells[0].Value);
             clsApplications App = clsApplications.Find(Ldla.ApplicationID);
-         
-            Form frm = new frmLicenseHistory(App.ApplicantPersonID);
+            clsLicenses Lic = clsLicenses.FindByAppID(Ldla.ApplicationID);
+            Form frm = new frmLicenseHistory(App.ApplicantPersonID , Lic.DriverID);
 
             frm.ShowDialog();
             GetLDLAInfo();

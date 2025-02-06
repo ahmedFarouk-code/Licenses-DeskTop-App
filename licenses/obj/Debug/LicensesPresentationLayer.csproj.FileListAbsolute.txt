@@ -44,3 +44,6 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmMannageDrivers.resourc
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmLicenseHistory.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmDriverLIcenseInfo.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.urDriverLIcenseInfo.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmNewLicenseInternationalApplication.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.ucIntarnationalAppInfo.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmInterNationalDriverLicenseID.resources

@@ -121,7 +121,7 @@ namespace LicensesBusinessLayer
             bool IsActive = false;
             byte IssueReason = 1;
 
-            if (clsLicensesData.GetLicenseByAppID(ref  LicenseID,  ApplicationID, ref  DriverID, ref  LicenseClass,
+            if (clsLicensesData.GetLicenseByAppID(ref LicenseID,  ApplicationID, ref  DriverID, ref  LicenseClass,
             ref  IssueDate, ref  ExpirationDate, ref  Notes,
             ref  PaidFees, ref  IsActive, ref  IssueReason, ref  CreatedByUserID))
 
@@ -132,6 +132,33 @@ namespace LicensesBusinessLayer
             else
                 return null;
 
+        }
+
+        public static clsLicenses FindByLicenseID(int LicenseID)
+        {
+            int ApplicationID = 0, DriverID = -1, LicenseClass = -1, CreatedByUserID = -1;
+            DateTime IssueDate = DateTime.Now, ExpirationDate = DateTime.Now;
+            string Notes = "";
+            decimal PaidFees = 0;
+            bool IsActive = false;
+            byte IssueReason = 1;
+
+            if (clsLicensesData.GetLicenseID( LicenseID, ref ApplicationID, ref DriverID, ref LicenseClass,
+            ref IssueDate, ref ExpirationDate, ref Notes,
+            ref PaidFees, ref IsActive, ref IssueReason, ref CreatedByUserID))
+
+                return new clsLicenses(LicenseID, ApplicationID, DriverID, LicenseClass,
+             IssueDate, ExpirationDate, Notes,
+             PaidFees, IsActive, IssueReason, CreatedByUserID);
+
+            else
+                return null;
+
+        }
+
+        public static bool isExistSameLicenseforDriver(int DriverID ,int LicenseClass)
+        {
+            return clsLicensesData.isExistSameLicenseforDriver(DriverID , LicenseClass);
         }
 
     }

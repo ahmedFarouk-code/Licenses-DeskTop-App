@@ -79,5 +79,12 @@ namespace licensesApp
             Form frm = new frmMannageDrivers();
             frm.ShowDialog();
         }
+
+        private void internationalLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmNewLicenseInternationalApplication(_UserID);
+            frm.ShowDialog();
+           
+        }
     }
 }

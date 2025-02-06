@@ -15,17 +15,21 @@ namespace licensesApp
     {
 
         private int _PersonID;
-        public frmLicenseHistory(int PersonID)
+        private int  _DriverID;
+        public frmLicenseHistory(int PersonID , int DriverID)
         {
             InitializeComponent();
             _PersonID = PersonID;
+            _DriverID = DriverID;
+
             UserControl2PersonDetailsWithFilter.PersonID = _PersonID;
 
         }
 
 
         DataTable LocalLicensesList = new DataTable();
-        private void _DriversTableColumns()
+        DataTable InterNationalLicensesList = new DataTable();
+        private void _LDLTableColumns()
         {
             DataColumn dtColumn;
 
@@ -51,7 +55,7 @@ namespace licensesApp
 
             dtColumn = new DataColumn();
             dtColumn.DataType = typeof(DateTime);
-            dtColumn.ColumnName = "Epiration Date";
+            dtColumn.ColumnName = "Expiration Date";
             LocalLicensesList.Columns.Add(dtColumn);
 
             dtColumn = new DataColumn();
@@ -60,10 +64,45 @@ namespace licensesApp
             LocalLicensesList.Columns.Add(dtColumn);
         }
 
-
-        private void GetAllLDLA_info_ForPerson()
+        private void _IDLTableColumns()
         {
-            _DriversTableColumns();
+            DataColumn dtColumn;
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(int);
+            dtColumn.ColumnName = "Int.License.ID";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(int);
+            dtColumn.ColumnName = "Application ID";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(string);
+            dtColumn.ColumnName = "License ID";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(DateTime);
+            dtColumn.ColumnName = "Issue Date";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(DateTime);
+            dtColumn.ColumnName = "Expiration Date";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+
+            dtColumn = new DataColumn();
+            dtColumn.DataType = typeof(bool);
+            dtColumn.ColumnName = "Is Active";
+            InterNationalLicensesList.Columns.Add(dtColumn);
+        }
+
+
+        private void GetLDLA_info_ForPerson()
+        {
+            _LDLTableColumns();
             DataTable ApplicationsTabl = new DataTable();
             ApplicationsTabl = clsApplications.GetAllApplications();
 
@@ -77,26 +116,17 @@ namespace licensesApp
             LicenseClassesTable = clsLicenseClasses.GetAllLicenseClasses();
 
 
-            DataRow[] ApplicationsTablRestults = ApplicationsTabl.Select("ApplicantPersonID =" + _PersonID);
-            foreach (var ApplicationsRecordRow in ApplicationsTablRestults)
+            DataRow[] LicensesRestults = LicensesTable.Select("DriverID =" + _DriverID + "AND IsActive= true");
+            foreach (var LicensesRecordRow in LicensesRestults)
             {
 
-                LocalLicensesList.Rows.Add(null, ApplicationsRecordRow["ApplicationID"], null, null, null, null);
+                LocalLicensesList.Rows.Add(LicensesRecordRow["LicenseID"], LicensesRecordRow["ApplicationID"], null, LicensesRecordRow["IssueDate"], null, LicensesRecordRow["IsActive"]);
             }
             foreach (DataRow RecordRow in LocalLicensesList.Rows)
             {
-                DataRow[] LDLARRestults = LDLAtable.Select("ApplicationID =" + (int)RecordRow["App.ID"]);
-                foreach (var LDLARRecordRow in LDLARRestults)
-                {
-                    RecordRow["Lic.ID"] = LDLARRecordRow["LocalDrivingLicenseApplicationID"];
-                   
-                }
-
-
-                DataRow[] LicensesRestults = LicensesTable.Select("ApplicationID =" + (int)RecordRow["App.ID"]);
+                 
                 foreach (var LicensesRecordRow in LicensesRestults)
                 {
-                    RecordRow["Is Active"] = LicensesRecordRow["IsActive"];
 
                     DataRow[] LicenseClassesRestults = LicenseClassesTable.Select("LicenseClassID =" + (int)LicensesRecordRow["LicenseClass"]);
                     foreach (var LicenseClassesRecordRow in LicenseClassesRestults)
@@ -105,34 +135,77 @@ namespace licensesApp
                         DateTime TheDate = (DateTime)LicensesRecordRow["IssueDate"];
                         DateTime EpirationDate = TheDate.AddDays((byte)LicenseClassesRecordRow["DefaultValidityLength"]);
                         RecordRow["Class Name"] = LicenseClassesRecordRow["ClassName"];
-                        RecordRow["Issue Date"] = TheDate;
-                        RecordRow["Epiration Date"] = EpirationDate;
-                      
-                    }
+                        RecordRow["Expiration Date"] = EpirationDate;
 
+                    }
+                }
+               
+
+
+            }
+
+               
+                  
+                
+                dgvLocalLicense.DataSource = LocalLicensesList;
+
+
+        }
+
+
+        private void GetIDLA_info_ForPerson()
+        {
+            _IDLTableColumns();
+            DataTable ApplicationsTabl = new DataTable();
+            ApplicationsTabl = clsApplications.GetAllApplications();
+
+            DataTable LicensesTable = new DataTable();
+            LicensesTable = clsLicenses.GetAllLicense();
+
+            DataTable InternationalLicensesTable = new DataTable();
+            InternationalLicensesTable = clsInternationalLicenses.GetAllInternationalLicenses();
+
+            DataTable LicenseClassesTable = new DataTable();
+            LicenseClassesTable = clsLicenseClasses.GetAllLicenseClasses();
+
+
+            DataRow[] InternationalLicensesRestults = InternationalLicensesTable.Select("DriverID =" + _DriverID + "AND IsActive= true");
+            foreach (var InternationalLicensesRecordRow in InternationalLicensesRestults)
+            {
+
+                InterNationalLicensesList.Rows.Add(InternationalLicensesRecordRow["InternationalLicenseID"], InternationalLicensesRecordRow["ApplicationID"], null, InternationalLicensesRecordRow["IssueDate"], InternationalLicensesRecordRow["ExpirationDate"], InternationalLicensesRecordRow["IsActive"]);
+            }
+            foreach (DataRow RecordRow in InterNationalLicensesList.Rows)
+            {
+                DataRow[] LicensesRestults = LicensesTable.Select("DriverID =" + _DriverID + "AND IsActive= true");
+                foreach (var LicensesRecordRow in LicensesRestults)
+                {
+                    RecordRow["License ID"] = LicensesRecordRow["LicenseID"];
 
                 }
 
-
-                dgvLocalLicense.DataSource = LocalLicensesList  ; 
-
             }
+
+            dgvIDLforPeson.DataSource = InterNationalLicensesList;
+
+
         }
 
-            private void _Load()
+        private void _Load()
             {
 
             }
 
         private void frmLicenseHistory_Load(object sender, EventArgs e)
         {
-            GetAllLDLA_info_ForPerson();
-            dgvLocalLicense.Columns[0].Width = 75;
-            dgvLocalLicense.Columns[1].Width = 75;
-            dgvLocalLicense.Columns[2].Width = 200;
-            dgvLocalLicense.Columns[3].Width = 200;
-            dgvLocalLicense.Columns[4].Width = 200;
-            dgvLocalLicense.Columns[5].Width = 75;
+            GetLDLA_info_ForPerson();
+            GetIDLA_info_ForPerson();
+            //dgvLocalLicense.Columns[0].Width = 75;
+            //dgvLocalLicense.Columns[1].Width = 75;
+            //dgvLocalLicense.Columns[2].Width = 200;
+            //dgvLocalLicense.Columns[3].Width = 200;
+            //dgvLocalLicense.Columns[4].Width = 200;
+            //dgvLocalLicense.Columns[5].Width = 75;
         }
     }
 }

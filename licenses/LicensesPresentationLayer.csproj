@@ -70,6 +70,12 @@
     <Compile Include="frmDriverLIcenseInfo.Designer.cs">
       <DependentUpon>frmDriverLIcenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmInterNationalDriverLicenseID.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmInterNationalDriverLicenseID.Designer.cs">
+      <DependentUpon>frmInterNationalDriverLicenseID.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmIssueDriverLicenseForTheFirstTime.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -87,6 +93,12 @@
     </Compile>
     <Compile Include="frmMannageDrivers.Designer.cs">
       <DependentUpon>frmMannageDrivers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmNewLicenseInternationalApplication.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmNewLicenseInternationalApplication.Designer.cs">
+      <DependentUpon>frmNewLicenseInternationalApplication.cs</DependentUpon>
     </Compile>
     <Compile Include="Tests\frmScheduleTest.cs">
       <SubType>Form</SubType>
@@ -147,6 +159,12 @@
     </Compile>
     <Compile Include="Controls\UserControlAppDetails.Designer.cs">
       <DependentUpon>UserControlAppDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ucIntarnationalAppInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucIntarnationalAppInfo.Designer.cs">
+      <DependentUpon>ucIntarnationalAppInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="urDriverLIcenseInfo.cs">
       <SubType>UserControl</SubType>
@@ -252,6 +270,9 @@
     <EmbeddedResource Include="frmDriverLIcenseInfo.resx">
       <DependentUpon>frmDriverLIcenseInfo.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmInterNationalDriverLicenseID.resx">
+      <DependentUpon>frmInterNationalDriverLicenseID.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmIssueDriverLicenseForTheFirstTime.resx">
       <DependentUpon>frmIssueDriverLicenseForTheFirstTime.cs</DependentUpon>
     </EmbeddedResource>
@@ -260,6 +281,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmMannageDrivers.resx">
       <DependentUpon>frmMannageDrivers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmNewLicenseInternationalApplication.resx">
+      <DependentUpon>frmNewLicenseInternationalApplication.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Tests\frmScheduleTest.resx">
       <DependentUpon>frmScheduleTest.cs</DependentUpon>
@@ -290,6 +314,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\UserControlAppDetails.resx">
       <DependentUpon>UserControlAppDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucIntarnationalAppInfo.resx">
+      <DependentUpon>ucIntarnationalAppInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="urDriverLIcenseInfo.resx">
       <DependentUpon>urDriverLIcenseInfo.cs</DependentUpon>
