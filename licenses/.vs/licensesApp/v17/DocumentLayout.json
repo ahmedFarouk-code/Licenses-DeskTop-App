@@ -3,8 +3,12 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frminternationaldriverlicenseid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frminternationaldriverlicenseid.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -26,14 +30,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmInterNationalDriverLicenseID.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmInterNationalDriverLicenseID.cs",
-              "RelativeDocumentMoniker": "frmInterNationalDriverLicenseID.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmInterNationalDriverLicenseID.cs [Design]",
-              "RelativeToolTip": "frmInterNationalDriverLicenseID.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "frmIntarnationlLicenseApplications.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs",
+              "RelativeDocumentMoniker": "frmIntarnationlLicenseApplications.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs",
+              "RelativeToolTip": "frmIntarnationlLicenseApplications.cs",
+              "ViewState": "AgIAAIEAAAAAAAAAAAA8wJYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-06T23:03:13.965Z",
+              "WhenOpened": "2025-02-07T01:17:15.338Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmIntarnationlLicenseApplications.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs",
+              "RelativeDocumentMoniker": "frmIntarnationlLicenseApplications.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs [Design]",
+              "RelativeToolTip": "frmIntarnationlLicenseApplications.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-07T00:24:41.791Z",
               "EditorCaption": " [Design]"
             }
           ]
