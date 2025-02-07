@@ -148,7 +148,16 @@ namespace licensesApp
 
         private void showPersonDetailsToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            int PersonID = clsDrivers.FindDriverID((int)dgvintarbationalLicensApps.CurrentRow.Cells[2].Value).PersonID;
 
+            Form frm = new frmPersonDetails(PersonID);
+            frm.ShowDialog();
+        }
+
+        private void btnAddNewApp_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmNewLicenseInternationalApplication(_UserID);
+            frm.ShowDialog();
         }
     }
 }
