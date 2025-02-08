@@ -62,7 +62,7 @@ namespace LicensesDataAccess
                 object result = command.ExecuteScalar();
                 if (result != null && int.TryParse(result.ToString(), out int insertedID))
                 {
-                    ApplicationID = insertedID;
+                    LocalDrivingLicenseApplicationID = insertedID;
                 }
             }
             catch (Exception ex)

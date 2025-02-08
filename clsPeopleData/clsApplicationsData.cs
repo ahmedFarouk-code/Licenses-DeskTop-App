@@ -223,6 +223,51 @@ namespace LicensesDataAccess
             return isFound;
         }
 
+        
+            public static bool FindPerIDAndAppDate(ref int ApplicationID, int ApplicantPersonID,  DateTime ApplicationDate, ref int ApplicationTypeID,
+           ref byte ApplicationStatus, ref DateTime LastStatusDate, ref decimal PaidFees, ref int CreatedByUserID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "SELECT * FROM Applications WHERE ApplicantPersonID = @ApplicantPersonID AND ApplicationDate = @ApplicationDate";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@ApplicantPersonID", ApplicantPersonID);
+            command.Parameters.AddWithValue("@ApplicationDate", ApplicationDate);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    ApplicationID = (int)reader["ApplicationID"];
+                    ApplicationTypeID = (int)reader["ApplicationTypeID"];
+                    LastStatusDate = (DateTime)reader["LastStatusDate"];
+                    PaidFees = (decimal)reader["PaidFees"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error" + ex.ToString());
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
 
         public static bool IsApplicationExist(int PersonID)
         {

@@ -132,6 +132,7 @@
             this.renewDeivingLicenseToolStripMenuItem.Name = "renewDeivingLicenseToolStripMenuItem";
             this.renewDeivingLicenseToolStripMenuItem.Size = new System.Drawing.Size(294, 22);
             this.renewDeivingLicenseToolStripMenuItem.Text = "Renew Deiving License";
+            this.renewDeivingLicenseToolStripMenuItem.Click += new System.EventHandler(this.renewDeivingLicenseToolStripMenuItem_Click);
             // 
             // replacementForLostDamagedLicenseToolStripMenuItem
             // 

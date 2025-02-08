@@ -126,7 +126,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 13);
             this.label2.TabIndex = 0;
-            this.label2.Text = "LicenseID:";
+            this.label2.Text = "_OldLicenseID:";
             // 
             // label1
             // 

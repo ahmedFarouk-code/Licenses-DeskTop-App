@@ -93,5 +93,12 @@ namespace licensesApp
             frm.ShowDialog();
             
         }
+
+        private void renewDeivingLicenseToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form frm = new frmRenewLocalLicenseApplicationInfo(_UserID);
+            frm.ShowDialog();
+            
+        }
     }
 }

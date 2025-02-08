@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmintarnationllicenseapplications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -18,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -30,28 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "frmIntarnationlLicenseApplications.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs",
-              "RelativeDocumentMoniker": "frmIntarnationlLicenseApplications.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs*",
-              "RelativeToolTip": "frmIntarnationlLicenseApplications.cs*",
-              "ViewState": "AgIAAIsAAAAAAAAAAAAYwKIAAAABAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "frmRenewLocalLicenseApplicationInfo.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs",
+              "RelativeDocumentMoniker": "frmRenewLocalLicenseApplicationInfo.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs [Design]*",
+              "RelativeToolTip": "frmRenewLocalLicenseApplicationInfo.cs [Design]*",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T01:17:15.338Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-08T15:03:42.915Z",
+              "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "frmIntarnationlLicenseApplications.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs",
-              "RelativeDocumentMoniker": "frmIntarnationlLicenseApplications.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmIntarnationlLicenseApplications.cs [Design]*",
-              "RelativeToolTip": "frmIntarnationlLicenseApplications.cs [Design]*",
+              "DocumentIndex": 0,
+              "Title": "frmRenewLocalLicenseApplicationInfo.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs",
+              "RelativeDocumentMoniker": "frmRenewLocalLicenseApplicationInfo.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs*",
+              "RelativeToolTip": "frmRenewLocalLicenseApplicationInfo.cs*",
+              "ViewState": "AgIAAHwAAAAAAAAAAAA4wJQAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T00:24:41.791Z",
-              "EditorCaption": " [Design]"
+              "WhenOpened": "2025-02-07T21:30:32.158Z",
+              "EditorCaption": ""
             }
           ]
         }

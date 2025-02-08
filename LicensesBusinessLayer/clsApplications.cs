@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace LicensesBusinessLayer
@@ -67,6 +68,15 @@ namespace LicensesBusinessLayer
             this.ApplicationID = clsApplicationsData.AddNewApplication(this.ApplicantPersonID, this.ApplicationDate, this.ApplicationTypeID,
             this.ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUserID);
 
+            return (this.ApplicationID != -1);
+        }
+
+        public bool AddNewApplication(ref int ApplicationID)
+        {
+            this.ApplicationID = clsApplicationsData.AddNewApplication(this.ApplicantPersonID, this.ApplicationDate, this.ApplicationTypeID,
+            this.ApplicationStatus, this.LastStatusDate, this.PaidFees, this.CreatedByUserID);
+
+            ApplicationID = this.ApplicationID;
             return (this.ApplicationID != -1);
         }
 
@@ -139,6 +149,25 @@ namespace LicensesBusinessLayer
                 return null;
 
         }
+
+        public static clsApplications FindPerIDAndAppDate(int ApplicantPersonID, DateTime ApplicationDate)
+        {
+            int ApplicationID = -1, CreatedByUserID = -1, ApplicationTypeID = -1;
+            DateTime  LastStatusDate = DateTime.Now;
+            byte ApplicationStatus = 0;
+            decimal PaidFees = 0;
+            if (clsApplicationsData.FindPerIDAndAppDate(ref ApplicationID, ApplicantPersonID,  ApplicationDate, ref ApplicationTypeID,
+           ref ApplicationStatus, ref LastStatusDate, ref PaidFees, ref CreatedByUserID))
+
+                return new clsApplications(ApplicationID, ApplicantPersonID, ApplicationDate, ApplicationTypeID,
+             ApplicationStatus, LastStatusDate, PaidFees, CreatedByUserID);
+
+            else
+                return null;
+
+        }
+
+
 
         public static bool IsApplicationExist(int PersonID)
         {

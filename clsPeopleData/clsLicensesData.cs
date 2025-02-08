@@ -77,7 +77,7 @@ namespace LicensesDataAccess
                                    PaidFees = @PaidFees,
                                    IsActive = @IsActive,
                                    IssueReason = @IssueReason,
-                                   CreatedByUserID = @CreatedByUserID,
+                                   CreatedByUserID = @CreatedByUserID
                                    where LicenseID = @LicenseID";
 
             SqlCommand command = new SqlCommand(query, connection);

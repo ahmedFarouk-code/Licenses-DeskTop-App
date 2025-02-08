@@ -379,7 +379,7 @@
   <data name="newDrivingLicenseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAIvBJREFUeF7tmwdYVOe29wcsUWPUJMaYxMTEGGNMLCcxxphYQUURpElvIr2DAoau
+        vgAADr4B6kKxwAAAIvBJREFUeF7tmwdYVOe29wcsUWPUJMaYxMTEGGNMLCcxxphYQUURpElvIr2DAoau
         gAUpIoioFOmdoffee5EiCNiIIWpsKAIq+X/rHWZOiEmOOffmfvecc13Ps5zC3jP7/e21/mutvUfOC3th
         L+yFvbAX9sJe2At7YS/sr7K0ZC4nITZGOCstZVV5cZFxdUW5alFB3rcpKckLzgYHz9I1Np3Itps2cxZv
         +/9TlpCcwolITufEcZPFzubXXA9q7Ud670+jFZd/fNB8qa+vo7u3ruPCBW5LU6NnVXmpfkFujlh6Wupn
@@ -534,7 +534,7 @@
   <data name="renewDeivingLicenseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAI5xJREFUeF7tmgdYVOe29wcssSWaxCQmMdGoaSYaj5po7AUVpAiI0kVQepEiYKQp
+        vgAADr4B6kKxwAAAI5xJREFUeF7tmgdYVOe29wcssSWaxCQmMdGoaSYaj5po7AUVpAiI0kVQepEiYKQp
         RQWRJqKIICi9995771VAQTQW7AqISP53vcPMCXqSQ+75zv3uOedmPc9yM+Psmf3+9lr/tdbem/On/Wl/
         2p/2p/1pf9qf9qf9aX/aP8sSYmM4kWGhgikJcT8U5ubolRYVKuVkZayJi4ud5+PnN0NDz2A8+9yU6TO4
         n/8/ZZGxcZzA2EROeEyssE9m2U3fhltI7Lw3XHTt9tPaqz09ze2dFc0tLTF1NdWnSgrztbLS04QTE+K/
@@ -692,7 +692,7 @@
   <data name="replacementForLostDamagedLicenseToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAInlJREFUeF7tmwdYVOfSxxcssWuMsUSMscQkmqhXjbFXVBRBUQQEFAQBqVIElK6A
+        vgAADr4B6kKxwAAAInlJREFUeF7tmwdYVOfSxxcssWuMsUSMscQkmqhXjbFXVBRBUQQEFAQBqVIElK6A
         BRVEsKBYkC5deu+9i6B0EBUpKhYEVPL/5l12E/TmC8n9cp9bPud5xt09nN097+/M/GfmnJXz0T7aR/to
         H+2jfbSP9tE+2kf7qyw0OIjj7+sjGBkasjAtKVErKz1NPjE+dllISPDUy1evjlLV0unP9hsychR3//9X
         5h8cwvEIDuPcDAoWuRyX/fBKSSPCqlu702sfvyyqaWgoq6zOLbt7N6i4sOB0ZlrKvviYaJGw0FvfBwYF
@@ -845,7 +845,7 @@
   <data name="retakeTestToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAEgAAABICAYAAABV7bNHAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vwAADr8BOAVTJAAAKKJJREFUeF7VnAdYFVfbrscSTYwxiTFGTTWxa5oaW9QYY+wVQVGxxgKKHZSIiCii
+        vgAADr4B6kKxwAAAKKJJREFUeF7VnAdYFVfbrscSTYwxiTFGTTWxa5oaW9QYY+wVQVGxxgKKHZSIiCii
         IiC9d9j03nvvRXqTJiDSmwgISJ7zrgGs+6B/8uU/55sr9zUza9bee95n3rZGDQfgf0RzczNXXV39H6WK
         KL1fzd2rrOYeNVQP62qqHt3ZVD2SXSuqqObuVwn/3N+ltraW6+npEWrfywgdHIhDhw5x48aN+4/xySfj
         uNFjx3FrZ477wWTdOKOgbeOywrZ/UhYmPq7Yecu4QJnF4/Z989m4wWNojrDP/x2mTp3KNTQ0CLXvZYQO

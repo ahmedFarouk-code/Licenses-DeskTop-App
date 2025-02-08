@@ -48,3 +48,5 @@ D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmNewLicenseInternationa
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.ucIntarnationalAppInfo.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmInterNationalDriverLicenseID.resources
 D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmIntarnationlLicenseApplications.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.frmRenewLocalLicenseApplicationInfo.resources
+D:\Licenses-DeskTop-App\licenses\obj\Debug\licensesApp.ucRenewLocalApplicationInfo.resources

@@ -76,6 +76,12 @@
     <Compile Include="frmIntarnationlLicenseApplications.Designer.cs">
       <DependentUpon>frmIntarnationlLicenseApplications.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmRenewLocalLicenseApplicationInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRenewLocalLicenseApplicationInfo.Designer.cs">
+      <DependentUpon>frmRenewLocalLicenseApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="License\frmInterNationalDriverLicenseID.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -178,6 +184,12 @@
     <Compile Include="Controls\urDriverLIcenseInfo.Designer.cs">
       <DependentUpon>urDriverLIcenseInfo.cs</DependentUpon>
     </Compile>
+    <Compile Include="ucRenewLocalApplicationInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="ucRenewLocalApplicationInfo.Designer.cs">
+      <DependentUpon>ucRenewLocalApplicationInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users\frmAddEditUser.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -279,6 +291,9 @@
     <EmbeddedResource Include="frmIntarnationlLicenseApplications.resx">
       <DependentUpon>frmIntarnationlLicenseApplications.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmRenewLocalLicenseApplicationInfo.resx">
+      <DependentUpon>frmRenewLocalLicenseApplicationInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="License\frmInterNationalDriverLicenseID.resx">
       <DependentUpon>frmInterNationalDriverLicenseID.cs</DependentUpon>
     </EmbeddedResource>
@@ -329,6 +344,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Controls\urDriverLIcenseInfo.resx">
       <DependentUpon>urDriverLIcenseInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ucRenewLocalApplicationInfo.resx">
+      <DependentUpon>ucRenewLocalApplicationInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Users\frmAddEditUser.resx">
       <DependentUpon>frmAddEditUser.cs</DependentUpon>
