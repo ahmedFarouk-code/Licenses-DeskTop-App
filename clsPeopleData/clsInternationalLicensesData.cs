@@ -168,6 +168,52 @@ namespace LicensesDataAccess
 
             return isFound;
         }
+        
 
+             public static bool GetInternationalLicensesByIDLid( int InternationalLicenseID, ref int ApplicationID, ref int DriverID, ref int IssuedUsingLocalLicenseID,
+            ref DateTime IssueDate, ref DateTime ExpirationDate, ref bool IsActive,
+            ref int CreatedByUserID)
+        {
+            bool isFound = false;
+            SqlConnection connection = new SqlConnection(clsDataAccessSetting.ConnectionString);
+            string query = "SELECT * FROM InternationalLicenses WHERE InternationalLicenseID = @InternationalLicenseID";
+            SqlCommand command = new SqlCommand(query, connection);
+            command.Parameters.AddWithValue("@InternationalLicenseID", InternationalLicenseID);
+
+            try
+            {
+                connection.Open();
+                SqlDataReader reader = command.ExecuteReader();
+                if (reader.Read())
+                {
+                    isFound = true;
+                    IssuedUsingLocalLicenseID = (int)reader["IssuedUsingLocalLicenseID"];
+                    ApplicationID = (int)reader["ApplicationID"];
+                    DriverID = (int)reader["DriverID"];
+                    IssueDate = (DateTime)reader["IssueDate"];
+                    ExpirationDate = (DateTime)reader["ExpirationDate"];
+                    IsActive = (bool)reader["IsActive"];
+                    CreatedByUserID = (int)reader["CreatedByUserID"];
+
+
+                }
+                else
+                {
+                    isFound = false;
+                }
+                reader.Close();
+            }
+            catch (Exception ex)
+            {
+                //Console.WriteLine("Error" + ex.ToString());
+                isFound = false;
+            }
+            finally
+            {
+                connection.Close();
+            }
+
+            return isFound;
+        }
     }
 }

@@ -116,7 +116,7 @@ namespace licensesApp
             LicenseClassesTable = clsLicenseClasses.GetAllLicenseClasses();
 
 
-            DataRow[] LicensesRestults = LicensesTable.Select("DriverID =" + _DriverID + "AND IsActive= true");
+            DataRow[] LicensesRestults = LicensesTable.Select("DriverID =" + _DriverID);
             foreach (var LicensesRecordRow in LicensesRestults)
             {
 
@@ -206,6 +206,26 @@ namespace licensesApp
             //dgvLocalLicense.Columns[3].Width = 200;
             //dgvLocalLicense.Columns[4].Width = 200;
             //dgvLocalLicense.Columns[5].Width = 75;
+        }
+
+        private void showLicenseInToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int LDLId = clsLDLA.FindByAppID((int)dgvLocalLicense.CurrentRow.Cells[1].Value).LocalDrivingLicenseApplicationID;
+            Form frm = new frmDriverLIcenseInfo(LDLId);
+            frm.ShowDialog();
+        }
+
+        private void showLiceToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            int LDLId = clsInternationalLicenses.FindByIDLid((int)dgvIDLforPeson.CurrentRow.Cells[0].Value).IssuedUsingLocalLicenseID;
+            Form frm = new frmInterNationalDriverLicenseID(LDLId);
+            frm.ShowDialog();
+        }
+        
+        private void contextMenuStrip1_Opening(object sender, CancelEventArgs e)
+        {
+
         }
     }
 }

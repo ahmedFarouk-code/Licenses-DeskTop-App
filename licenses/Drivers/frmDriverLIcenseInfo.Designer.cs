@@ -73,7 +73,7 @@
             // urDriverLIcenseInfo1
             // 
             this.urDriverLIcenseInfo1.Location = new System.Drawing.Point(0, 186);
-            this.urDriverLIcenseInfo1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.urDriverLIcenseInfo1.Margin = new System.Windows.Forms.Padding(4);
             this.urDriverLIcenseInfo1.Name = "urDriverLIcenseInfo1";
             this.urDriverLIcenseInfo1.Size = new System.Drawing.Size(992, 406);
             this.urDriverLIcenseInfo1.TabIndex = 4;
@@ -91,7 +91,6 @@
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "frmDriverLIcenseInfo";
             this.Text = "frmDriverLIcenseInfo";
-          
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

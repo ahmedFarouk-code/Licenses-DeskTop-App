@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|D:\\Licenses-DeskTop-App\\licenses\\frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\license\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:license\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:frmrenewlocallicenseapplicationinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\drivers\\frmdriverlicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:drivers\\frmdriverlicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,26 +31,26 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "frmRenewLocalLicenseApplicationInfo.cs [Design]",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs",
-              "RelativeDocumentMoniker": "frmRenewLocalLicenseApplicationInfo.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs [Design]*",
-              "RelativeToolTip": "frmRenewLocalLicenseApplicationInfo.cs [Design]*",
+              "Title": "frmDriverLIcenseInfo.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Drivers\\frmDriverLIcenseInfo.cs",
+              "RelativeDocumentMoniker": "Drivers\\frmDriverLIcenseInfo.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Drivers\\frmDriverLIcenseInfo.cs [Design]",
+              "RelativeToolTip": "Drivers\\frmDriverLIcenseInfo.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-08T15:03:42.915Z",
+              "WhenOpened": "2025-02-08T18:56:16.981Z",
               "EditorCaption": " [Design]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "frmRenewLocalLicenseApplicationInfo.cs",
-              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs",
-              "RelativeDocumentMoniker": "frmRenewLocalLicenseApplicationInfo.cs",
-              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\frmRenewLocalLicenseApplicationInfo.cs*",
-              "RelativeToolTip": "frmRenewLocalLicenseApplicationInfo.cs*",
-              "ViewState": "AgIAAHwAAAAAAAAAAAA4wJQAAAAJAAAAAAAAAA==",
+              "Title": "frmLicenseHistory.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\License\\frmLicenseHistory.cs",
+              "RelativeDocumentMoniker": "License\\frmLicenseHistory.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\License\\frmLicenseHistory.cs*",
+              "RelativeToolTip": "License\\frmLicenseHistory.cs*",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAvwNwAAABjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-07T21:30:32.158Z",
+              "WhenOpened": "2025-02-08T15:48:26.004Z",
               "EditorCaption": ""
             }
           ]

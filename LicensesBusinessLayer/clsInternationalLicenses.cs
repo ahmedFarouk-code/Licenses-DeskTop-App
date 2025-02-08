@@ -109,7 +109,22 @@ namespace LicensesBusinessLayer
 
         }
 
+        public static clsInternationalLicenses FindByIDLid(int InternationalLicenseID)
+        {
+            int IssuedUsingLocalLicenseID = 0; int ApplicationID = -1, DriverID = -1, CreatedByUserID = -1;
+            DateTime IssueDate = DateTime.Now, ExpirationDate = DateTime.Now;
+            bool IsActive = false;
 
+            if (clsInternationalLicensesData.GetInternationalLicensesByIDLid( InternationalLicenseID, ref ApplicationID, ref DriverID, ref IssuedUsingLocalLicenseID,
+               ref IssueDate, ref ExpirationDate, ref IsActive, ref CreatedByUserID))
+
+                return new clsInternationalLicenses(InternationalLicenseID, ApplicationID, DriverID, IssuedUsingLocalLicenseID,
+                IssueDate, ExpirationDate, IsActive, CreatedByUserID);
+
+            else
+                return null;
+
+        }
 
 
 

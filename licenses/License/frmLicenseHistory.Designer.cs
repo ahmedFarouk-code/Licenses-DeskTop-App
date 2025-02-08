@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmLicenseHistory));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -36,19 +37,25 @@
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tpLocal = new System.Windows.Forms.TabPage();
             this.dgvLocalLicense = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showLiceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tpInternational = new System.Windows.Forms.TabPage();
+            this.dgvIDLforPeson = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.showLicenseInToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnClose = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.dgvIDLforPeson = new System.Windows.Forms.DataGridView();
             this.userControl2PersonDetailsWithFilter1 = new licensesApp.UserControl2PersonDetailsWithFilter();
             this.groupBox1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tpLocal.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicense)).BeginInit();
+            this.contextMenuStrip2.SuspendLayout();
             this.tpInternational.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIDLforPeson)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
@@ -122,11 +129,26 @@
             this.dgvLocalLicense.AllowUserToOrderColumns = true;
             this.dgvLocalLicense.BackgroundColor = System.Drawing.Color.White;
             this.dgvLocalLicense.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvLocalLicense.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvLocalLicense.Location = new System.Drawing.Point(3, 3);
             this.dgvLocalLicense.Name = "dgvLocalLicense";
             this.dgvLocalLicense.ReadOnly = true;
             this.dgvLocalLicense.Size = new System.Drawing.Size(753, 114);
             this.dgvLocalLicense.TabIndex = 0;
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showLiceToolStripMenuItem});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(167, 26);
+            // 
+            // showLiceToolStripMenuItem
+            // 
+            this.showLiceToolStripMenuItem.Name = "showLiceToolStripMenuItem";
+            this.showLiceToolStripMenuItem.Size = new System.Drawing.Size(166, 22);
+            this.showLiceToolStripMenuItem.Text = "Show license Info";
+            this.showLiceToolStripMenuItem.Click += new System.EventHandler(this.showLiceToolStripMenuItem_Click);
             // 
             // tpInternational
             // 
@@ -138,6 +160,35 @@
             this.tpInternational.TabIndex = 1;
             this.tpInternational.Text = "International";
             this.tpInternational.UseVisualStyleBackColor = true;
+            // 
+            // dgvIDLforPeson
+            // 
+            this.dgvIDLforPeson.AllowUserToAddRows = false;
+            this.dgvIDLforPeson.AllowUserToDeleteRows = false;
+            this.dgvIDLforPeson.AllowUserToOrderColumns = true;
+            this.dgvIDLforPeson.BackgroundColor = System.Drawing.Color.White;
+            this.dgvIDLforPeson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvIDLforPeson.ContextMenuStrip = this.contextMenuStrip2;
+            this.dgvIDLforPeson.Location = new System.Drawing.Point(6, 3);
+            this.dgvIDLforPeson.Name = "dgvIDLforPeson";
+            this.dgvIDLforPeson.ReadOnly = true;
+            this.dgvIDLforPeson.Size = new System.Drawing.Size(750, 114);
+            this.dgvIDLforPeson.TabIndex = 0;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.showLicenseInToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // showLicenseInToolStripMenuItem
+            // 
+            this.showLicenseInToolStripMenuItem.Name = "showLicenseInToolStripMenuItem";
+            this.showLicenseInToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.showLicenseInToolStripMenuItem.Text = "Show License Info";
+            this.showLicenseInToolStripMenuItem.Click += new System.EventHandler(this.showLicenseInToolStripMenuItem_Click);
             // 
             // btnClose
             // 
@@ -170,19 +221,6 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // dgvIDLforPeson
-            // 
-            this.dgvIDLforPeson.AllowUserToAddRows = false;
-            this.dgvIDLforPeson.AllowUserToDeleteRows = false;
-            this.dgvIDLforPeson.AllowUserToOrderColumns = true;
-            this.dgvIDLforPeson.BackgroundColor = System.Drawing.Color.White;
-            this.dgvIDLforPeson.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvIDLforPeson.Location = new System.Drawing.Point(6, 3);
-            this.dgvIDLforPeson.Name = "dgvIDLforPeson";
-            this.dgvIDLforPeson.ReadOnly = true;
-            this.dgvIDLforPeson.Size = new System.Drawing.Size(750, 114);
-            this.dgvIDLforPeson.TabIndex = 0;
-            // 
             // userControl2PersonDetailsWithFilter1
             // 
             this.userControl2PersonDetailsWithFilter1.Location = new System.Drawing.Point(178, 68);
@@ -209,9 +247,11 @@
             this.tabControl1.ResumeLayout(false);
             this.tpLocal.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvLocalLicense)).EndInit();
+            this.contextMenuStrip2.ResumeLayout(false);
             this.tpInternational.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvIDLforPeson)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +272,9 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.DataGridView dgvLocalLicense;
         private System.Windows.Forms.DataGridView dgvIDLforPeson;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem showLicenseInToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem showLiceToolStripMenuItem;
     }
 }

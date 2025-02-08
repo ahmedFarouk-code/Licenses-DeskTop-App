@@ -1,7 +1,16 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Licenses-DeskTop-App\\licenses\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\license\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:license\\frmlicensehistory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|d:\\licenses-desktop-app\\licenses\\drivers\\frmdriverlicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{AC36B54A-E75E-4E35-9A48-D32AA983F29C}|LicensesPresentationLayer.csproj|solutionrelative:drivers\\frmdriverlicenseinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -18,6 +27,31 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "frmDriverLIcenseInfo.cs [Design]",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\Drivers\\frmDriverLIcenseInfo.cs",
+              "RelativeDocumentMoniker": "Drivers\\frmDriverLIcenseInfo.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\Drivers\\frmDriverLIcenseInfo.cs [Design]",
+              "RelativeToolTip": "Drivers\\frmDriverLIcenseInfo.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T18:56:16.981Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "frmLicenseHistory.cs",
+              "DocumentMoniker": "D:\\Licenses-DeskTop-App\\licenses\\License\\frmLicenseHistory.cs",
+              "RelativeDocumentMoniker": "License\\frmLicenseHistory.cs",
+              "ToolTip": "D:\\Licenses-DeskTop-App\\licenses\\License\\frmLicenseHistory.cs",
+              "RelativeToolTip": "License\\frmLicenseHistory.cs",
+              "ViewState": "AgIAAMIAAAAAAAAAAAAvwNwAAABjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-08T15:48:26.004Z",
+              "EditorCaption": ""
             }
           ]
         }
